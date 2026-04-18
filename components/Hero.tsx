@@ -126,8 +126,12 @@ export default function Hero() {
                 className="block animate-fade-up font-editorial italic text-mint"
                 style={{
                   fontWeight: 500,
-                  letterSpacing: "-0.02em",
                   fontStyle: "italic",
+                  fontSize: "1.05em",
+                  letterSpacing: "0.005em",
+                  lineHeight: 1.08,
+                  paddingTop: "0.08em",
+                  paddingBottom: "0.04em",
                   animationDelay: "700ms",
                 }}
               >
@@ -196,16 +200,25 @@ export default function Hero() {
             style={{ animationDelay: "1400ms" }}
           >
             <div
-              className="glass rounded-lg p-6 md:p-7"
+              className="glass rounded-lg p-7 md:p-8"
               style={{
                 borderLeft: "2px solid hsl(var(--color-mint))",
               }}
             >
-              <div className="mb-5 flex items-center justify-between">
-                <span className="eyebrow !text-mint">Three decades in</span>
-                <span className="eyebrow !text-fg-faint">01 / 04</span>
+              <div className="mb-6 flex items-center gap-3">
+                <span className="eyebrow !text-mint">The scoreboard</span>
+                <span
+                  aria-hidden="true"
+                  className="h-px flex-1 bg-border"
+                />
+                <span
+                  className="font-sans text-[10px] font-semibold uppercase text-fg-faint"
+                  style={{ letterSpacing: "0.2em" }}
+                >
+                  Since 2013
+                </span>
               </div>
-              <dl className="grid grid-cols-2 gap-x-6 gap-y-5">
+              <dl className="grid grid-cols-2 gap-x-8 gap-y-7">
                 {STATS.map((stat, i) => (
                   <div key={stat.label} className="group cursor-default">
                     <dt
