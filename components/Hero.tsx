@@ -94,21 +94,17 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Display headline — Antonio, tall condensed
-                "RAISING" animates from outlined stencil → solid fill  */}
-            <h1
-              className="font-display text-fg uppercase"
-              style={{
-                fontSize: "var(--text-step-5)",
-                fontWeight: 700,
-                lineHeight: 0.98,
-                letterSpacing: "-0.005em",
-                textShadow: "0 6px 60px hsl(264 65% 4% / 0.6)",
-              }}
-            >
+            {/* Display headline — magazine-cover hierarchy:
+                RAISING + CHAMPIONS as the statement, editorial italic coda below. */}
+            <h1 className="text-fg">
               <span
-                className="block animate-stencil-fill"
+                className="block font-display uppercase animate-stencil-fill"
                 style={{
+                  fontSize: "var(--text-step-5)",
+                  fontWeight: 700,
+                  lineHeight: 0.92,
+                  letterSpacing: "-0.005em",
+                  textShadow: "0 6px 60px hsl(264 65% 4% / 0.6)",
                   animationDelay: "200ms",
                   WebkitTextStrokeColor: "hsl(var(--color-fg))",
                   color: "hsl(var(--color-fg))",
@@ -117,31 +113,39 @@ export default function Hero() {
                 Raising
               </span>
               <span
-                className="block animate-fade-up"
-                style={{ animationDelay: "500ms" }}
-              >
-                champions
-              </span>
-              <span
-                className="block animate-fade-up font-editorial italic text-mint"
+                className="block font-display uppercase animate-fade-up"
                 style={{
-                  fontWeight: 500,
-                  fontStyle: "italic",
-                  fontSize: "1.05em",
-                  letterSpacing: "0.005em",
-                  lineHeight: 1.08,
-                  paddingTop: "0.08em",
-                  paddingBottom: "0.04em",
-                  animationDelay: "700ms",
+                  fontSize: "var(--text-step-5)",
+                  fontWeight: 700,
+                  lineHeight: 0.92,
+                  letterSpacing: "-0.005em",
+                  textShadow: "0 6px 60px hsl(264 65% 4% / 0.6)",
+                  animationDelay: "500ms",
                 }}
               >
-                on &amp; off
+                Champions.
               </span>
               <span
-                className="block animate-fade-up"
-                style={{ animationDelay: "880ms" }}
+                className="mt-5 flex items-baseline gap-3 pl-[0.2em] animate-fade-up"
+                style={{ animationDelay: "760ms" }}
               >
-                the court.
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-px bg-mint/70"
+                  style={{ width: "2.5rem", marginBottom: "0.35em" }}
+                />
+                <span
+                  className="font-editorial italic text-mint"
+                  style={{
+                    fontSize: "var(--text-step-3)",
+                    fontWeight: 500,
+                    fontStyle: "italic",
+                    lineHeight: 1,
+                    letterSpacing: "0.005em",
+                  }}
+                >
+                  on &amp; off the court.
+                </span>
               </span>
             </h1>
 
