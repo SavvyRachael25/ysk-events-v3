@@ -101,8 +101,8 @@ export default function Hero() {
               style={{
                 fontSize: "var(--text-step-5)",
                 fontWeight: 700,
-                lineHeight: 0.86,
-                letterSpacing: "-0.01em",
+                lineHeight: 0.98,
+                letterSpacing: "-0.005em",
                 textShadow: "0 6px 60px hsl(264 65% 4% / 0.6)",
               }}
             >
