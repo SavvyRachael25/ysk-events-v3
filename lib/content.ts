@@ -6,9 +6,8 @@
 export const NAV_SECTIONS = [
   { id: "about", label: "About", href: "/#about" },
   { id: "programs", label: "Programs", href: "/#programs" },
-  { id: "events", label: "Events", href: "/events" },
+  { id: "blog", label: "Blog", href: "/blog" },
   { id: "gallery", label: "Gallery", href: "/gallery" },
-  { id: "press", label: "Press", href: "/press" },
   { id: "donate", label: "Donate", href: "/#donate" },
   { id: "contact", label: "Contact", href: "/#contact" },
 ] as const;
@@ -213,6 +212,39 @@ export const DONATION_IMPACTS = [
   { amount: "$100", desc: "One month of academic tutoring for a student athlete" },
   { amount: "$250", desc: "Full tournament season sponsorship for one youth" },
   { amount: "$1,000", desc: "An entire year of coaching, competition, and mentorship" },
+] as const;
+
+export const HOMEPAGE_FAQ = [
+  {
+    question: "Where does YSK Events train youth squash players?",
+    answer:
+      "YSK Events programs are based at PRO Club Bellevue (4455 148th Ave NE, Bellevue, WA), where Head Coach Azam Khan directs a world-class squash program. We also partner with Title I schools across the Bellevue–Seattle corridor for community access clinics.",
+  },
+  {
+    question: "Who runs YSK Events?",
+    answer:
+      "YSK Events was founded in 2013 by national champion Shabana Khan. The Khan family has produced seven World No. 1–ranked players across three generations, beginning with patriarch Yusuf Khan, who brought squash to Seattle in 1968. The full coaching and leadership team is led by Shabana Khan (Founder & CEO), Murad Khan (President), Azam Khan (Head Coach), and Latasha Khan (Director and 2024 US Squash Hall of Fame inductee).",
+  },
+  {
+    question: "Is YSK Events a registered nonprofit?",
+    answer:
+      "Yes. YSK Events is a 501(c)(3) tax-exempt nonprofit. All donations are tax-deductible, and 100% of program funding goes directly to youth — coaching, court time, equipment, academic support, and tournament travel.",
+  },
+  {
+    question: "Are the youth programs really free for scholarship athletes?",
+    answer:
+      "Yes. No child is turned away for inability to pay. Through scholarship-funded court time, donated equipment, and partnerships with Title I schools, the cost for a scholarship athlete is $0 — that includes coaching, gear, and competitive play.",
+  },
+  {
+    question: "How does YSK Events connect to the LA28 Olympic Games?",
+    answer:
+      "Squash makes its Olympic debut at the Los Angeles 2028 Games. YSK Events runs the LA28 Pathway program (launching 2027) to identify and develop Pacific Northwest junior players with Olympic potential, in alignment with US Squash sanctioning.",
+  },
+  {
+    question: "How can I support YSK Events?",
+    answer:
+      "Three ways: make a tax-deductible donation, sponsor a scholarship athlete or tournament season, or partner as a corporation or foundation. Contact hello@yskevents.com to discuss naming rights, multi-year sponsorships, or grant partnerships.",
+  },
 ] as const;
 
 export const CONTACT_INTERESTS = [

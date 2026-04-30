@@ -8,37 +8,29 @@ import Programs from "@/components/Programs";
 import Donate from "@/components/Donate";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/constants";
+import { HOMEPAGE_FAQ } from "@/lib/content";
+import {
+  breadcrumbJsonLd,
+  faqJsonLd,
+  jsonLdScriptProps,
+  organizationJsonLd,
+  venueJsonLd,
+} from "@/lib/seo";
 
-const homeJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NGO",
-  name: "YSK Events",
-  alternateName: "YSK",
-  url: "https://www.yskevents.com",
-  description:
-    "501(c)(3) nonprofit building futures through squash in the Pacific Northwest. Youth development, competitive training, and LA28 Olympic pathway.",
-  foundingDate: "2013",
-  nonprofitStatus: "501(c)(3)",
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Pacific Northwest",
-  },
-  sport: "Squash",
-  sameAs: [
-    "https://www.instagram.com/yskevents",
-    "https://www.facebook.com/yskevents",
-  ],
-};
+const homeBreadcrumbs = breadcrumbJsonLd([
+  { name: "Home", url: `${SITE_URL}/` },
+]);
+
+const homeFaq = faqJsonLd(HOMEPAGE_FAQ);
 
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(homeJsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      <script {...jsonLdScriptProps(organizationJsonLd)} />
+      <script {...jsonLdScriptProps(venueJsonLd)} />
+      <script {...jsonLdScriptProps(homeBreadcrumbs)} />
+      <script {...jsonLdScriptProps(homeFaq)} />
       <Navbar />
       <main id="main" className="flex-1">
         <Hero />

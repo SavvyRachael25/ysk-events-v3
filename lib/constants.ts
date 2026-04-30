@@ -18,6 +18,23 @@ export const ORG_STATUS = "501(c)(3) Nonprofit";
 // ——— Contact ———
 export const CONTACT_EMAIL = "hello@yskevents.com";
 
+// ——— Site ———
+export const SITE_URL = "https://www.yskevents.com";
+
+// ——— Location (training facility, not mailing address) ———
+// YSK programs train at PRO Club Bellevue under Azam Khan's direction.
+export const VENUE = {
+  name: "PRO Club Bellevue",
+  streetAddress: "4455 148th Ave NE",
+  addressLocality: "Bellevue",
+  addressRegion: "WA",
+  postalCode: "98007",
+  addressCountry: "US",
+  // Approximate coordinates for Pro Club Bellevue (Crossroads).
+  latitude: 47.6363,
+  longitude: -122.1438,
+} as const;
+
 // ——— Social ———
 export const SOCIAL = {
   instagram: "https://www.instagram.com/yskevents",
