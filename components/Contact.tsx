@@ -1,4 +1,7 @@
+"use client";
+
 import { Mail, MapPin, ShieldCheck } from "lucide-react";
+import { FormEvent } from "react";
 import SquashBallCanvas from "./SquashBallCanvas";
 import { CONTACT_INTERESTS } from "@/lib/content";
 import { CONTACT_EMAIL } from "@/lib/constants";
@@ -8,6 +11,34 @@ const inputClass =
 
 const labelClass =
   "mb-1.5 block font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-fg-faint";
+
+function handleMailtoSubmit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+  const data = new FormData(e.currentTarget);
+  const firstName = String(data.get("firstName") ?? "").trim();
+  const lastName = String(data.get("lastName") ?? "").trim();
+  const email = String(data.get("email") ?? "").trim();
+  const interest = String(data.get("interest") ?? "").trim();
+  const message = String(data.get("message") ?? "").trim();
+
+  const fullName = [firstName, lastName].filter(Boolean).join(" ");
+  const subject = interest
+    ? `YSK inquiry — ${interest}`
+    : "YSK Events inquiry";
+  const body = [
+    fullName && `Name: ${fullName}`,
+    email && `Reply-to: ${email}`,
+    interest && `Interested in: ${interest}`,
+    "",
+    message,
+  ]
+    .filter((line) => line !== undefined)
+    .join("\n");
+
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    subject,
+  )}&body=${encodeURIComponent(body)}`;
+}
 
 export default function Contact() {
   return (
@@ -141,6 +172,7 @@ export default function Contact() {
           <form
             className="glass rounded-lg p-7 md:p-8"
             style={{ borderTop: "2px solid hsl(var(--color-mint))" }}
+            onSubmit={handleMailtoSubmit}
           >
             <p className="eyebrow mb-6 !text-mint">Send a message</p>
 

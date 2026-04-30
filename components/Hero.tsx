@@ -172,7 +172,7 @@ export default function Hero() {
               style={{ animationDelay: "1260ms" }}
             >
               <a
-                href="#donate"
+                href="mailto:hello@yskevents.com?subject=I%20want%20to%20support%20YSK%20Events"
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-md bg-mint px-8 py-4 font-sans text-xs font-bold uppercase tracking-[0.2em] text-mint-ink transition-all duration-base ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-mint)]"
               >
                 <span className="relative z-10">Fund the mission</span>
