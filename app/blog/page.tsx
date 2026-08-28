@@ -49,7 +49,7 @@ const blogJsonLd = {
 };
 
 const categoryAccent: Record<string, string> = {
-  "Youth Programs": "text-mint",
+  "Youth Programs": "text-gold",
   "Olympic Pathway": "text-gold",
   "Brand Story": "text-coral",
 };
@@ -73,12 +73,12 @@ export default function BlogIndex() {
               background: `
                 radial-gradient(
                   ellipse 60% 50% at 80% 0%,
-                  hsl(262 52% 32% / 0.45) 0%,
+                  hsl(38 48% 82% / 0.45) 0%,
                   transparent 65%
                 ),
                 radial-gradient(
                   ellipse 60% 60% at 0% 100%,
-                  hsl(292 70% 28% / 0.35) 0%,
+                  hsl(35 42% 84% / 0.35) 0%,
                   transparent 65%
                 )
               `,
@@ -87,11 +87,11 @@ export default function BlogIndex() {
           <div className="relative z-10 mx-auto max-w-[1180px]">
             <header className="mb-14 max-w-[760px]">
               <div className="mb-4 flex items-center gap-3">
-                <span className="h-px w-8 bg-mint/70" />
+                <span className="h-px w-8 bg-gold/70" />
                 <span className="eyebrow">Blog</span>
               </div>
               <h1
-                className="font-display uppercase text-fg"
+                className="font-display uppercase text-ink"
                 style={{
                   fontSize: "var(--text-step-4)",
                   fontWeight: 700,
@@ -101,14 +101,14 @@ export default function BlogIndex() {
               >
                 Notes from{" "}
                 <span
-                  className="font-editorial italic text-mint"
+                  className="font-lockup italic italic text-gold"
                   style={{ fontWeight: 500 }}
                 >
                   the court.
                 </span>
               </h1>
               <p
-                className="mt-6 font-editorial italic text-fg/75 leading-relaxed"
+                className="mt-6 font-lockup italic italic text-ink/75 leading-relaxed"
                 style={{ fontSize: "var(--text-step-1)" }}
               >
                 Long-form writing on youth squash, the road to LA28, and the
@@ -121,20 +121,20 @@ export default function BlogIndex() {
                 <li key={post.slug}>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="group flex h-full flex-col rounded-lg border border-border bg-fg/[0.04] p-7 transition-all duration-base ease-[var(--ease-out-expo)] hover:-translate-y-1 hover:border-mint/40 hover:bg-fg/[0.08]"
+                    className="group flex h-full flex-col rounded-lg border border-border bg-ink/[0.04] p-7 transition-all duration-300 ease-[var(--ease-out-expo)] hover:-translate-y-1 hover:border-gold/40 hover:bg-ink/[0.08]"
                   >
                     <div className="mb-4 flex items-center justify-between">
                       <span
-                        className={`eyebrow ${categoryAccent[post.category] ?? "text-mint"}`}
+                        className={`eyebrow ${categoryAccent[post.category] ?? "text-gold"}`}
                       >
                         {post.category}
                       </span>
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-fg-faint">
+                      <span className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-ink-faint">
                         {post.readingMinutes} min read
                       </span>
                     </div>
                     <h2
-                      className="mb-3 font-display uppercase text-fg transition-colors duration-base group-hover:text-mint"
+                      className="mb-3 font-display uppercase text-ink transition-colors duration-300 group-hover:text-gold"
                       style={{
                         fontSize: "1.5rem",
                         fontWeight: 700,
@@ -144,18 +144,18 @@ export default function BlogIndex() {
                     >
                       {post.title}
                     </h2>
-                    <p className="mb-6 flex-1 text-[14px] leading-relaxed text-fg/65">
+                    <p className="mb-6 flex-1 text-[14px] leading-relaxed text-ink/65">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between border-t border-border pt-4">
-                      <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-fg-faint">
+                      <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-ink-faint">
                         {dateFormatter.format(new Date(post.datePublished))}
                       </span>
-                      <span className="inline-flex items-center gap-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-mint">
+                      <span className="inline-flex items-center gap-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-gold">
                         Read
                         <span
                           aria-hidden="true"
-                          className="transition-transform duration-base ease-[var(--ease-spring)] group-hover:translate-x-1"
+                          className="transition-transform duration-300 ease-[var(--ease-spring)] group-hover:translate-x-1"
                         >
                           →
                         </span>

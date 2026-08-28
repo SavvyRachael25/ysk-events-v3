@@ -17,7 +17,7 @@ export default function OgImage() {
           justifyContent: "space-between",
           padding: "72px 80px",
           background:
-            "radial-gradient(ellipse 80% 60% at 80% 0%, #4a2570 0%, transparent 65%), radial-gradient(ellipse 70% 70% at 0% 100%, #6b2d8e 0%, transparent 65%), #1a0f2e",
+            "radial-gradient(ellipse 80% 60% at 80% 0%, #2b241e 0%, transparent 65%), radial-gradient(ellipse 70% 70% at 0% 100%, #3a2f24 0%, transparent 65%), #1c1815",
           color: "#f5efe6",
           fontFamily: "system-ui, sans-serif",
         }}
@@ -39,7 +39,7 @@ export default function OgImage() {
               fontWeight: 700,
               letterSpacing: "0.32em",
               textTransform: "uppercase",
-              color: "#7befc4",
+              color: "#c99a4b",
             }}
           >
             Events
@@ -53,7 +53,7 @@ export default function OgImage() {
               fontWeight: 700,
               letterSpacing: "0.28em",
               textTransform: "uppercase",
-              color: "#7befc4",
+              color: "#c99a4b",
             }}
           >
             Pacific Northwest · Youth Squash · LA28 Pathway
@@ -76,7 +76,7 @@ export default function OgImage() {
               fontSize: 56,
               fontWeight: 400,
               fontStyle: "italic",
-              color: "#7befc4",
+              color: "#c99a4b",
               letterSpacing: "-0.005em",
             }}
           >

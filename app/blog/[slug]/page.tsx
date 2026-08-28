@@ -57,7 +57,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 const categoryAccent: Record<string, string> = {
-  "Youth Programs": "text-mint",
+  "Youth Programs": "text-gold",
   "Olympic Pathway": "text-gold",
   "Brand Story": "text-coral",
 };
@@ -105,12 +105,12 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               background: `
                 radial-gradient(
                   ellipse 60% 50% at 90% 0%,
-                  hsl(262 52% 32% / 0.4) 0%,
+                  hsl(38 48% 82% / 0.4) 0%,
                   transparent 65%
                 ),
                 radial-gradient(
                   ellipse 60% 60% at 0% 100%,
-                  hsl(292 70% 28% / 0.3) 0%,
+                  hsl(35 42% 84% / 0.3) 0%,
                   transparent 65%
                 )
               `,
@@ -119,28 +119,28 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           <div className="relative z-10 mx-auto max-w-[760px]">
             <nav
               aria-label="Breadcrumb"
-              className="mb-10 flex flex-wrap items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-fg-faint"
+              className="mb-10 flex flex-wrap items-center gap-2 font-sans text-[11px] uppercase tracking-[0.2em] text-ink-faint"
             >
-              <Link href="/" className="hover:text-mint">
+              <Link href="/" className="hover:text-gold">
                 Home
               </Link>
               <span aria-hidden="true">/</span>
-              <Link href="/blog" className="hover:text-mint">
+              <Link href="/blog" className="hover:text-gold">
                 Blog
               </Link>
               <span aria-hidden="true">/</span>
-              <span className={categoryAccent[post.category] ?? "text-mint"}>
+              <span className={categoryAccent[post.category] ?? "text-gold"}>
                 {post.category}
               </span>
             </nav>
 
             <header className="mb-12">
               <div className="mb-4 flex items-center gap-3">
-                <span className="h-px w-8 bg-mint/70" />
+                <span className="h-px w-8 bg-gold/70" />
                 <span className="eyebrow">{post.heroEyebrow}</span>
               </div>
               <h1
-                className="font-display uppercase text-fg"
+                className="font-display uppercase text-ink"
                 style={{
                   fontSize: "var(--text-step-4)",
                   fontWeight: 700,
@@ -151,12 +151,12 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 {post.title}
               </h1>
               <p
-                className="mt-6 font-editorial italic text-fg/75 leading-relaxed"
+                className="mt-6 font-lockup italic italic text-ink/75 leading-relaxed"
                 style={{ fontSize: "var(--text-step-1)" }}
               >
                 {post.heroSubtitle}
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-sans text-[11px] uppercase tracking-[0.2em] text-fg-faint">
+              <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 font-sans text-[11px] uppercase tracking-[0.2em] text-ink-faint">
                 <span>By {post.author}</span>
                 <span aria-hidden="true">·</span>
                 <time dateTime={post.datePublished}>
@@ -172,11 +172,11 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             {post.faq.length > 0 && (
               <section className="mt-16 border-t border-border pt-12">
                 <div className="mb-8 flex items-center gap-3">
-                  <span className="h-px w-8 bg-mint/70" />
+                  <span className="h-px w-8 bg-gold/70" />
                   <span className="eyebrow">Frequently asked</span>
                 </div>
                 <h2
-                  className="mb-8 font-display uppercase text-fg"
+                  className="mb-8 font-display uppercase text-ink"
                   style={{
                     fontSize: "var(--text-step-3)",
                     fontWeight: 700,
@@ -190,10 +190,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                   {post.faq.map((qa) => (
                     <li
                       key={qa.question}
-                      className="rounded-lg border border-border bg-fg/[0.04] p-6"
+                      className="rounded-lg border border-border bg-ink/[0.04] p-6"
                     >
                       <h3
-                        className="mb-2 font-display uppercase text-fg"
+                        className="mb-2 font-display uppercase text-ink"
                         style={{
                           fontSize: "1.05rem",
                           fontWeight: 700,
@@ -204,7 +204,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                         {qa.question}
                       </h3>
                       <p
-                        className="text-fg/80 leading-relaxed"
+                        className="text-ink/80 leading-relaxed"
                         style={{ fontSize: "1rem" }}
                       >
                         {qa.answer}
@@ -217,12 +217,12 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
             <section className="mt-16 border-t border-border pt-12">
               <div
-                className="glass rounded-lg p-7 md:p-8"
-                style={{ borderTop: "2px solid hsl(var(--color-mint))" }}
+                className="rounded-lg border border-border bg-paper-2 p-7 md:p-8"
+                style={{ borderTop: "2px solid var(--color-gold)" }}
               >
-                <p className="eyebrow mb-4 !text-mint">Get involved</p>
+                <p className="eyebrow mb-4 !text-gold">Get involved</p>
                 <p
-                  className="mb-6 font-editorial italic text-fg/85 leading-relaxed"
+                  className="mb-6 font-lockup italic italic text-ink/85 leading-relaxed"
                   style={{ fontSize: "var(--text-step-1)" }}
                 >
                   Whether you&rsquo;re a parent, sponsor, or just curious about
@@ -231,24 +231,24 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 <div className="flex flex-wrap items-center gap-4">
                   <a
                     href={`mailto:${CONTACT_EMAIL}?subject=I%20read%20your%20blog%20—%20want%20to%20connect`}
-                    className="group inline-flex items-center gap-2 rounded-md bg-mint px-7 py-3.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-mint-ink transition-all duration-base ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-mint)]"
+                    className="group inline-flex items-center gap-2 rounded-md bg-gold px-7 py-3.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-on-gold transition-all duration-300 ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
                   >
                     Email YSK Events
                     <span
                       aria-hidden="true"
-                      className="transition-transform duration-base ease-[var(--ease-spring)] group-hover:translate-x-1"
+                      className="transition-transform duration-300 ease-[var(--ease-spring)] group-hover:translate-x-1"
                     >
                       →
                     </span>
                   </a>
                   <Link
                     href="/#programs"
-                    className="group inline-flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-fg/80 transition-colors duration-base hover:text-mint"
+                    className="group inline-flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-ink/80 transition-colors duration-300 hover:text-gold"
                   >
                     Explore programs
                     <span
                       aria-hidden="true"
-                      className="transition-transform duration-base ease-[var(--ease-spring)] group-hover:translate-x-1"
+                      className="transition-transform duration-300 ease-[var(--ease-spring)] group-hover:translate-x-1"
                     >
                       →
                     </span>
@@ -260,7 +260,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             {related.length > 0 && (
               <section className="mt-16 border-t border-border pt-12">
                 <div className="mb-8 flex items-center gap-3">
-                  <span className="h-px w-8 bg-mint/70" />
+                  <span className="h-px w-8 bg-gold/70" />
                   <span className="eyebrow">More from the blog</span>
                 </div>
                 <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -268,17 +268,17 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                     <li key={p.slug}>
                       <Link
                         href={`/blog/${p.slug}`}
-                        className="group flex h-full flex-col rounded-lg border border-border bg-fg/[0.04] p-6 transition-all duration-base ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:border-mint/40 hover:bg-fg/[0.08]"
+                        className="group flex h-full flex-col rounded-lg border border-border bg-ink/[0.04] p-6 transition-all duration-300 ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:border-gold/40 hover:bg-ink/[0.08]"
                       >
                         <span
                           className={`eyebrow mb-3 ${
-                            categoryAccent[p.category] ?? "text-mint"
+                            categoryAccent[p.category] ?? "text-gold"
                           }`}
                         >
                           {p.category}
                         </span>
                         <h3
-                          className="mb-2 font-display uppercase text-fg transition-colors duration-base group-hover:text-mint"
+                          className="mb-2 font-display uppercase text-ink transition-colors duration-300 group-hover:text-gold"
                           style={{
                             fontSize: "1.15rem",
                             fontWeight: 700,
@@ -288,7 +288,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                         >
                           {p.title}
                         </h3>
-                        <p className="text-[13.5px] leading-relaxed text-fg/65">
+                        <p className="text-[13.5px] leading-relaxed text-ink/65">
                           {p.excerpt}
                         </p>
                       </Link>

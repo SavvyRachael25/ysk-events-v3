@@ -1,15 +1,15 @@
 import type { Block } from "@/lib/blog";
 
 const calloutBorderColor: Record<"mint" | "gold" | "coral", string> = {
-  mint: "hsl(var(--color-mint))",
-  gold: "hsl(var(--color-gold))",
-  coral: "hsl(var(--color-coral))",
+  mint: "var(--color-gold)",
+  gold: "var(--color-gold)",
+  coral: "var(--color-gold-deep)",
 };
 
 const calloutAccentText: Record<"mint" | "gold" | "coral", string> = {
-  mint: "!text-mint",
+  mint: "!text-gold",
   gold: "!text-gold",
-  coral: "!text-coral",
+  coral: "!text-gold",
 };
 
 export function BlogBlocks({ blocks }: { blocks: Block[] }) {
@@ -22,7 +22,7 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
               <h2
                 key={i}
                 id={block.id}
-                className="font-display uppercase text-fg pt-6"
+                className="font-display uppercase text-ink pt-6"
                 style={{
                   fontSize: "var(--text-step-3)",
                   fontWeight: 700,
@@ -38,7 +38,7 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
               <h3
                 key={i}
                 id={block.id}
-                className="font-display uppercase text-fg pt-4"
+                className="font-display uppercase text-ink pt-4"
                 style={{
                   fontSize: "var(--text-step-2)",
                   fontWeight: 700,
@@ -53,7 +53,7 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
             return (
               <p
                 key={i}
-                className="text-fg/80 leading-relaxed"
+                className="text-ink/80 leading-relaxed"
                 style={{ fontSize: "1.0625rem" }}
               >
                 {block.text}
@@ -63,7 +63,7 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
             return (
               <ul
                 key={i}
-                className="ml-5 list-disc space-y-2 text-fg/80 marker:text-mint"
+                className="ml-5 list-disc space-y-2 text-ink/80 marker:text-gold"
                 style={{ fontSize: "1.0625rem" }}
               >
                 {block.items.map((item, j) => (
@@ -77,7 +77,7 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
             return (
               <ol
                 key={i}
-                className="ml-5 list-decimal space-y-2 text-fg/80 marker:text-mint marker:font-bold"
+                className="ml-5 list-decimal space-y-2 text-ink/80 marker:text-gold marker:font-bold"
                 style={{ fontSize: "1.0625rem" }}
               >
                 {block.items.map((item, j) => (
@@ -91,17 +91,17 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
             return (
               <blockquote
                 key={i}
-                className="glass rounded-lg p-6 md:p-7 my-2"
-                style={{ borderLeft: "2px solid hsl(var(--color-gold))" }}
+                className="rounded-lg border border-border bg-paper-2 p-6 md:p-7 my-2"
+                style={{ borderLeft: "2px solid var(--color-gold)" }}
               >
                 <p
-                  className="font-editorial italic text-fg/85 leading-relaxed"
+                  className="font-lockup italic italic text-ink/85 leading-relaxed"
                   style={{ fontSize: "var(--text-step-1)" }}
                 >
                   &ldquo;{block.text}&rdquo;
                 </p>
                 {block.cite && (
-                  <footer className="eyebrow mt-3 !text-fg-faint">
+                  <footer className="eyebrow mt-3 !text-ink-faint">
                     — {block.cite}
                   </footer>
                 )}
@@ -111,14 +111,14 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
             return (
               <aside
                 key={i}
-                className="glass rounded-lg p-6 md:p-7 my-2"
+                className="rounded-lg border border-border bg-paper-2 p-6 md:p-7 my-2"
                 style={{ borderLeft: `2px solid ${calloutBorderColor[block.tone]}` }}
               >
                 <p className={`eyebrow mb-2 ${calloutAccentText[block.tone]}`}>
                   {block.title}
                 </p>
                 <p
-                  className="text-fg/85 leading-relaxed"
+                  className="text-ink/85 leading-relaxed"
                   style={{ fontSize: "1.0625rem" }}
                 >
                   {block.text}

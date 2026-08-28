@@ -10,7 +10,7 @@ export function generateStaticParams() {
 }
 
 const categoryColor: Record<string, string> = {
-  "Youth Programs": "#7befc4",
+  "Youth Programs": "#c99a4b",
   "Olympic Pathway": "#f6c560",
   "Brand Story": "#ff8a73",
 };
@@ -25,7 +25,7 @@ export default async function OgImage({
 
   const title = post?.title ?? "YSK Events";
   const eyebrow = post?.heroEyebrow ?? "YSK Events";
-  const accent = post ? (categoryColor[post.category] ?? "#7befc4") : "#7befc4";
+  const accent = post ? (categoryColor[post.category] ?? "#c99a4b") : "#c99a4b";
 
   return new ImageResponse(
     (
@@ -38,7 +38,7 @@ export default async function OgImage({
           justifyContent: "space-between",
           padding: "72px 80px",
           background:
-            "radial-gradient(ellipse 80% 60% at 80% 0%, #4a2570 0%, transparent 65%), radial-gradient(ellipse 70% 70% at 0% 100%, #6b2d8e 0%, transparent 65%), #1a0f2e",
+            "radial-gradient(ellipse 80% 60% at 80% 0%, #2b241e 0%, transparent 65%), radial-gradient(ellipse 70% 70% at 0% 100%, #3a2f24 0%, transparent 65%), #1c1815",
           color: "#f5efe6",
           fontFamily: "system-ui, sans-serif",
         }}
