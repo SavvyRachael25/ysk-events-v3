@@ -1,57 +1,153 @@
 /**
  * YSK Events — source of truth for copy.
+ * Direction: "The Road to LA" — the final Olympic qualification event
+ * for squash, Bellevue–Seattle, Washington, June 2028.
  * Keeping real content centralized so components stay presentational.
  */
 
 export const NAV_SECTIONS = [
-  { id: "about", label: "About", href: "/#about" },
-  { id: "programs", label: "Programs", href: "/#programs" },
-  { id: "blog", label: "Blog", href: "/blog" },
+  { id: "event", label: "The Event", href: "/#event" },
+  { id: "road", label: "Road to LA", href: "/#road" },
+  { id: "cities", label: "Cities", href: "/#cities" },
+  { id: "history", label: "History", href: "/#history" },
   { id: "gallery", label: "Gallery", href: "/gallery" },
-  { id: "donate", label: "Donate", href: "/#donate" },
-  { id: "contact", label: "Contact", href: "/#contact" },
+  { id: "partner", label: "Partner With Us", href: "/#partner" },
 ] as const;
+
+// ——— The event ———
+export const EVENT = {
+  kicker: "The Final Olympic Qualification Event for Squash",
+  headlineTop: "The Road to LA",
+  headlineAccent: "Goes Through Washington.",
+  location: "Bellevue · Seattle, Washington",
+  date: "June 2028",
+  lines: [
+    "One final opportunity.",
+    "The world's best players.",
+    "Olympic dreams on the line.",
+  ],
+  ctaPrimary: { label: "Explore the Event", href: "#road" },
+  ctaSecondary: { label: "Partner With Us", href: "#partner" },
+} as const;
 
 export const MARQUEE_ITEMS = [
-  "3 Generations of Champions",
-  "7 World No. 1 Rankings",
-  "Squash at LA28",
-  "Youth-First Mission",
-  "501(c)(3) Nonprofit",
-  "Pacific Northwest",
-  "Kids First. Always.",
+  "Squash Debuts at the LA Olympics",
+  "The Final Qualification Event",
+  "Bellevue · Seattle · June 2028",
+  "The World's Best Players",
+  "One Last Chance to Qualify",
+  "Presented by YSK Events · 501(c)(3)",
 ] as const;
 
-export const PILLARS = [
+// ——— Why it matters ———
+export const QUALIFY = {
+  eyebrow: "June 2028 · Washington State",
+  headline: "Where the world comes to qualify",
+  headlineAccent: "for the Olympics.",
+  body: "In 2028, squash makes its Olympic debut at the Los Angeles Games. Before it does, the world's top players will come to Washington for one last chance to earn their place. Every match matters. Every point could send a player to the Olympics, or send them home.",
+} as const;
+
+// ——— The journey: three cities ———
+export const CITIES = [
   {
-    num: "01",
-    title: "Youth-First Mission",
-    desc: "Every dollar, every decision, every program — designed around the growth and well-being of young athletes.",
+    name: "Bellevue",
+    tagline: "Where the journey begins.",
+    desc: "Home of YSK Events and the 2015 Men's World Championship, the first ever held on U.S. soil.",
+    image: "/event/city-bellevue.jpg",
+    alt: "Downtown Bellevue, Washington skyline across the water",
   },
   {
-    num: "02",
-    title: "World-Class Coaching",
-    desc: "Three generations of Khan family expertise. 7 family members ranked World No. 1. That legacy now coaches your kids.",
+    name: "Seattle",
+    tagline: "Where the final Olympic places are decided.",
+    desc: "The Pacific Northwest's biggest stage hosts the last qualification event before the Games.",
+    image: "/event/city-seattle.jpg",
+    alt: "Seattle skyline at golden hour with Mount Rainier behind",
   },
   {
-    num: "03",
-    title: "Community Access",
-    desc: "Scholarship-funded court time, free clinics, and Title I school partnerships — no child turned away for inability to pay.",
-  },
-  {
-    num: "04",
-    title: "Proven Results",
-    desc: "From hosting the first-ever Men's World Championship on U.S. soil to Hall of Fame inductions — we deliver on what we promise.",
+    name: "Los Angeles",
+    tagline: "Where squash makes its Olympic debut.",
+    desc: "For the first time in history, squash is an Olympic sport. The road ends at the LA Games.",
+    image: "/event/city-la.jpg",
+    alt: "Downtown Los Angeles skyline at sunset with palm trees",
   },
 ] as const;
 
-export const PARTNERS = [
-  { name: "US Squash", label: "Sanctioned Partner" },
-  { name: "PSA World Tour", label: "Professional Events" },
-  { name: "LA28 Olympics", label: "Olympic Pathway" },
-  { name: "Title I Schools", label: "Community Access" },
-  { name: "Xbox", label: "Title Sponsor" },
-  { name: "PRO Club", label: "Training Facility" },
+// ——— History ———
+export const HISTORY = {
+  eyebrow: "Since 2013",
+  headline: "A history of",
+  headlineAccent: "making squash matter.",
+  body: "For more than a decade, YSK Events has helped elevate squash in the United States through community impact, major championships, and memorable event experiences. Founded by the Khan family, three generations of champions, YSK is a 501(c)(3) nonprofit rooted in the Pacific Northwest.",
+  image: "/event/athlete.jpg",
+  alt: "Squash athlete mid-swing under arena lights",
+} as const;
+
+export const HISTORY_PROOF = [
+  { value: "2015", label: "Hosted the first Men's World Championship on U.S. soil" },
+  { value: "25+", label: "Countries represented at YSK championships" },
+  { value: "7", label: "Khan family World No. 1 rankings" },
+  { value: "10K+", label: "Youth introduced to squash across Washington" },
+] as const;
+
+export const TIMELINE = [
+  {
+    year: "2014",
+    title: "World-champion exhibitions",
+    desc: "Ramy Ashour, Amr Shabana, and Grégory Gaultier headline exhibitions at PRO Club in Bellevue.",
+  },
+  {
+    year: "2015",
+    title: "Men's World Championship",
+    desc: "YSK makes history: the PSA World Championship comes to the U.S. for the first time. 100+ pros, 25+ countries, record prize money, an all-glass court at Meydenbauer Center.",
+  },
+  {
+    year: "2017",
+    title: "PMI Bellevue Squash Classic",
+    desc: "A $200K PSA event brings the world tour back to the Eastside.",
+  },
+  {
+    year: "2021–2025",
+    title: "The Yusuf Khan Invitational era",
+    desc: "Junior championships, PSA World Tour Finals, and the annual invitational honoring the man who brought squash to the Pacific Northwest.",
+  },
+  {
+    year: "2028",
+    title: "The Road to LA",
+    desc: "The final Olympic qualification event for squash comes to Washington. Then, Los Angeles.",
+  },
+] as const;
+
+// ——— Partner ———
+export const PARTNER = {
+  eyebrow: "Sponsorship & Support",
+  headline: "Be part of squash's",
+  headlineAccent: "Olympic moment.",
+  body: "The first Olympic qualification event on American soil is a once-in-a-generation platform. Partner with YSK Events to put your brand at the center of it, or support the 501(c)(3) mission that builds the next generation of American squash.",
+} as const;
+
+export const PARTNER_TIERS = [
+  {
+    name: "Title Partner",
+    desc: "Naming rights to the qualification event, court branding, and first position across all broadcast and press coverage.",
+  },
+  {
+    name: "Official Partner",
+    desc: "Court-side branding, hospitality packages, and presence across the event's digital and printed program.",
+  },
+  {
+    name: "Community Partner",
+    desc: "Fund youth clinics and scholarship court time around the event. Every dollar is tax-deductible.",
+  },
+] as const;
+
+export const CONTACT_INTERESTS = [
+  "Title Partnership",
+  "Official Partnership",
+  "Community Partnership",
+  "Media / Press Inquiry",
+  "Volunteering",
+  "General Donation",
+  "Other",
 ] as const;
 
 export const PRESS_OUTLETS = [
@@ -62,158 +158,7 @@ export const PRESS_OUTLETS = [
   "US Squash",
 ] as const;
 
-export type Program = {
-  tag: string;
-  accent: "mint" | "coral" | "sun";
-  name: string;
-  headline: string;
-  desc: string;
-  status?: string;
-  cta: string;
-  featured?: boolean;
-};
-
-export const PROGRAMS: Program[] = [
-  {
-    tag: "Flagship",
-    accent: "mint",
-    name: "Squash Forward",
-    headline: "Where champions are made",
-    desc: "Structured youth development integrating social-emotional learning with competitive squash. Recruiting from Title I schools across Bellevue–Seattle.",
-    status: "Launching 2026",
-    cta: "Enroll now",
-    featured: true,
-  },
-  {
-    tag: "Community",
-    accent: "mint",
-    name: "Community Clinics",
-    headline: "Zero barriers to entry",
-    desc: "Free introductory clinics for ages 5–18 with scholarship-funded access for underserved families. No experience needed.",
-    cta: "Join a clinic",
-  },
-  {
-    tag: "Academics",
-    accent: "coral",
-    name: "Squash + Academics",
-    headline: "Court to classroom pipeline",
-    desc: "Athletic training paired with academic enrichment, college prep, and 1-on-1 mentorship. Building pathways that last.",
-    status: "Launching 2026",
-    cta: "Learn more",
-  },
-  {
-    tag: "Elite",
-    accent: "mint",
-    name: "Competitive Training",
-    headline: "Train with the best",
-    desc: "High-performance coaching for tournament-ready athletes. US Squash sanctioned, led by world-class Khan family coaches.",
-    cta: "Apply now",
-  },
-  {
-    tag: "Culture",
-    accent: "coral",
-    name: "Squash Art Initiative",
-    headline: "Sport meets expression",
-    desc: "Youth explore identity, resilience, and community through art and squash. Original works by Sharif Khan featured at every event.",
-    cta: "Explore",
-  },
-  {
-    tag: "Olympic",
-    accent: "sun",
-    name: "LA28 Pathway",
-    headline: "The Olympic dream starts here",
-    desc: "Squash debuts at Los Angeles 2028. We're building the pipeline from Pacific Northwest courts to the Olympic stage.",
-    status: "Launching 2027",
-    cta: "Learn more",
-    featured: true,
-  },
-];
-
-export const PROGRAM_STATS = [
-  { big: "500+", label: "Youth athletes served" },
-  { big: "12+", label: "Years of impact" },
-  { big: "LA28", label: "Olympic debut" },
-  { big: "$0", label: "Cost for scholarship athletes" },
-] as const;
-
-export type TeamMember = {
-  name: string;
-  role: string;
-  group: "khan" | "board";
-  bio: string;
-  accolades?: readonly string[];
-  featured?: boolean;
-  memorial?: boolean;
-};
-
-export const KHAN_FAMILY: TeamMember[] = [
-  {
-    name: "Yusuf Khan",
-    role: "Patriarch & Founder of Seattle Squash",
-    group: "khan",
-    bio: "A 10-time All-India squash champion who moved to Seattle in 1968 and is credited with bringing the sport to the Pacific Northwest. He served as head pro at the Seattle Tennis Club before founding the Seattle Athletic Club. He remained a legendary figure in the squash community until his passing in 2018.",
-    accolades: ["10× All-India Champion", "Seattle Pioneer", "1968–2018"],
-    featured: true,
-    memorial: true,
-  },
-  {
-    name: "Shabana Khan",
-    role: "Founder & CEO",
-    group: "khan",
-    bio: "A former Women's National Squash Champion and professional player who founded YSK Events to bring world-class tournaments to the U.S. She organized the 2015 Men's World Squash Championship in Bellevue — the first time the event was held in the United States. She is the visionary behind YSK's shift toward youth development and professional showcases.",
-    accolades: ["National Champion", "2015 Worlds Host", "Visionary"],
-    featured: true,
-  },
-  {
-    name: "Latasha Khan",
-    role: "Director",
-    group: "khan",
-    bio: "A former Women's National Champion who reached World No. 18 and was inducted into the US Squash Hall of Fame in 2024. She earned two Gold medals at the 2003 Pan American Games. In the 1990s and 2000s, Shabana and Latasha dominated the U.S. squash scene, often meeting in national finals. Latasha provides business development expertise to YSK Events.",
-    accolades: ["World No. 18", "Hall of Fame 2024", "2× Pan Am Gold"],
-    featured: true,
-  },
-  {
-    name: "Murad Khan",
-    role: "President & Manager",
-    group: "khan",
-    bio: "One of Yusuf's sons, Murad played professional squash and now leads YSK Events operations. He is the driving force behind major events like the Yusuf Khan Invitational, and focuses on bridging the Pacific Northwest tech community — notably Microsoft and Google employees — with the sport of squash.",
-    accolades: ["Pro Player", "Event Operations", "Tech Bridge"],
-  },
-  {
-    name: "Azam Khan",
-    role: "Head Coach & Director",
-    group: "khan",
-    bio: "A renowned coach who directs a world-class squash program at PRO Club in Bellevue. While less focused on event production, Azam's coaching excellence and player development are central to the Khan family's mission of growing squash's player base across Washington State.",
-    accolades: ["PRO Club Bellevue", "World-Class Coach"],
-  },
-];
-
-export const BOARD: TeamMember[] = [
-  {
-    name: "Craig B. Landgren",
-    role: "Secretary & Treasurer",
-    group: "board",
-    bio: "Overseeing financial stewardship and governance, Craig ensures YSK Events' 501(c)(3) operations run with full transparency and accountability.",
-  },
-  {
-    name: "Curt Ligot",
-    role: "Board of Directors",
-    group: "board",
-    bio: "Founder of Roundbox Fitness in Seattle with 20+ years in fitness and performance training. His holistic approach to human performance aligns with YSK's commitment to developing well-rounded young athletes.",
-    accolades: ["Roundbox Fitness", "Seattle"],
-  },
-];
-
-export const DONATION_AMOUNTS = ["$25", "$50", "$100", "$250", "$1,000"] as const;
-
-export const DONATION_IMPACTS = [
-  { amount: "$25", desc: "One week of court time for a scholarship athlete" },
-  { amount: "$50", desc: "Full racket and gear set for a first-time player" },
-  { amount: "$100", desc: "One month of academic tutoring for a student athlete" },
-  { amount: "$250", desc: "Full tournament season sponsorship for one youth" },
-  { amount: "$1,000", desc: "An entire year of coaching, competition, and mentorship" },
-] as const;
-
+// ——— Homepage FAQ (SEO/AEO structured data) ———
 export const HOMEPAGE_FAQ = [
   {
     question: "Where does YSK Events train youth squash players?",
@@ -245,15 +190,4 @@ export const HOMEPAGE_FAQ = [
     answer:
       "Three ways: make a tax-deductible donation, sponsor a scholarship athlete or tournament season, or partner as a corporation or foundation. Contact hello@yskevents.com to discuss naming rights, multi-year sponsorships, or grant partnerships.",
   },
-] as const;
-
-export const CONTACT_INTERESTS = [
-  "Youth Program Enrollment",
-  "Corporate Sponsorship",
-  "Olympic Court Naming Rights",
-  "Foundation / Grant Partnership",
-  "Volunteering",
-  "Media / Press Inquiry",
-  "General Donation",
-  "Other",
 ] as const;

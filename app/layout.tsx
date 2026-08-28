@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Antonio, Fraunces, Sora } from "next/font/google";
+import { Playfair_Display, Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
-const antonio = Antonio({
-  variable: "--font-unbounded",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
-const sora = Sora({
-  variable: "--font-geist",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -29,18 +29,20 @@ const SITE_URL = "https://www.yskevents.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "YSK Events — Pacific Northwest Youth Squash Nonprofit | LA28 Olympic Pathway",
+    default:
+      "YSK Events — The Road to LA Goes Through Washington | Olympic Squash Qualification",
     template: "%s · YSK Events",
   },
   description:
-    "YSK Events is a 501(c)(3) nonprofit building futures through squash. Youth development programs, community clinics, competitive training, and LA2028 Olympic pathway in the Pacific Northwest.",
+    "The final Olympic qualification event for squash. In June 2028, the world's top players come to Bellevue–Seattle, Washington for one last chance to earn their place at the Los Angeles Olympic Games. Presented by YSK Events, a 501(c)(3) nonprofit.",
   keywords: [
-    "youth squash",
-    "Pacific Northwest squash",
-    "LA28 Olympic squash",
-    "youth development nonprofit",
-    "junior squash training",
+    "Olympic squash",
+    "LA28 squash",
+    "squash Olympic qualification",
+    "Bellevue squash event",
     "Seattle squash",
+    "YSK Events",
+    "Road to LA",
   ],
   authors: [{ name: "YSK Events" }],
   creator: "YSK Events",
@@ -48,16 +50,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "YSK Events",
-    title: "YSK Events — Raising Champions On & Off the Court",
+    title: "The Road to LA Goes Through Washington",
     description:
-      "501(c)(3) nonprofit building futures through squash in the Pacific Northwest. LA28 Olympic pathway.",
+      "The final Olympic qualification event for squash. Bellevue–Seattle, Washington. June 2028.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "YSK Events — Raising Champions On & Off the Court",
+    title: "The Road to LA Goes Through Washington",
     description:
-      "501(c)(3) nonprofit building futures through squash. LA28 Olympic pathway.",
+      "The final Olympic qualification event for squash. Bellevue–Seattle, Washington. June 2028.",
   },
   alternates: {
     canonical: SITE_URL,
@@ -82,9 +84,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${antonio.variable} ${fraunces.variable} ${sora.variable} h-full antialiased`}
+      className={`${playfair.variable} ${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ink text-fg">
+      <body className="min-h-full flex flex-col bg-paper text-ink">
         <a href="#main" className="skip-link">
           Skip to content
         </a>

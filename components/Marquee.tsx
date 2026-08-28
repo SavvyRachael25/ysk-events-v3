@@ -1,38 +1,25 @@
 import { MARQUEE_ITEMS } from "@/lib/content";
 
+/** Thin ink band with rolling gold event facts — an editorial ticker. */
 export default function Marquee() {
   return (
     <div
-      className="relative z-10 overflow-hidden border-y border-border-strong"
-      style={{
-        background: "hsl(264 65% 12% / 0.6)",
-      }}
       aria-hidden="true"
+      className="relative overflow-hidden border-y border-border bg-ink-2 py-3.5"
     >
-      <div className="flex whitespace-nowrap animate-marquee py-4">
-        {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((t, i) => (
-          <span
-            key={i}
-            className="flex items-center gap-7 px-7 font-sans text-sm font-semibold uppercase text-fg/85"
-            style={{ letterSpacing: "0.28em" }}
-          >
-            {t}
-            {/* squash ball divider — mint dot inside dark circle */}
-            <span
-              aria-hidden="true"
-              className="inline-flex h-3 w-3 items-center justify-center rounded-full"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 30% 28%, hsl(0 0% 14%), hsl(0 0% 3%))",
-                boxShadow: "inset 0 0 4px hsl(0 0% 0% / 0.8)",
-              }}
-            >
+      <div className="animate-marquee flex w-max">
+        {[0, 1].map((copy) => (
+          <div key={copy} className="flex shrink-0 items-center">
+            {MARQUEE_ITEMS.map((item) => (
               <span
-                className="h-[3px] w-[3px] rounded-full bg-mint"
-                style={{ boxShadow: "0 0 4px hsl(152 72% 70%)" }}
-              />
-            </span>
-          </span>
+                key={`${copy}-${item}`}
+                className="flex items-center gap-8 pr-8 font-sans text-[10.5px] font-semibold uppercase tracking-[0.28em] text-gold-bright"
+              >
+                {item}
+                <span className="text-gold-bright/50">◆</span>
+              </span>
+            ))}
+          </div>
         ))}
       </div>
     </div>

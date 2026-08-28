@@ -1,8 +1,5 @@
-"use client";
-
-import { ArrowUp } from "lucide-react";
 import { CONTACT_EMAIL, ORG_FOUNDED, SOCIAL } from "@/lib/constants";
-import { NAV_SECTIONS } from "@/lib/content";
+import { NAV_SECTIONS, PRESS_OUTLETS } from "@/lib/content";
 
 function FacebookIcon({ size = 15 }: { size?: number }) {
   return (
@@ -22,218 +19,120 @@ function InstagramIcon({ size = 15 }: { size?: number }) {
   );
 }
 
-function LinkedinIcon({ size = 15 }: { size?: number }) {
+function YoutubeIcon({ size = 15 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.4v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z" />
+      <path d="M23.5 6.2a3 3 0 0 0-2.12-2.12C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.53A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.12 2.12c1.88.53 9.38.53 9.38.53s7.5 0 9.38-.53a3 3 0 0 0 2.12-2.12A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z" />
     </svg>
   );
 }
-
-const PROGRAM_LINKS = [
-  "Squash Forward",
-  "Community Clinics",
-  "Squash + Academics",
-  "Competitive Training",
-  "Squash Art",
-  "LA28 Pathway",
-];
-
-const INVOLVED = [
-  { label: "Make a donation", href: "/#donate" },
-  { label: "Corporate sponsorship", href: "/#contact" },
-  { label: "Olympic naming rights", href: "/#contact" },
-  { label: "Volunteer", href: "/#contact" },
-  { label: "Email us", href: `mailto:${CONTACT_EMAIL}` },
-];
-
-const SOCIAL_LINKS = [
-  { icon: FacebookIcon, href: SOCIAL.facebook, label: "Facebook" },
-  { icon: InstagramIcon, href: SOCIAL.instagram, label: "Instagram" },
-  { icon: LinkedinIcon, href: "#", label: "LinkedIn" },
-];
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      role="contentinfo"
-      className="relative border-t border-border bg-ink-2 px-6 pb-10 pt-16 md:px-12 lg:px-20"
-    >
-      {/* Newsletter — centered top strip */}
-      <div className="mx-auto mb-14 max-w-[560px] border-b border-border pb-12 text-center">
-        <p
-          className="mb-2 font-display uppercase text-fg"
-          style={{
-            fontSize: "var(--text-step-2)",
-            fontWeight: 700,
-            letterSpacing: "0.02em",
-            lineHeight: 1,
-          }}
-        >
-          Stay in the game
-        </p>
-        <p className="mb-6 text-[14px] text-fg/65">
-          Updates on programs, tournaments, and the road to LA28.
-        </p>
-        <form
-          className="mx-auto flex max-w-[420px] gap-2"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <input
-            type="email"
-            placeholder="your@email.com"
-            aria-label="Email address"
-            className="flex-1 rounded-md border border-border-strong bg-fg/[0.06] px-4 py-3 font-sans text-sm text-fg outline-none transition-colors placeholder:text-fg-faint focus:border-mint"
-          />
-          <button
-            type="submit"
-            className="rounded-md bg-mint px-5 py-3 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-mint-ink transition-all duration-base hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow-mint)]"
-          >
-            Subscribe
-          </button>
-        </form>
-      </div>
-
-      {/* Columns */}
-      <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-10 border-b border-border pb-10 sm:grid-cols-2 lg:grid-cols-4">
-        {/* Brand block */}
-        <div>
-          <div className="mb-4 inline-flex items-baseline gap-[6px]">
-            <span
-              className="font-display uppercase leading-none text-fg"
-              style={{
-                fontWeight: 700,
-                fontSize: "1.5rem",
-                letterSpacing: "0.04em",
-              }}
-            >
-              YSK
+    <footer className="border-t border-paper/10 bg-ink text-paper">
+      <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-12 md:py-20">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+          {/* Brand */}
+          <div className="md:col-span-5">
+            <span className="inline-flex flex-col leading-none" aria-label="YSK Events">
+              <span
+                className="font-display text-paper"
+                style={{ fontSize: "1.6rem", letterSpacing: "0.12em" }}
+              >
+                YSK
+              </span>
+              <span
+                className="mt-1 text-[9px] font-semibold uppercase text-gold-bright"
+                style={{ letterSpacing: "0.42em", fontFamily: "var(--font-sans)" }}
+              >
+                Events
+              </span>
             </span>
-            <span
-              className="text-[9px] font-semibold uppercase text-mint"
-              style={{ letterSpacing: "0.28em", fontFamily: "var(--font-sans)" }}
-            >
-              Events
-            </span>
+            <p className="mt-6 max-w-[380px] font-sans text-sm leading-relaxed text-paper/55">
+              The final Olympic qualification event for squash. Bellevue ·
+              Seattle, Washington, June 2028. Presented by YSK Events, a
+              501(c)(3) nonprofit elevating squash in the United States since{" "}
+              {ORG_FOUNDED}.
+            </p>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href={SOCIAL.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YSK Events on Instagram"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href={SOCIAL.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YSK Events on Facebook"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+              >
+                <FacebookIcon />
+              </a>
+              <a
+                href={SOCIAL.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YSK Events on YouTube"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+              >
+                <YoutubeIcon />
+              </a>
+            </div>
           </div>
-          <p className="mb-4 font-sans text-[10px] font-bold uppercase tracking-[0.22em] text-mint">
-            Raising champions. On &amp; off the court.
+
+          {/* Explore */}
+          <nav aria-label="Footer" className="md:col-span-3">
+            <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bright">
+              Explore
+            </p>
+            <ul className="mt-5 space-y-3">
+              {NAV_SECTIONS.map((s) => (
+                <li key={s.id}>
+                  <a
+                    href={s.href}
+                    className="font-sans text-sm text-paper/60 transition-colors duration-300 hover:text-gold-bright"
+                  >
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Contact + press */}
+          <div className="md:col-span-4">
+            <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bright">
+              Contact
+            </p>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="mt-5 inline-block font-sans text-sm text-paper/70 underline-offset-4 transition-colors duration-300 hover:text-gold-bright hover:underline"
+            >
+              {CONTACT_EMAIL}
+            </a>
+            <p className="mt-8 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bright">
+              As Seen In
+            </p>
+            <p className="mt-4 max-w-[320px] font-sans text-xs leading-loose text-paper/45">
+              {PRESS_OUTLETS.join(" · ")}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
+          <p className="font-sans text-xs text-paper/40">
+            © {year} YSK Events. A 501(c)(3) nonprofit organization.
           </p>
-          <p
-            className="mb-5 font-editorial italic text-fg/60 leading-relaxed"
-            style={{ fontSize: "0.95rem" }}
-          >
-            A 501(c)(3) nonprofit harnessing the power of squash to build
-            champions — in sport, in school, and in life.
+          <p className="font-sans text-xs text-paper/40">
+            The Road to LA Goes Through Washington.
           </p>
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="block font-display text-fg transition-colors hover:text-mint"
-            style={{
-              fontSize: "0.95rem",
-              fontWeight: 700,
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-            }}
-          >
-            {CONTACT_EMAIL}
-          </a>
-          <ul className="mt-5 flex gap-2.5">
-            {SOCIAL_LINKS.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  aria-label={s.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-md border border-border-strong bg-fg/[0.06] text-fg/70 transition-all duration-base hover:border-mint hover:bg-mint hover:text-mint-ink"
-                >
-                  <s.icon size={15} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Nav column */}
-        <div>
-          <p className="eyebrow mb-4 !text-fg-faint">Navigate</p>
-          <ul className="space-y-2.5">
-            {NAV_SECTIONS.filter((s) => s.id !== "donate").map((l) => (
-              <li key={l.id}>
-                <a
-                  href={l.href}
-                  className="font-sans text-[14px] text-fg/65 transition-colors hover:text-mint"
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Programs column */}
-        <div>
-          <p className="eyebrow mb-4 !text-fg-faint">Programs</p>
-          <ul className="space-y-2.5">
-            {PROGRAM_LINKS.map((p) => (
-              <li key={p}>
-                <a
-                  href="/#programs"
-                  className="font-sans text-[14px] text-fg/65 transition-colors hover:text-mint"
-                >
-                  {p}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Get Involved column */}
-        <div>
-          <p className="eyebrow mb-4 !text-fg-faint">Get involved</p>
-          <ul className="space-y-2.5">
-            {INVOLVED.map((l) => (
-              <li key={l.label}>
-                <a
-                  href={l.href}
-                  className="font-sans text-[14px] text-fg/65 transition-colors hover:text-mint"
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* Bottom strip */}
-      <div className="mx-auto mt-7 flex max-w-[1180px] flex-col items-center justify-between gap-4 sm:flex-row">
-        <p className="font-sans text-[12px] text-fg-faint">
-          &copy; {year} YSK Events · 501(c)(3) Nonprofit · Pacific Northwest ·
-          Est. {ORG_FOUNDED}
-        </p>
-        <div className="flex items-center gap-5">
-          <a
-            href="/privacy"
-            className="font-sans text-[12px] text-fg-faint transition-colors hover:text-mint"
-          >
-            Privacy
-          </a>
-          <a
-            href="/terms"
-            className="font-sans text-[12px] text-fg-faint transition-colors hover:text-mint"
-          >
-            Terms
-          </a>
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            aria-label="Back to top"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-border-strong bg-fg/[0.06] text-fg/60 transition-all duration-base hover:border-mint hover:bg-mint hover:text-mint-ink"
-          >
-            <ArrowUp size={14} strokeWidth={1.75} />
-          </button>
         </div>
       </div>
     </footer>

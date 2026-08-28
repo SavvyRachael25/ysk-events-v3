@@ -11,7 +11,7 @@ export const HERO_END_TIME = 80;   // seconds
 
 // ——— Organization ———
 export const ORG_NAME = "YSK Events";
-export const ORG_TAGLINE = "Raising Champions On & Off the Court";
+export const ORG_TAGLINE = "The Road to LA Goes Through Washington";
 export const ORG_FOUNDED = 2013;
 export const ORG_STATUS = "501(c)(3) Nonprofit";
 
