@@ -50,7 +50,7 @@ export default function GalleryPage() {
         id="main"
         className="paper-grain relative flex-1 bg-paper px-6 pt-32 pb-24 md:px-12 md:pt-40 lg:px-20"
       >
-        <div className="relative z-10 mx-auto max-w-[1280px]">
+        <div className="relative mx-auto max-w-[1280px]">
           <header className="mb-14">
             <div className="flex items-center gap-4">
               <span className="section-no">Archive</span>
