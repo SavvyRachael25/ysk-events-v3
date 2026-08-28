@@ -29,6 +29,7 @@ export default function Hero() {
               className="block font-display text-ink animate-fade-up"
               style={{
                 fontSize: "var(--text-step-4)",
+                textWrap: "balance",
                 animationDelay: "200ms",
               }}
             >
@@ -38,6 +39,7 @@ export default function Hero() {
               className="block font-display text-gold animate-fade-up"
               style={{
                 fontSize: "var(--text-step-4)",
+                textWrap: "balance",
                 animationDelay: "340ms",
               }}
             >
