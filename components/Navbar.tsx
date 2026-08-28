@@ -62,7 +62,9 @@ export default function Navbar() {
         aria-label="Primary"
         className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between px-6 transition-all duration-300 ease-[var(--ease-out-expo)] md:h-[76px] md:px-10"
         style={{
-          background: scrolled ? "hsl(42 33% 95% / 0.92)" : "transparent",
+          background: scrolled
+            ? "hsl(42 33% 95% / 0.92)"
+            : "linear-gradient(180deg, hsl(42 33% 95% / 0.92) 0%, hsl(42 33% 95% / 0.55) 60%, transparent 100%)",
           backdropFilter: scrolled ? "blur(16px) saturate(1.1)" : "none",
           borderBottom: scrolled
             ? "1px solid hsl(34 18% 82%)"

@@ -15,7 +15,7 @@ export default function Hero() {
     >
       <div className="mx-auto grid min-h-[100svh] max-w-[1440px] grid-cols-1 items-stretch lg:grid-cols-12">
         {/* LEFT: copy */}
-        <div className="relative z-10 flex flex-col justify-center px-6 pt-28 pb-12 md:px-12 lg:col-span-5 lg:py-32 lg:pr-10 lg:pl-16">
+        <div className="relative z-10 flex flex-col justify-center px-6 pt-28 pb-12 md:px-12 lg:col-span-5 lg:py-24 lg:pr-10 lg:pl-16">
           {/* Kicker */}
           <p
             className="eyebrow-quiet animate-fade-up"
@@ -27,10 +27,9 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="mt-6">
             <span
-              className="block font-display text-ink animate-fade-up"
+              className="block font-display text-ink animate-fade-up lg:whitespace-nowrap"
               style={{
-                fontSize: "var(--text-step-5)",
-                textWrap: "balance",
+                fontSize: "var(--text-step-4)",
                 animationDelay: "200ms",
               }}
             >
@@ -39,7 +38,7 @@ export default function Hero() {
             <span
               className="block font-display text-gold animate-fade-up"
               style={{
-                fontSize: "var(--text-step-5)",
+                fontSize: "var(--text-step-4)",
                 textWrap: "balance",
                 animationDelay: "340ms",
               }}
@@ -101,7 +100,7 @@ export default function Hero() {
 
           {/* Countdown */}
           <div
-            className="mt-12 animate-fade-up"
+            className="mt-10 animate-fade-up"
             style={{ animationDelay: "920ms" }}
           >
             <Countdown />
