@@ -9,12 +9,16 @@ import athleteImage from "@/public/event/athlete.jpg";
  */
 export default function History() {
   return (
-    <section id="history" className="paper-grain bg-paper py-24 md:py-32">
+    <section id="history" className="paper-grain relative bg-paper py-24 md:py-36">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
           {/* LEFT: copy + proof */}
           <Reveal className="lg:col-span-5">
-            <p className="eyebrow-quiet">{HISTORY.eyebrow}</p>
+            <div className="flex items-center gap-4">
+              <span className="section-no">03</span>
+              <span aria-hidden="true" className="rule-gold h-px w-8" />
+              <p className="eyebrow-quiet">{HISTORY.eyebrow}</p>
+            </div>
             <h2 className="mt-5">
               <span
                 className="block font-display text-ink"
@@ -52,7 +56,7 @@ export default function History() {
 
           {/* RIGHT: athlete */}
           <Reveal delay={160} as="figure" className="lg:col-span-7">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
+            <div className="img-frame relative aspect-[16/10] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
               <Image
                 src={athleteImage}
                 alt={HISTORY.alt}

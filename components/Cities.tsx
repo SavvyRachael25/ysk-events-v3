@@ -8,10 +8,15 @@ import { CITIES } from "@/lib/content";
  */
 export default function Cities() {
   return (
-    <section id="cities" className="bg-paper-2 py-24 md:py-32">
+    <section id="cities" className="bg-paper-2 py-24 md:py-36">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         {/* Section header */}
         <Reveal className="text-center">
+          <div className="mb-5 flex items-center justify-center gap-4">
+            <span className="section-no">02</span>
+            <span aria-hidden="true" className="rule-gold h-px w-8" />
+            <span className="eyebrow-quiet">The Journey</span>
+          </div>
           <h2
             className="font-display text-ink"
             style={{ fontSize: "var(--text-step-2)" }}
@@ -25,8 +30,13 @@ export default function Cities() {
           />
         </Reveal>
 
-        {/* Cards */}
-        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-0">
+        {/* Cards — joined by the journey line */}
+        <div className="relative mt-16 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-0">
+          {/* Connecting line behind the cards */}
+          <span
+            aria-hidden="true"
+            className="rule-gold absolute left-[8%] right-[8%] top-[104px] hidden md:block"
+          />
           {CITIES.map((city, i) => (
             <Reveal
               key={city.name}
@@ -44,7 +54,7 @@ export default function Cities() {
               )}
 
               <figure className="group">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-paper)]">
+                <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-paper)] transition-shadow duration-500 ease-[var(--ease-out-expo)] group-hover:shadow-[var(--shadow-lift)]">
                   <Image
                     src={city.image}
                     alt={city.alt}

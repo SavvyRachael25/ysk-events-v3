@@ -8,12 +8,16 @@ import { CONTACT_EMAIL } from "@/lib/constants";
  */
 export default function Partner() {
   return (
-    <section id="partner" className="bg-ink-2 py-24 text-paper md:py-32">
+    <section id="partner" className="bg-ink-2 py-24 text-paper md:py-36" style={{ borderTop: "1px solid var(--color-gold)" }}>
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
           {/* LEFT: pitch */}
           <Reveal className="lg:col-span-5">
-            <p className="eyebrow !text-gold-bright">{PARTNER.eyebrow}</p>
+            <div className="flex items-center gap-4">
+              <span className="section-no !text-gold-bright">04</span>
+              <span aria-hidden="true" className="h-px w-8 bg-gold-bright/50" />
+              <p className="eyebrow !text-gold-bright">{PARTNER.eyebrow}</p>
+            </div>
             <h2 className="mt-5">
               <span
                 className="block font-display text-paper"

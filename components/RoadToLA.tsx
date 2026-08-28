@@ -9,11 +9,24 @@ import splashImage from "@/public/event/ball-splash.jpg";
  */
 export default function RoadToLA() {
   return (
-    <section id="road" className="paper-grain bg-paper py-24 md:py-32">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 px-6 md:px-12 lg:grid-cols-12 lg:gap-8">
+    <section id="road" className="paper-grain relative bg-paper py-24 md:py-36">
+      {/* Ghost numeral */}
+      <span
+        aria-hidden="true"
+        className="ghost-type right-[-2%] top-10 hidden lg:block"
+        style={{ fontSize: "clamp(10rem, 22vw, 20rem)" }}
+      >
+        2028
+      </span>
+
+      <div className="relative z-10 mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 px-6 md:px-12 lg:grid-cols-12 lg:gap-8">
         {/* LEFT: copy */}
         <Reveal className="lg:col-span-6">
-          <p className="eyebrow">{QUALIFY.eyebrow}</p>
+          <div className="flex items-center gap-4">
+            <span className="section-no">01</span>
+            <span aria-hidden="true" className="rule-gold h-px w-8" />
+            <p className="eyebrow">{QUALIFY.eyebrow}</p>
+          </div>
           <h2 className="mt-5">
             <span
               className="block font-display text-ink"
@@ -65,7 +78,7 @@ export default function RoadToLA() {
 
             {/* Ball splash */}
             <Reveal delay={240} as="figure" className="col-span-3">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-paper)]">
+              <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
                 <Image
                   src={splashImage}
                   alt="Squash ball striking water in golden light"

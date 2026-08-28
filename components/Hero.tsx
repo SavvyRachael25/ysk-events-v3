@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Countdown from "./Countdown";
 import { EVENT } from "@/lib/content";
 import heroImage from "@/public/event/hero-glass-court.jpg";
 
@@ -28,7 +29,7 @@ export default function Hero() {
             <span
               className="block font-display text-ink animate-fade-up"
               style={{
-                fontSize: "var(--text-step-4)",
+                fontSize: "var(--text-step-5)",
                 textWrap: "balance",
                 animationDelay: "200ms",
               }}
@@ -38,7 +39,7 @@ export default function Hero() {
             <span
               className="block font-display text-gold animate-fade-up"
               style={{
-                fontSize: "var(--text-step-4)",
+                fontSize: "var(--text-step-5)",
                 textWrap: "balance",
                 animationDelay: "340ms",
               }}
@@ -97,10 +98,19 @@ export default function Hero() {
               {EVENT.ctaSecondary.label}
             </a>
           </div>
+
+          {/* Countdown */}
+          <div
+            className="mt-12 animate-fade-up"
+            style={{ animationDelay: "920ms" }}
+          >
+            <Countdown />
+          </div>
         </div>
 
         {/* RIGHT: glass court image */}
         <div className="relative min-h-[46vh] overflow-hidden lg:col-span-7 lg:min-h-0">
+          <div className="img-frame absolute inset-0 z-10" aria-hidden="true" />
           <div className="absolute inset-0 animate-ken-burns">
             <Image
               src={heroImage}
