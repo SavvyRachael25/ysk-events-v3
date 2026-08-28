@@ -11,7 +11,7 @@ export const NAV_SECTIONS = [
   { id: "cities", label: "Cities", href: "/#cities" },
   { id: "history", label: "History", href: "/#history" },
   { id: "gallery", label: "Gallery", href: "/gallery" },
-  { id: "partner", label: "Partner With Us", href: "/#partner" },
+  { id: "partner", label: "Sponsors", href: "/sponsors" },
 ] as const;
 
 // ——— The event ———
@@ -129,15 +129,50 @@ export const PARTNER_TIERS = [
   {
     name: "Title Partner",
     desc: "Naming rights to the qualification event, court branding, and first position across all broadcast and press coverage.",
+    includes: [
+      "Event naming rights and presenting credit",
+      "Glass-court and arena branding",
+      "First position in all press, broadcast, and digital coverage",
+      "Premium hospitality suite for the full event week",
+      "Year-round presence across YSK channels through 2028",
+    ],
   },
   {
     name: "Official Partner",
     desc: "Court-side branding, hospitality packages, and presence across the event's digital and printed program.",
+    includes: [
+      "Court-side and venue signage",
+      "Hospitality packages for finals sessions",
+      "Placement in the official event program and site",
+      "Content and social collaborations with YSK Events",
+    ],
   },
   {
     name: "Community Partner",
     desc: "Fund youth clinics and scholarship court time around the event. Every dollar is tax-deductible.",
+    includes: [
+      "Named support of youth clinics around the event",
+      "Scholarship court time and equipment funding",
+      "Recognition at community sessions and on-site",
+      "501(c)(3) tax-deductible contribution",
+    ],
   },
+] as const;
+
+// ——— Credibility: names YSK has worked with across its events ———
+export const SPONSOR_CRED = [
+  "US Squash",
+  "PSA World Tour",
+  "PRO Club",
+  "Xbox",
+  "LA28 Olympic pathway",
+] as const;
+
+export const SPONSOR_PROOF = [
+  { value: "2015", label: "First Men's World Championship ever held on U.S. soil, hosted by YSK in Bellevue" },
+  { value: "100+", label: "Professional players competed at that championship" },
+  { value: "25+", label: "Countries represented" },
+  { value: "1st", label: "Squash appears at the Olympics for the first time in LA" },
 ] as const;
 
 export const CONTACT_INTERESTS = [

@@ -44,9 +44,12 @@ export default function Partner() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
+              <a href="/sponsors" className="btn-gold">
+                View Sponsorship Packages
+              </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Road to LA Partnership Inquiry")}`}
-                className="btn-gold"
+                className="btn-outline !border-paper/30 !text-paper hover:!border-gold-bright hover:!text-gold-bright"
               >
                 Start the Conversation
               </a>

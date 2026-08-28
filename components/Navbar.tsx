@@ -101,7 +101,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="/#partner" className="btn-gold !px-5 !py-2.5">
+            <a href="/sponsors" className="btn-gold !px-5 !py-2.5">
               Partner With Us
             </a>
           </li>
