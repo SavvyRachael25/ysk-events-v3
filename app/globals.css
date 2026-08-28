@@ -30,9 +30,9 @@
   --color-on-gold: hsl(42 40% 97%);
 
   /* ——— Type stacks ——— */
-  --font-display: var(--font-playfair), "Times New Roman", Georgia, serif;
-  --font-lockup: var(--font-cormorant), "Times New Roman", Georgia, serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), "Times New Roman", Georgia, serif;
+  --font-lockup: var(--font-fraunces), "Times New Roman", Georgia, serif;
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
 
   /* ——— Fluid type scale ——— */
   --text-step-0: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
@@ -182,16 +182,18 @@ body {
 /* All-caps editorial serif headline — the voice of the site */
 @utility font-display {
   font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.005em;
-  line-height: 1.06;
+  font-weight: 620;
+  font-variation-settings: "opsz" 144, "SOFT" 40, "WONK" 0;
+  letter-spacing: 0.01em;
+  line-height: 1.04;
   text-transform: uppercase;
 }
 
 /* High-contrast serif for lockups and pull numbers */
 @utility font-lockup {
   font-family: var(--font-lockup);
-  font-weight: 500;
+  font-weight: 440;
+  font-variation-settings: "opsz" 60, "SOFT" 60, "WONK" 1;
 }
 
 /* Small caps meta label */
