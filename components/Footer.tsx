@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CONTACT_EMAIL, ORG_FOUNDED, SOCIAL } from "@/lib/constants";
 import { NAV_SECTIONS, PRESS_OUTLETS } from "@/lib/content";
 
@@ -36,20 +37,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-5">
-            <span className="inline-flex flex-col leading-none" aria-label="YSK Events">
-              <span
-                className="font-display text-paper"
-                style={{ fontSize: "1.6rem", letterSpacing: "0.12em" }}
-              >
-                YSK
-              </span>
-              <span
-                className="mt-1 text-[9px] font-semibold uppercase text-gold-bright"
-                style={{ letterSpacing: "0.42em", fontFamily: "var(--font-sans)" }}
-              >
-                Events
-              </span>
-            </span>
+            <Image
+              src="/ysk-logo.png"
+              alt="YSK Events"
+              width={1254}
+              height={1254}
+              className="h-16 w-16"
+            />
             <p className="mt-6 max-w-[380px] font-sans text-sm leading-relaxed text-paper/55">
               The final Olympic qualification event for squash. Bellevue ·
               Seattle, Washington, June 2028. Presented by YSK Events, a

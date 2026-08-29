@@ -1,30 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { NAV_SECTIONS } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
-/** Inline wordmark — editorial serif, no external image dependency */
+/** Official YSK Events emblem. Dark circle needs no extra treatment on ivory. */
 function Wordmark({ className }: { className?: string }) {
   return (
-    <span
-      className={cn("inline-flex flex-col items-start leading-none", className)}
-      aria-label="YSK Events"
-    >
-      <span
-        className="font-display text-ink"
-        style={{ fontSize: "1.35rem", letterSpacing: "0.12em" }}
-      >
-        YSK
-      </span>
-      <span
-        className="mt-[3px] text-[8px] font-semibold uppercase text-gold"
-        style={{ letterSpacing: "0.42em", fontFamily: "var(--font-sans)" }}
-      >
-        Events
-      </span>
-    </span>
+    <Image
+      src="/ysk-logo.png"
+      alt="YSK Events"
+      width={1254}
+      height={1254}
+      priority
+      className={cn("h-11 w-11 md:h-12 md:w-12", className)}
+    />
   );
 }
 
