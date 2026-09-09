@@ -66,7 +66,7 @@ export default function SponsorsPage() {
               Put your name on squash&rsquo;s{" "}
               <span className="text-gold">Olympic moment.</span>
             </h1>
-            <span aria-hidden="true" className="rule-gold mt-8 block w-14" />
+            <span aria-hidden="true" className="rule-tricolor mt-8 block w-20" />
             <p className="body-copy mt-8 max-w-[600px]">
               For the first time in history, squash is an Olympic sport. The
               last qualification event before the Los Angeles Games happens in
@@ -181,7 +181,7 @@ export default function SponsorsPage() {
 
         {/* ——— Closing CTA ——— */}
         <section
-          className="relative overflow-hidden bg-ink-2 px-6 py-24 text-paper md:px-12 md:py-32 lg:px-20"
+          className="relative overflow-hidden bg-navy-deep px-6 py-24 text-paper md:px-12 md:py-32 lg:px-20"
           style={{ borderTop: "1px solid var(--color-gold)" }}
         >
           <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-12">
@@ -216,8 +216,8 @@ export default function SponsorsPage() {
             <Reveal delay={160} as="figure" className="hidden lg:col-span-5 lg:block">
               <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
-                  src={QUALIFY.image}
-                  alt={QUALIFY.imageAlt}
+                  src="/event/mens-bellevue.jpg"
+                  alt="Ali Farag competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
                   fill
                   sizes="40vw"
                   className="object-cover"

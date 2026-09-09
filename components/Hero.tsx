@@ -64,7 +64,7 @@ export default function Hero() {
 
           <span
             aria-hidden="true"
-            className="rule-gold mt-8 w-14 animate-draw-line"
+            className="rule-tricolor mt-8 w-20 animate-draw-line"
             style={{ animationDelay: "560ms" }}
           />
 

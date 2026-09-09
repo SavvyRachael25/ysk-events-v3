@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         {/* Photo credits: required by the CC BY-SA licence on the tour photography */}
-        <p className="mt-12 max-w-[720px] font-sans text-[11px] leading-relaxed text-paper/35">
+        <p className="mt-12 max-w-[760px] rounded-lg border border-paper/15 bg-paper/[0.04] p-5 font-sans text-[12px] leading-relaxed text-paper/70">
           Photography from the 2023-24 PSA World Tour Finals in Bellevue by
           Nettrom, licensed under{" "}
           <a

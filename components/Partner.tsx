@@ -8,7 +8,7 @@ import { CONTACT_EMAIL } from "@/lib/constants";
  */
 export default function Partner() {
   return (
-    <section id="partner" className="bg-ink-2 py-24 text-paper md:py-36" style={{ borderTop: "1px solid var(--color-gold)" }}>
+    <section id="partner" className="bg-navy-deep py-24 text-paper md:py-36" style={{ borderTop: "3px solid var(--color-gold)" }}>
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
           {/* LEFT: pitch */}

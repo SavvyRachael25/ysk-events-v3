@@ -24,6 +24,12 @@
   --color-gold-bright: hsl(38 58% 58%);  /* on-dark accent, rules */
   --color-gold-wash: hsl(38 45% 88%);    /* tint fill */
 
+  /* ——— Olympic accent: USA red and blue, used sparingly against the gold.
+         Gold stays the brand. These are supporting notes, not a repalette. ——— */
+  --color-navy: hsl(220 55% 21%);
+  --color-navy-deep: hsl(220 58% 14%);
+  --color-flag-red: hsl(354 68% 44%);
+
   /* ——— Semantic ——— */
   --color-border: hsl(34 18% 82%);
   --color-border-strong: hsl(32 16% 70%);
@@ -276,6 +282,20 @@ body {
 /* ============================================================
    Rules — the thin gold hairlines that structure the page
    ============================================================ */
+
+/* Thin USA tricolor rule. Olympic energy without touching protected marks. */
+@utility rule-tricolor {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--color-navy) 0%,
+    var(--color-navy) 33.33%,
+    var(--color-paper) 33.33%,
+    var(--color-paper) 66.66%,
+    var(--color-flag-red) 66.66%,
+    var(--color-flag-red) 100%
+  );
+}
 
 @utility rule-gold {
   height: 1px;

@@ -26,7 +26,7 @@ export default function Cities() {
           </h2>
           <span
             aria-hidden="true"
-            className="rule-gold mx-auto mt-6 block w-14"
+            className="rule-tricolor mx-auto mt-6 block w-20"
           />
         </Reveal>
 
@@ -35,7 +35,7 @@ export default function Cities() {
           {/* Connecting line behind the cards */}
           <span
             aria-hidden="true"
-            className="rule-gold absolute left-[8%] right-[8%] top-[104px] hidden md:block"
+            className="rule-tricolor absolute left-[8%] right-[8%] top-[104px] hidden md:block"
           />
           {CITIES.map((city, i) => (
             <Reveal
