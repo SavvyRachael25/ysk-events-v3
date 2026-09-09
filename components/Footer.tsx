@@ -141,7 +141,9 @@ export default function Footer() {
           >
             Wikimedia Commons
           </a>
-          . Championship photography courtesy of YSK Events.
+          . Universal Studios Lot photograph by R.A. Perquin, also CC BY-SA 4.0
+          via Wikimedia Commons. Championship photography courtesy of YSK
+          Events.
         </p>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
