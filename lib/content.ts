@@ -54,6 +54,7 @@ export const NAV_SECTIONS = [
   { id: "road", label: "Road to LA", href: "/#road" },
   { id: "cities", label: "Cities", href: "/#cities" },
   { id: "history", label: "History", href: "/#history" },
+  { id: "faq", label: "FAQ", href: "/#faq" },
   { id: "gallery", label: "Gallery", href: "/gallery" },
   { id: "partner", label: "Sponsors", href: "/sponsors" },
 ] as const;

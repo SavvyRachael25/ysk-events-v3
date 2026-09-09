@@ -1,9 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
+import OlympicBand from "@/components/OlympicBand";
 import RoadToLA from "@/components/RoadToLA";
 import Cities from "@/components/Cities";
 import History from "@/components/History";
+import Faq from "@/components/Faq";
 import Partner from "@/components/Partner";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/constants";
@@ -61,9 +63,11 @@ export default function Home() {
       <main id="main" className="flex-1">
         <Hero />
         <Marquee />
+        <OlympicBand />
         <RoadToLA />
         <Cities />
         <History />
+        <Faq />
         <Partner />
       </main>
       <Footer />
