@@ -105,7 +105,7 @@ export default function SponsorsPage() {
               </dl>
             </Reveal>
             <Reveal delay={150} className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border pt-8">
-              <span className="eyebrow-quiet">YSK has worked with</span>
+              <span className="eyebrow-quiet">YSK works with</span>
               {SPONSOR_CRED.map((name) => (
                 <span
                   key={name}

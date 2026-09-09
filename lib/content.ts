@@ -67,6 +67,7 @@ export const SPONSOR_CRED = [
   "PSA World Tour",
   "PRO Club",
   "Xbox",
+  "Seattle Sports Commission",
   "LA28 Olympic pathway",
 ] as const;
 
