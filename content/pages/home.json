@@ -10,8 +10,8 @@
       "The world's best players.",
       "Olympic dreams on the line."
     ],
-    "image": "/event/hero-championship.jpg",
-    "imageAlt": "Two players competing on the all-glass show court at the 2015 Men's World Squash Championship, hosted by YSK Events in Bellevue",
+    "image": "/event/worlds-bellevue-hero.jpg",
+    "imageAlt": "World number one Hania El Hammamy competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
     "ctaPrimaryLabel": "Explore the Event",
     "ctaPrimaryHref": "#road",
     "ctaSecondaryLabel": "Partner With Us",
@@ -29,9 +29,9 @@
     "eyebrow": "June 2028 · Washington State",
     "headline": "Where the world comes to qualify",
     "headlineAccent": "for the Olympics.",
-    "body": "In 2028, squash makes its Olympic debut at the Los Angeles Games. Before it does, the world's top players will come to Washington for one last chance to earn their place. Every match matters. Every point could send a player to the Olympics, or send them home.",
-    "image": "/event/ball-in-play.jpg",
-    "imageAlt": "A squash ball in play during a match at the 2015 Men's World Squash Championship in Bellevue"
+    "body": "In 2028, squash makes its Olympic debut at the Los Angeles Games. Before it does, the world's top players will come to Washington for one last chance to earn their place. They have been here before: Bellevue hosted the PSA World Tour Finals in 2024, and the Men's World Championship in 2015. Every match matters. Every point could send a player to the Olympics, or send them home.",
+    "image": "/event/olivia-weaver-bellevue.jpg",
+    "imageAlt": "American player Olivia Weaver competing against Nele Gilis at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
   },
   "cities": [
     {
@@ -99,9 +99,14 @@
       "desc": "A $200K PSA event brings the world tour back to the Eastside."
     },
     {
-      "year": "2021–2025",
+      "year": "2021–2023",
       "title": "The Yusuf Khan Invitational era",
-      "desc": "Junior championships, PSA World Tour Finals, and the annual invitational honoring the man who brought squash to the Pacific Northwest."
+      "desc": "Junior championships and the annual invitational honoring the man who brought squash to the Pacific Northwest."
+    },
+    {
+      "year": "2024",
+      "title": "PSA World Tour Finals",
+      "desc": "The season-ending finals came to Bellevue. The top eight men and women in the world, including world number one Hania El Hammamy, competed at the Boys and Girls Club at Hidden Valley Fieldhouse."
     },
     {
       "year": "2028",

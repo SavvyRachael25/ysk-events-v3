@@ -120,7 +120,31 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
+        {/* Photo credits: required by the CC BY-SA licence on the tour photography */}
+        <p className="mt-12 max-w-[720px] font-sans text-[11px] leading-relaxed text-paper/35">
+          Photography from the 2023-24 PSA World Tour Finals in Bellevue by
+          Nettrom, licensed under{" "}
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-gold-bright"
+          >
+            CC BY-SA 4.0
+          </a>{" "}
+          via{" "}
+          <a
+            href="https://commons.wikimedia.org/wiki/Category:2023-24_PSA_World_Tour_Finals"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-gold-bright"
+          >
+            Wikimedia Commons
+          </a>
+          . Championship photography courtesy of YSK Events.
+        </p>
+
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
           <p className="font-sans text-xs text-paper/40">
             © {year} YSK Events. A 501(c)(3) nonprofit organization.
           </p>
