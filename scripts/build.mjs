@@ -14,6 +14,19 @@
  */
 
 import { spawnSync } from "node:child_process";
+import { readFileSync, existsSync } from "node:fs";
+
+// On Vercel the variables are already in the environment. Locally they live in
+// .env.local, which Next loads for itself but not for this wrapper, so read it.
+for (const file of [".env.local", ".env"]) {
+  if (!existsSync(file)) continue;
+  for (const line of readFileSync(file, "utf8").split("\n")) {
+    const match = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
+    if (match && !process.env[match[1]]) {
+      process.env[match[1]] = match[2].replace(/^["']|["']$/g, "");
+    }
+  }
+}
 
 const hasTina =
   Boolean(process.env.NEXT_PUBLIC_TINA_CLIENT_ID) &&
