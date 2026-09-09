@@ -39,7 +39,11 @@ function run(command, args) {
 
 if (hasTina) {
   console.log("Tina credentials found. Building the client editing portal.");
-  run("npx", ["tinacms", "build"]);
+  // --skip-cloud-checks: TinaCloud reindexes the schema on push, and Vercel
+  // builds can start before that finishes. Without this flag a schema
+  // change fails the deploy on a race. The site must always ship; the
+  // portal catches up once indexing completes.
+  run("npx", ["tinacms", "build", "--skip-cloud-checks"]);
 } else {
   console.log(
     "No Tina credentials. Building the site without the editing portal. " +
