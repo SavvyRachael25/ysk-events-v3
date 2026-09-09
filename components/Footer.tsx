@@ -141,7 +141,7 @@ export default function Footer() {
           >
             Wikimedia Commons
           </a>
-          . Universal Studios Lot photograph by R.A. Perquin, also CC BY-SA 4.0
+          . Universal Studios photograph by Benoît Prieur, released under CC0
           via Wikimedia Commons. Championship photography courtesy of YSK
           Events. The LA28 mark is used with permission; Los Angeles 2028 is a
           trademark of the LA28 organising committee.

@@ -1,11 +1,26 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
 export const alt =
-  "YSK Events — Raising Champions On & Off the Court. Pacific Northwest youth squash nonprofit.";
+  "The Road to LA Goes Through Washington. The final Olympic qualification event for squash, Bellevue and Seattle, June 2028. Presented by YSK Events.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+/**
+ * Social share card.
+ *
+ * Leads with the LA28 Olympic mark, used under clearance held by YSK Events.
+ * The mark is rendered unaltered on white with generous clear space and is
+ * never overlaid or recoloured. YSK is named alongside it so the card reads
+ * as YSK's event page referencing the Games, not as an LA28 property.
+ */
 export default function OgImage() {
+  const mark = readFileSync(
+    join(process.cwd(), "public/event/la28-olympic-mark.png"),
+  );
+  const markSrc = `data:image/png;base64,${mark.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -14,90 +29,76 @@ export default function OgImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "72px 80px",
-          background:
-            "radial-gradient(ellipse 80% 60% at 80% 0%, #2b241e 0%, transparent 65%), radial-gradient(ellipse 70% 70% at 0% 100%, #3a2f24 0%, transparent 65%), #1c1815",
-          color: "#f5efe6",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#ffffff",
           fontFamily: "system-ui, sans-serif",
+          position: "relative",
         }}
       >
-        <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-          <span
-            style={{
-              fontSize: 48,
-              fontWeight: 800,
-              letterSpacing: "0.04em",
-              color: "#f5efe6",
-            }}
-          >
-            YSK
-          </span>
-          <span
-            style={{
-              fontSize: 16,
-              fontWeight: 700,
-              letterSpacing: "0.32em",
-              textTransform: "uppercase",
-              color: "#c99a4b",
-            }}
-          >
-            Events
-          </span>
-        </div>
+        {/* The mark, unaltered, with clear space */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={markSrc} alt="" height={300} />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div
-            style={{
-              fontSize: 18,
-              fontWeight: 700,
-              letterSpacing: "0.28em",
-              textTransform: "uppercase",
-              color: "#c99a4b",
-            }}
-          >
-            Pacific Northwest · Youth Squash · LA28 Pathway
-          </div>
-          <div
-            style={{
-              fontSize: 96,
-              fontWeight: 800,
-              lineHeight: 0.95,
-              letterSpacing: "-0.01em",
-              textTransform: "uppercase",
-              color: "#f5efe6",
-              maxWidth: 900,
-            }}
-          >
-            Raising Champions
-          </div>
-          <div
-            style={{
-              fontSize: 56,
-              fontWeight: 400,
-              fontStyle: "italic",
-              color: "#c99a4b",
-              letterSpacing: "-0.005em",
-            }}
-          >
-            on &amp; off the court.
-          </div>
+        <div
+          style={{
+            display: "flex",
+            marginTop: 44,
+            fontSize: 40,
+            fontWeight: 700,
+            color: "#1c1815",
+            letterSpacing: "0.01em",
+            textAlign: "center",
+          }}
+        >
+          The Road to LA Goes Through Washington
         </div>
 
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            fontSize: 18,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "rgba(245, 239, 230, 0.65)",
-            fontWeight: 700,
+            marginTop: 16,
+            fontSize: 22,
+            color: "#57534e",
+            letterSpacing: "0.04em",
           }}
         >
-          <span>501(c)(3) Nonprofit · Est. 2013</span>
-          <span>yskevents.com</span>
+          The Final Olympic Qualification Event for Squash
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            marginTop: 10,
+            fontSize: 20,
+            fontWeight: 700,
+            color: "#a87a3d",
+            letterSpacing: "0.16em",
+            textTransform: "uppercase",
+          }}
+        >
+          Bellevue · Seattle · June 2028
+        </div>
+
+        {/* USA tricolor rule, then YSK attribution */}
+        <div style={{ display: "flex", marginTop: 34 }}>
+          <div style={{ width: 46, height: 4, background: "#1b2f5c" }} />
+          <div style={{ width: 46, height: 4, background: "#e9e3d6" }} />
+          <div style={{ width: 46, height: 4, background: "#bc2c3c" }} />
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            marginTop: 22,
+            fontSize: 19,
+            fontWeight: 700,
+            color: "#1c1815",
+            letterSpacing: "0.26em",
+            textTransform: "uppercase",
+          }}
+        >
+          Presented by YSK Events
         </div>
       </div>
     ),
