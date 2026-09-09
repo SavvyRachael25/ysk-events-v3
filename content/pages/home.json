@@ -15,7 +15,9 @@
     "ctaPrimaryLabel": "Explore the Event",
     "ctaPrimaryHref": "#road",
     "ctaSecondaryLabel": "Partner With Us",
-    "ctaSecondaryHref": "#partner"
+    "ctaSecondaryHref": "#partner",
+    "imageSecondary": "/event/mens-bellevue.jpg",
+    "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
   },
   "marquee": [
     "Squash Debuts at the LA Olympics",

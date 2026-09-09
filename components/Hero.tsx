@@ -106,31 +106,45 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT: glass court image */}
-        <div className="relative min-h-[46vh] overflow-hidden lg:col-span-7 lg:min-h-0">
-          <div className="img-frame absolute inset-0 z-10" aria-hidden="true" />
-          <div className="absolute inset-0 animate-ken-burns">
-            <Image
-              src={EVENT.image}
-              alt={EVENT.imageAlt}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 58vw"
-              className="object-cover"
-            />
+        {/* RIGHT: women and men, both above the fold */}
+        <div className="relative grid min-h-[46vh] grid-cols-2 overflow-hidden lg:col-span-7 lg:min-h-0">
+          <div className="img-frame pointer-events-none absolute inset-0 z-10" aria-hidden="true" />
+          <div className="relative overflow-hidden">
+            <div className="absolute inset-0 animate-ken-burns">
+              <Image
+                src={EVENT.image}
+                alt={EVENT.imageAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 50vw, 29vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="relative overflow-hidden border-l border-paper/40">
+            <div className="absolute inset-0 animate-ken-burns" style={{ animationDelay: "-9s" }}>
+              <Image
+                src={EVENT.imageSecondary}
+                alt={EVENT.imageSecondaryAlt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 50vw, 29vw"
+                className="object-cover"
+              />
+            </div>
           </div>
           {/* Ivory feather into the copy column */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 hidden lg:block"
+            className="pointer-events-none absolute inset-0 hidden lg:block"
             style={{
               background:
-                "linear-gradient(90deg, hsl(42 33% 95%) 0%, hsl(42 33% 95% / 0) 18%)",
+                "linear-gradient(90deg, hsl(42 33% 95%) 0%, hsl(42 33% 95% / 0) 14%)",
             }}
           />
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-24 lg:hidden"
+            className="pointer-events-none absolute inset-x-0 top-0 h-24 lg:hidden"
             style={{
               background:
                 "linear-gradient(180deg, hsl(42 33% 95%) 0%, hsl(42 33% 95% / 0) 100%)",

@@ -23,6 +23,8 @@ export const EVENT = {
   lines: home.hero.lines,
   image: home.hero.image,
   imageAlt: home.hero.imageAlt,
+  imageSecondary: home.hero.imageSecondary,
+  imageSecondaryAlt: home.hero.imageSecondaryAlt,
   ctaPrimary: { label: home.hero.ctaPrimaryLabel, href: home.hero.ctaPrimaryHref },
   ctaSecondary: { label: home.hero.ctaSecondaryLabel, href: home.hero.ctaSecondaryHref },
 };
