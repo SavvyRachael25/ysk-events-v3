@@ -2,8 +2,52 @@
  * YSK Events — source of truth for copy.
  * Direction: "The Road to LA" — the final Olympic qualification event
  * for squash, Bellevue–Seattle, Washington, June 2028.
- * Keeping real content centralized so components stay presentational.
+ *
+ * CLIENT-EDITABLE COPY now lives in content/pages/home.json and is edited
+ * through the portal at /admin (TinaCMS). This file re-exports it under the
+ * same names the components already use, so nothing downstream changed.
+ *
+ * Anything below the "not client-editable" divider stays in code on purpose:
+ * it is structural (nav), legal, or SEO wiring the client should not break.
  */
+
+import home from "@/content/pages/home.json";
+
+// ——— The event (editable) ———
+export const EVENT = {
+  kicker: home.hero.kicker,
+  headlineTop: home.hero.headlineTop,
+  headlineAccent: home.hero.headlineAccent,
+  location: home.hero.location,
+  date: home.hero.date,
+  lines: home.hero.lines,
+  image: home.hero.image,
+  imageAlt: home.hero.imageAlt,
+  ctaPrimary: { label: home.hero.ctaPrimaryLabel, href: home.hero.ctaPrimaryHref },
+  ctaSecondary: { label: home.hero.ctaSecondaryLabel, href: home.hero.ctaSecondaryHref },
+};
+
+export const MARQUEE_ITEMS = home.marquee;
+
+// ——— Why it matters (editable) ———
+export const QUALIFY = home.qualify;
+
+// ——— The journey: three cities (editable) ———
+export const CITIES = home.cities;
+
+// ——— History (editable) ———
+export const HISTORY = home.history;
+export const HISTORY_PROOF = home.historyProof;
+export const TIMELINE = home.timeline;
+
+// ——— Partner (editable) ———
+export const PARTNER = home.partner;
+export const PARTNER_TIERS = home.partnerTiers;
+
+/* ============================================================
+   NOT CLIENT-EDITABLE below this line.
+   Structural, legal, and SEO wiring. Change in code only.
+   ============================================================ */
 
 export const NAV_SECTIONS = [
   { id: "event", label: "The Event", href: "/#event" },
@@ -12,151 +56,6 @@ export const NAV_SECTIONS = [
   { id: "history", label: "History", href: "/#history" },
   { id: "gallery", label: "Gallery", href: "/gallery" },
   { id: "partner", label: "Sponsors", href: "/sponsors" },
-] as const;
-
-// ——— The event ———
-export const EVENT = {
-  kicker: "The Final Olympic Qualification Event for Squash",
-  headlineTop: "The Road to LA",
-  headlineAccent: "Goes Through Washington.",
-  location: "Bellevue · Seattle, Washington",
-  date: "June 2028",
-  lines: [
-    "One final opportunity.",
-    "The world's best players.",
-    "Olympic dreams on the line.",
-  ],
-  ctaPrimary: { label: "Explore the Event", href: "#road" },
-  ctaSecondary: { label: "Partner With Us", href: "#partner" },
-} as const;
-
-export const MARQUEE_ITEMS = [
-  "Squash Debuts at the LA Olympics",
-  "The Final Qualification Event",
-  "Bellevue · Seattle · June 2028",
-  "The World's Best Players",
-  "One Last Chance to Qualify",
-  "Presented by YSK Events · 501(c)(3)",
-] as const;
-
-// ——— Why it matters ———
-export const QUALIFY = {
-  eyebrow: "June 2028 · Washington State",
-  headline: "Where the world comes to qualify",
-  headlineAccent: "for the Olympics.",
-  body: "In 2028, squash makes its Olympic debut at the Los Angeles Games. Before it does, the world's top players will come to Washington for one last chance to earn their place. Every match matters. Every point could send a player to the Olympics, or send them home.",
-} as const;
-
-// ——— The journey: three cities ———
-export const CITIES = [
-  {
-    name: "Bellevue",
-    tagline: "Where the journey begins.",
-    desc: "Home of YSK Events and the 2015 Men's World Championship, the first ever held on U.S. soil.",
-    image: "/event/city-bellevue.jpg",
-    alt: "Downtown Bellevue, Washington skyline across the water",
-  },
-  {
-    name: "Seattle",
-    tagline: "Where the final Olympic places are decided.",
-    desc: "The Pacific Northwest's biggest stage hosts the last qualification event before the Games.",
-    image: "/event/city-seattle.jpg",
-    alt: "Seattle skyline at golden hour with Mount Rainier behind",
-  },
-  {
-    name: "Los Angeles",
-    tagline: "Where squash makes its Olympic debut.",
-    desc: "For the first time in history, squash is an Olympic sport. The road ends at the LA Games.",
-    image: "/event/city-la.jpg",
-    alt: "Downtown Los Angeles skyline at sunset with palm trees",
-  },
-] as const;
-
-// ——— History ———
-export const HISTORY = {
-  eyebrow: "Since 2013",
-  headline: "A history of",
-  headlineAccent: "making squash matter.",
-  body: "For more than a decade, YSK Events has helped elevate squash in the United States through community impact, major championships, and memorable event experiences. Founded by the Khan family, three generations of champions, YSK is a 501(c)(3) nonprofit rooted in the Pacific Northwest.",
-  image: "/event/athlete.jpg",
-  alt: "Squash athlete mid-swing under arena lights",
-} as const;
-
-export const HISTORY_PROOF = [
-  { value: "2015", label: "Hosted the first Men's World Championship on U.S. soil" },
-  { value: "25+", label: "Countries represented at YSK championships" },
-  { value: "7", label: "Khan family World No. 1 rankings" },
-  { value: "10K+", label: "Youth introduced to squash across Washington" },
-] as const;
-
-export const TIMELINE = [
-  {
-    year: "2014",
-    title: "World-champion exhibitions",
-    desc: "Ramy Ashour, Amr Shabana, and Grégory Gaultier headline exhibitions at PRO Club in Bellevue.",
-  },
-  {
-    year: "2015",
-    title: "Men's World Championship",
-    desc: "YSK makes history: the PSA World Championship comes to the U.S. for the first time. 100+ pros, 25+ countries, record prize money, an all-glass court at Meydenbauer Center.",
-  },
-  {
-    year: "2017",
-    title: "PMI Bellevue Squash Classic",
-    desc: "A $200K PSA event brings the world tour back to the Eastside.",
-  },
-  {
-    year: "2021–2025",
-    title: "The Yusuf Khan Invitational era",
-    desc: "Junior championships, PSA World Tour Finals, and the annual invitational honoring the man who brought squash to the Pacific Northwest.",
-  },
-  {
-    year: "2028",
-    title: "The Road to LA",
-    desc: "The final Olympic qualification event for squash comes to Washington. Then, Los Angeles.",
-  },
-] as const;
-
-// ——— Partner ———
-export const PARTNER = {
-  eyebrow: "Sponsorship & Support",
-  headline: "Be part of squash's",
-  headlineAccent: "Olympic moment.",
-  body: "The first Olympic qualification event on American soil is a once-in-a-generation platform. Partner with YSK Events to put your brand at the center of it, or support the 501(c)(3) mission that builds the next generation of American squash.",
-} as const;
-
-export const PARTNER_TIERS = [
-  {
-    name: "Title Partner",
-    desc: "Naming rights to the qualification event, court branding, and first position across all broadcast and press coverage.",
-    includes: [
-      "Event naming rights and presenting credit",
-      "Glass-court and arena branding",
-      "First position in all press, broadcast, and digital coverage",
-      "Premium hospitality suite for the full event week",
-      "Year-round presence across YSK channels through 2028",
-    ],
-  },
-  {
-    name: "Official Partner",
-    desc: "Court-side branding, hospitality packages, and presence across the event's digital and printed program.",
-    includes: [
-      "Court-side and venue signage",
-      "Hospitality packages for finals sessions",
-      "Placement in the official event program and site",
-      "Content and social collaborations with YSK Events",
-    ],
-  },
-  {
-    name: "Community Partner",
-    desc: "Fund youth clinics and scholarship court time around the event. Every dollar is tax-deductible.",
-    includes: [
-      "Named support of youth clinics around the event",
-      "Scholarship court time and equipment funding",
-      "Recognition at community sessions and on-site",
-      "501(c)(3) tax-deductible contribution",
-    ],
-  },
 ] as const;
 
 // ——— Credibility: names YSK has worked with across its events ———

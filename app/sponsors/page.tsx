@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import {
+  QUALIFY,
   PARTNER_TIERS,
   SPONSOR_CRED,
   SPONSOR_PROOF,
@@ -11,7 +12,6 @@ import {
 } from "@/lib/content";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/constants";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
-import splashImage from "@/public/event/ball-splash.jpg";
 
 export const metadata: Metadata = {
   title: "Sponsors",
@@ -216,10 +216,9 @@ export default function SponsorsPage() {
             <Reveal delay={160} as="figure" className="hidden lg:col-span-5 lg:block">
               <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg">
                 <Image
-                  src={splashImage}
-                  alt="Squash ball striking water in golden light"
+                  src={QUALIFY.image}
+                  alt={QUALIFY.imageAlt}
                   fill
-                  placeholder="blur"
                   sizes="40vw"
                   className="object-cover"
                 />

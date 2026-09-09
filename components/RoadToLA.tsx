@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import { QUALIFY } from "@/lib/content";
-import splashImage from "@/public/event/ball-splash.jpg";
 
 /**
  * "Where the world comes to qualify for the Olympics." —
@@ -80,10 +79,9 @@ export default function RoadToLA() {
             <Reveal delay={240} as="figure" className="col-span-3">
               <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
                 <Image
-                  src={splashImage}
-                  alt="Squash ball striking water in golden light"
+                  src={QUALIFY.image}
+                  alt={QUALIFY.imageAlt}
                   fill
-                  placeholder="blur"
                   sizes="(max-width: 1024px) 60vw, 32vw"
                   className="object-cover transition-transform duration-700 ease-[var(--ease-out-expo)] hover:scale-[1.04]"
                 />
