@@ -4,18 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "dev:portal": "tinacms dev -c \"next dev\""
   },
   "dependencies": {
+    "@tinacms/cli": "^2.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.8.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "tinacms": "^3.13.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

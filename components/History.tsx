@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import { HISTORY, HISTORY_PROOF, TIMELINE } from "@/lib/content";
-import athleteImage from "@/public/event/athlete.jpg";
 
 /**
  * "A history of making squash matter." — copy + proof points left,
@@ -58,10 +57,9 @@ export default function History() {
           <Reveal delay={160} as="figure" className="lg:col-span-7">
             <div className="img-frame relative aspect-[16/10] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
               <Image
-                src={athleteImage}
+                src={HISTORY.image}
                 alt={HISTORY.alt}
                 fill
-                placeholder="blur"
                 sizes="(max-width: 1024px) 100vw, 58vw"
                 className="object-cover"
               />

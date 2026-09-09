@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Countdown from "./Countdown";
 import { EVENT } from "@/lib/content";
-import heroImage from "@/public/event/hero-glass-court.jpg";
 
 /**
  * Split hero, per Shabana's mockup: editorial copy block on ivory (left),
@@ -112,11 +111,10 @@ export default function Hero() {
           <div className="img-frame absolute inset-0 z-10" aria-hidden="true" />
           <div className="absolute inset-0 animate-ken-burns">
             <Image
-              src={heroImage}
-              alt="All-glass squash show court against the Bellevue skyline"
+              src={EVENT.image}
+              alt={EVENT.imageAlt}
               fill
               priority
-              placeholder="blur"
               sizes="(max-width: 1024px) 100vw, 58vw"
               className="object-cover"
             />
