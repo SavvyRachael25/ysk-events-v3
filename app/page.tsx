@@ -42,7 +42,6 @@ const eventJsonLd = {
     { "@type": "City", name: "Bellevue", address: { "@type": "PostalAddress", addressLocality: "Bellevue", addressRegion: "WA", addressCountry: "US" } },
     { "@type": "City", name: "Seattle", address: { "@type": "PostalAddress", addressLocality: "Seattle", addressRegion: "WA", addressCountry: "US" } },
   ],
-  superEvent: { "@type": "SportsEvent", name: "Los Angeles 2028 Olympic Games", location: { "@type": "City", name: "Los Angeles" } },
   organizer: { "@id": `${SITE_URL}/#organization` },
 };
 

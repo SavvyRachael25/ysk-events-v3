@@ -19,7 +19,7 @@ export default function Countdown() {
     return () => clearInterval(id);
   }, []);
   return (
-    <div role="timer" aria-label="Days until the qualifier, June 2028" className="flex items-end gap-5 md:gap-7">
+    <div role="timer" aria-labelledby="countdown-heading" className="flex items-end gap-5 md:gap-7">
       <div className="flex flex-col items-center">
         <span className="font-lockup leading-none text-black" style={{ fontSize: "clamp(3.2rem, 7vw, 6rem)" }}>
           {days === null ? "---" : days.toLocaleString("en-US")}

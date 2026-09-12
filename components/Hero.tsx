@@ -29,7 +29,7 @@ export default function Hero() {
       <div
         aria-hidden="true"
         className="absolute inset-0"
-        style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0) 35%, rgb(0 0 0 / 0.72) 78%, rgb(0 0 0 / 0.9) 100%)" }}
+        style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0.1) 30%, rgb(0 0 0 / 0.55) 55%, rgb(0 0 0 / 0.82) 78%, rgb(0 0 0 / 0.94) 100%)" }}
       />
 
       {/* Copy */}
@@ -49,6 +49,8 @@ export default function Hero() {
           <span className="block sm:inline">{EVENT.location}</span>
           <span aria-hidden="true" className="mx-3 hidden opacity-50 sm:inline">|</span>
           <span className="block sm:inline">{EVENT.date}</span>
+          <span aria-hidden="true" className="mx-3 hidden opacity-50 sm:inline">|</span>
+          <span className="block sm:inline">Presented by YSK Events</span>
         </p>
         <p className="mt-5 max-w-[62ch] font-sans text-[15px] leading-relaxed text-white/85 animate-fade-up md:text-base" style={{ animationDelay: "500ms" }}>
           {EVENT_DEFINITION}
@@ -61,8 +63,8 @@ export default function Hero() {
             {EVENT.ctaSecondary.label}
           </a>
         </div>
-        <p className="mt-10 max-w-[34ch] font-sans text-[11px] font-700 uppercase tracking-[0.12em] text-white/60 animate-fade-up sm:max-w-none sm:tracking-[0.16em]" style={{ fontWeight: 700, animationDelay: "700ms" }}>
-          Presented by YSK Events, a 501(c)(3) nonprofit
+        <p className="mt-8 font-sans text-[11px] uppercase tracking-[0.12em] text-white/60 animate-fade-up" style={{ fontWeight: 700, animationDelay: "700ms" }}>
+          Photos: PSA World Tour Finals, Bellevue, June 2024
         </p>
       </div>
     </section>

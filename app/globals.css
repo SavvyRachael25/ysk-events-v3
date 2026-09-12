@@ -109,6 +109,9 @@ body {
 @utility animate-bounce-down { animation: bounce-down 1.8s ease-in-out infinite; }
 @utility animate-ribbon { animation: ribbon-drift 40s linear infinite; }
 
+/* Site-wide pause (see MotionToggle) */
+html.motion-paused *, html.motion-paused *::before, html.motion-paused *::after { animation-play-state: paused !important; }
+
 /* ============================================================ Reveal */
 
 @utility reveal {

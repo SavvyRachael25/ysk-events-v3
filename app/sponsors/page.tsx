@@ -213,8 +213,8 @@ export default function SponsorsPage() {
             <Reveal delay={160} as="figure" className="hidden lg:col-span-5 lg:block">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/event/mens-bellevue.jpg"
-                  alt="Ali Farag competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
+                  src="/event/glass-court-venue.jpg"
+                  alt="The all-glass show court at the 2015 Men's World Squash Championship in Bellevue, seen from the spectator side"
                   fill
                   sizes="40vw"
                   className="object-cover"

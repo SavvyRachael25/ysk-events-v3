@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionToggle from "./MotionToggle";
 import { CONTACT_EMAIL, ORG_FOUNDED, SOCIAL } from "@/lib/constants";
 import { NAV_SECTIONS, PRESS_OUTLETS } from "@/lib/content";
 
@@ -115,44 +116,41 @@ export default function Footer() {
             <p className="mt-8 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bright">
               As Seen In
             </p>
-            <p className="mt-4 max-w-[320px] font-sans text-xs leading-loose text-paper/45">
+            <p className="mt-4 max-w-[320px] font-sans text-xs leading-loose text-paper/60">
               {PRESS_OUTLETS.join(" · ")}
             </p>
           </div>
         </div>
 
-        {/* Photo credits: required by the CC BY-SA licence on the tour photography */}
-        <p className="mt-12 max-w-[760px] border border-paper/25 p-5 font-sans text-[12px] leading-relaxed text-paper/70">
-          Photography from the 2023-24 PSA World Tour Finals in Bellevue by
-          Nettrom, licensed under{" "}
-          <a
-            href="https://creativecommons.org/licenses/by-sa/4.0/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-gold-bright"
-          >
-            CC BY-SA 4.0
-          </a>{" "}
-          via{" "}
-          <a
-            href="https://commons.wikimedia.org/wiki/Category:2023-24_PSA_World_Tour_Finals"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-gold-bright"
-          >
-            Wikimedia Commons
-          </a>
-          . Universal Studios photograph by Benoît Prieur, released under CC0
-          via Wikimedia Commons. Championship photography courtesy of YSK
-          Events. The LA28 mark is used with permission; Los Angeles 2028 is a
-          trademark of the LA28 organizing committee.
-        </p>
+        {/* Rights and photo credits. Attribution is required by the CC licences;
+            the disclaimer is standard for any use of an Olympic mark under licence. */}
+        <div className="mt-12 max-w-[820px] space-y-4 border border-paper/25 p-5 font-sans text-[12px] leading-relaxed text-paper/70">
+          <p>
+            LA28 and the Olympic rings are trademarks of the LA28 Organizing Committee and the International
+            Olympic Committee, used with permission. This event is presented by YSK Events, a 501(c)(3)
+            nonprofit, and is not organized, sponsored, or endorsed by LA28, the IOC, or the USOPC.
+          </p>
+          <p>
+            Photographs of Hania El Hammamy, Ali Farag, and Olivia Weaver by Nettrom, 2023-24 PSA World Tour
+            Finals, Bellevue, via Wikimedia Commons, licensed{" "}
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC BY-SA 4.0</a>
+            {" "}(
+            <a href="https://commons.wikimedia.org/wiki/File:Hania_El_Hammamy_at_the_2023-24_PSA_World_Tour_Finals-06.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">1</a>,{" "}
+            <a href="https://commons.wikimedia.org/wiki/File:Ali_Farag_at_the_2023-24_PSA_World_Tour_Finals-01.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">2</a>,{" "}
+            <a href="https://commons.wikimedia.org/wiki/File:Nele_Gilis_and_Olivia_Weaver_at_the_2023-24_PSA_World_Tour_Finals.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">3</a>
+            ). Cropped and scaled for display; these versions are shared under the same licence. Universal Studios
+            globe by Benoît Prieur,{" "}
+            <a href="https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_globe_(July_2022).JPG" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC0</a>.
+            2015 World Championship photography copyright YSK Events.
+          </p>
+          <div className="pt-1"><MotionToggle /></div>
+        </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
-          <p className="font-sans text-xs text-paper/40">
+          <p className="font-sans text-xs text-paper/60">
             © {year} YSK Events. A 501(c)(3) nonprofit organization.
           </p>
-          <p className="font-sans text-xs text-paper/40">
+          <p className="font-sans text-xs text-paper/60">
             Built by{" "}
             <a
               href="https://www.thesavvydigitalco.com/"

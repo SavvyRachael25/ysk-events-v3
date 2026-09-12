@@ -38,15 +38,16 @@ export default function OgImage() {
       >
         {/* The mark, unaltered, with clear space */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={markSrc} alt="" height={300} />
+        <img src={markSrc} alt="" height={190} />
 
         <div
           style={{
             display: "flex",
-            marginTop: 44,
-            fontSize: 40,
-            fontWeight: 700,
-            color: "#1c1815",
+            marginTop: 40,
+            fontSize: 44,
+            fontWeight: 900,
+            color: "#000000",
+            textTransform: "uppercase",
             letterSpacing: "0.01em",
             textAlign: "center",
           }}
@@ -57,13 +58,13 @@ export default function OgImage() {
         <div
           style={{
             display: "flex",
-            marginTop: 16,
+            marginTop: 14,
             fontSize: 22,
-            color: "#57534e",
+            color: "#000000",
             letterSpacing: "0.04em",
           }}
         >
-          The Final Olympic Qualification Event for Squash
+          Presented by YSK Events
         </div>
 
         <div
@@ -71,8 +72,8 @@ export default function OgImage() {
             display: "flex",
             marginTop: 10,
             fontSize: 20,
-            fontWeight: 700,
-            color: "#a87a3d",
+            fontWeight: 800,
+            color: "#009ed6",
             letterSpacing: "0.16em",
             textTransform: "uppercase",
           }}
@@ -82,23 +83,23 @@ export default function OgImage() {
 
         {/* USA tricolor rule, then YSK attribution */}
         <div style={{ display: "flex", marginTop: 34 }}>
-          <div style={{ width: 46, height: 4, background: "#1b2f5c" }} />
-          <div style={{ width: 46, height: 4, background: "#e9e3d6" }} />
-          <div style={{ width: 46, height: 4, background: "#bc2c3c" }} />
+          <div style={{ width: 46, height: 5, background: "#009ed6" }} />
+          <div style={{ width: 46, height: 5, background: "#3adfa8" }} />
+          <div style={{ width: 46, height: 5, background: "#ff018f" }} />
         </div>
 
         <div
           style={{
             display: "flex",
             marginTop: 22,
-            fontSize: 19,
+            fontSize: 16,
             fontWeight: 700,
-            color: "#1c1815",
-            letterSpacing: "0.26em",
+            color: "#000000",
+            letterSpacing: "0.2em",
             textTransform: "uppercase",
           }}
         >
-          Presented by YSK Events
+          A 501(c)(3) nonprofit
         </div>
       </div>
     ),
