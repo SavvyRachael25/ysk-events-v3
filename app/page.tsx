@@ -65,6 +65,7 @@ export default function Home() {
         <History />
         <Faq />
         <Partner />
+        <Ribbon />
       </main>
       <Footer />
     </>

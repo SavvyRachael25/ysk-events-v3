@@ -48,13 +48,6 @@ export default function SponsorsPage() {
       <main id="main" className="flex-1">
         {/* ——— Page hero ——— */}
         <section className="paper-grain relative overflow-hidden bg-paper px-6 pt-32 pb-20 md:px-12 md:pt-44 md:pb-28 lg:px-20">
-          <span
-            aria-hidden="true"
-            className="ghost-type right-[-3%] top-16 hidden lg:block"
-            style={{ fontSize: "clamp(10rem, 20vw, 18rem)" }}
-          >
-            LA
-          </span>
           <div className="relative z-10 mx-auto max-w-[1280px]">
             <div className="flex items-center gap-4">
               <span className="section-no">Sponsorship</span>

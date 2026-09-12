@@ -9,14 +9,6 @@ import { QUALIFY } from "@/lib/content";
 export default function RoadToLA() {
   return (
     <section id="road" className="paper-grain relative bg-paper py-16 md:py-24">
-      {/* Ghost numeral */}
-      <span
-        aria-hidden="true"
-        className="ghost-type right-[-2%] top-10 hidden lg:block"
-        style={{ fontSize: "clamp(10rem, 22vw, 20rem)" }}
-      >
-        2028
-      </span>
 
       <div className="relative z-10 mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 px-6 md:px-12 lg:grid-cols-12 lg:gap-8">
         {/* LEFT: copy */}
