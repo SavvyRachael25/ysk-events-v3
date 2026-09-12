@@ -102,7 +102,7 @@ export function BlogBlocks({ blocks }: { blocks: Block[] }) {
                 </p>
                 {block.cite && (
                   <footer className="eyebrow mt-3 !text-ink-faint">
-                    — {block.cite}
+                    {block.cite}
                   </footer>
                 )}
               </blockquote>
