@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
+import Ribbon from "@/components/Ribbon";
 import {
   QUALIFY,
   PARTNER_TIERS,
@@ -85,6 +86,8 @@ export default function SponsorsPage() {
           </div>
         </section>
 
+        <Ribbon />
+
         {/* ——— Proof ——— */}
         <section className="border-y border-border bg-paper-2 px-6 py-16 md:px-12 md:py-20 lg:px-20">
           <div className="mx-auto max-w-[1280px]">
@@ -141,7 +144,7 @@ export default function SponsorsPage() {
                 <Reveal
                   key={tier.name}
                   delay={i * 140}
-                  className="group flex flex-col rounded-lg border border-border bg-paper-2 p-8 shadow-[var(--shadow-paper)] transition-all duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-1 hover:border-gold/50 hover:shadow-[var(--shadow-lift)]"
+                  className="group flex flex-col border-2 border-black bg-white p-8 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-baseline justify-between gap-4">
                     <h3
@@ -170,7 +173,7 @@ export default function SponsorsPage() {
                   </ul>
                   <a
                     href={mailto}
-                    className="link-draw mt-8 inline-flex w-fit items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-gold"
+                    className="btn-gold mt-8 w-fit"
                   >
                     Start the conversation
                   </a>
@@ -206,7 +209,7 @@ export default function SponsorsPage() {
                 of young American players.
               </p>
               <div className="mt-10">
-                <a href={mailto} className="btn-gold">
+                <a href={mailto} className="btn-light">
                   Contact {CONTACT_EMAIL}
                 </a>
               </div>
@@ -215,7 +218,7 @@ export default function SponsorsPage() {
               </p>
             </Reveal>
             <Reveal delay={160} as="figure" className="hidden lg:col-span-5 lg:block">
-              <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="/event/mens-bellevue.jpg"
                   alt="Ali Farag competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"

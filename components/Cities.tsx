@@ -8,7 +8,7 @@ import { CITIES } from "@/lib/content";
  */
 export default function Cities() {
   return (
-    <section id="cities" className="bg-paper-2 py-24 md:py-36">
+    <section id="cities" className="bg-paper-2 py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         {/* Section header */}
         <Reveal className="text-center">
@@ -32,29 +32,15 @@ export default function Cities() {
 
         {/* Cards — joined by the journey line */}
         <div className="relative mt-16 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-0">
-          {/* Connecting line behind the cards */}
-          <span
-            aria-hidden="true"
-            className="rule-tricolor absolute left-[8%] right-[8%] top-[104px] hidden md:block"
-          />
           {CITIES.map((city, i) => (
             <Reveal
               key={city.name}
               delay={i * 140}
               className="relative md:px-4"
             >
-              {/* Chevron connector (between cards, desktop only) */}
-              {i > 0 && (
-                <span
-                  aria-hidden="true"
-                  className="absolute -left-2.5 top-[92px] z-10 hidden font-lockup text-2xl text-gold md:block"
-                >
-                  ›
-                </span>
-              )}
 
               <figure className="group">
-                <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-paper)] transition-shadow duration-500 ease-[var(--ease-out-expo)] group-hover:shadow-[var(--shadow-lift)]">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={city.image}
                     alt={city.alt}
@@ -75,12 +61,6 @@ export default function Cities() {
 
                 <figcaption className="mt-6">
                   <div className="flex items-center gap-3">
-                    <span
-                      aria-hidden="true"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/60 font-lockup text-sm text-gold"
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     <h3
                       className="font-display text-ink"
                       style={{ fontSize: "1.05rem", letterSpacing: "0.14em" }}
@@ -88,7 +68,7 @@ export default function Cities() {
                       {city.name}
                     </h3>
                   </div>
-                  <p className="mt-3 font-lockup italic text-gold" style={{ fontSize: "1.05rem" }}>
+                  <p className="mt-3 font-sans text-[15px] font-bold text-black">
                     {city.tagline}
                   </p>
                   <p className="body-copy mt-2 text-sm">{city.desc}</p>

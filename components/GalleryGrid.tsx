@@ -44,7 +44,7 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
             key={img.src}
             type="button"
             onClick={() => setOpen(i)}
-            className="group relative mb-4 block w-full cursor-pointer overflow-hidden rounded-lg border border-border bg-paper-3 shadow-[var(--shadow-paper)] transition-shadow duration-500 ease-[var(--ease-out-expo)] hover:shadow-[var(--shadow-lift)]"
+            className="group relative mb-4 block w-full cursor-pointer overflow-hidden bg-paper-3"
             aria-label={`Open photo ${i + 1} of ${images.length}`}
           >
             <Image

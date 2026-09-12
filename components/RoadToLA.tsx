@@ -8,7 +8,7 @@ import { QUALIFY } from "@/lib/content";
  */
 export default function RoadToLA() {
   return (
-    <section id="road" className="paper-grain relative bg-paper py-24 md:py-36">
+    <section id="road" className="paper-grain relative bg-paper py-16 md:py-24">
       {/* Ghost numeral */}
       <span
         aria-hidden="true"
@@ -77,7 +77,7 @@ export default function RoadToLA() {
 
             {/* Ball splash */}
             <Reveal delay={240} as="figure" className="col-span-3">
-              <div className="img-frame relative aspect-[4/3] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={QUALIFY.image}
                   alt={QUALIFY.imageAlt}

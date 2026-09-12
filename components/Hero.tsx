@@ -10,7 +10,7 @@ import { EVENT_DEFINITION } from "@/lib/constants";
  */
 export default function Hero() {
   return (
-    <section id="event" className="relative min-h-[100svh] w-full overflow-hidden bg-black text-white">
+    <section id="event" className="relative min-h-[88svh] w-full overflow-hidden bg-black text-white">
       {/* Photography */}
       <div className="absolute inset-0 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
         <div className="relative overflow-hidden">
@@ -33,7 +33,7 @@ export default function Hero() {
       />
 
       {/* Copy */}
-      <div className="relative z-10 flex min-h-[100svh] flex-col justify-end px-6 pb-14 pt-32 md:px-12 md:pb-20 lg:px-20">
+      <div className="relative z-10 flex min-h-[88svh] flex-col justify-end px-6 pb-14 pt-32 md:px-12 md:pb-20 lg:px-20">
         <p className="eyebrow !text-white animate-fade-up" style={{ animationDelay: "80ms" }}>
           {EVENT.kicker}
         </p>

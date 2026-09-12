@@ -1,44 +1,51 @@
 /**
- * Fluid multicolour ribbon band, the signature divider on la28.org.
- * Drawn here as our own SVG in the LA28 colour family, so it reads as part
- * of the qualifier family without reproducing any LA28-owned artwork.
- * Drifts slowly; static under prefers-reduced-motion.
+ * Solid multicolour ribbon band, our own artwork in the LA28 colour family.
+ *
+ * Four stacked filled waves that cover the band edge to edge (no white
+ * showing through), built from a tile that is mathematically periodic so the
+ * two-tile drift loop has no seam. Drifts slowly; static under
+ * prefers-reduced-motion via the animate-ribbon utility.
  */
+const W = 1600; // tile width in viewBox units
+const H = 80;   // band height
+const K = 2;    // whole wave periods per tile, so the tile repeats seamlessly
+const COLORS = ["#009ed6", "#3fc6ea", "#3adfa8", "#ff018f"];
+const PHASES = [0, 0.9, 1.7, 2.6];
+const AMP = 11;
+
+function boundary(j: number, x: number) {
+  // inner boundaries wave; the outer two sit outside the band so it is always filled
+  if (j === 0) return -AMP * 2;
+  if (j === COLORS.length) return H + AMP * 2;
+  const base = (H / COLORS.length) * j;
+  return base + AMP * Math.sin((2 * Math.PI * K * x) / W + PHASES[j % PHASES.length]);
+}
+
+function bandPath(j: number, ox: number) {
+  const steps = 64;
+  const top: string[] = [];
+  const bot: string[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const x = (W * i) / steps;
+    top.push(`${(ox + x).toFixed(1)} ${boundary(j, x).toFixed(2)}`);
+    bot.push(`${(ox + x).toFixed(1)} ${boundary(j + 1, x).toFixed(2)}`);
+  }
+  return `M ${top[0]} L ${top.slice(1).join(" L ")} L ${bot.reverse().join(" L ")} Z`;
+}
+
 export default function Ribbon({ className = "" }: { className?: string }) {
-  const bands = [
-    { c: "#009ed6", y: 44, w: 26 },
-    { c: "#3fc6ea", y: 62, w: 20 },
-    { c: "#3adfa8", y: 80, w: 24 },
-    { c: "#ff018f", y: 100, w: 14 },
-    { c: "#009ed6", y: 116, w: 18 },
-  ];
-  // one 1600-wide tile of overlapping wave strokes, repeated twice for the drift loop
-  const tile = (ox: number) =>
-    bands.map((b, i) => (
-      <path
-        key={`${ox}-${i}`}
-        d={`M${ox - 100} ${b.y} C ${ox + 250} ${b.y - 40}, ${ox + 450} ${b.y + 40}, ${ox + 800} ${b.y} S ${ox + 1350} ${b.y - 40}, ${ox + 1700} ${b.y}`}
-        stroke={b.c}
-        strokeWidth={b.w}
-        strokeLinecap="round"
-        fill="none"
-        opacity={0.95}
-      />
-    ));
   return (
-    <div
-      aria-hidden="true"
-      className={`relative w-full overflow-hidden bg-white ${className}`}
-      style={{ height: 150 }}
-    >
+    <div aria-hidden="true" className={`relative w-full overflow-hidden bg-la-blue ${className}`} style={{ height: "clamp(56px, 6vw, 80px)" }}>
       <svg
         className="animate-ribbon absolute left-0 top-0 h-full"
         style={{ width: "200%" }}
-        viewBox="0 0 3200 150"
+        viewBox={`0 0 ${W * 2} ${H}`}
         preserveAspectRatio="none"
+        shapeRendering="geometricPrecision"
       >
-        {tile(0)}
-        {tile(1600)}
+        {[0, W].map((ox) =>
+          COLORS.map((c, j) => <path key={`${ox}-${j}`} d={bandPath(j, ox)} fill={c} />),
+        )}
       </svg>
     </div>
   );

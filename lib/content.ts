@@ -68,7 +68,6 @@ export const SPONSOR_CRED = [
   "PRO Club",
   "Xbox",
   "Seattle Sports Commission",
-  "LA28",
 ] as const;
 
 export const SPONSOR_PROOF = [

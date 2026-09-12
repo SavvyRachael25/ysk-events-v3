@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GalleryGrid from "@/components/GalleryGrid";
+import Ribbon from "@/components/Ribbon";
 import { GALLERY } from "@/lib/gallery";
 import { SITE_URL } from "@/lib/constants";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
@@ -64,8 +65,8 @@ export default function GalleryPage() {
             >
               Scenes from <span className="text-gold">the court.</span>
             </h1>
-            <span aria-hidden="true" className="rule-gold mt-7 block w-14" />
           </header>
+          <Ribbon className="mb-10" />
 
           <GalleryGrid images={GALLERY} />
         </div>

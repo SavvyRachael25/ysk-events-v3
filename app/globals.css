@@ -34,9 +34,9 @@
   --color-ink-2: var(--color-grey-8);
   --color-ink-soft: #2a2a2a;
   --color-ink-faint: #6a6a6a;
-  --color-gold: var(--color-la-blue);
-  --color-gold-deep: #007fb0;
-  --color-gold-bright: var(--color-la-cyan);
+  --color-gold: var(--color-black);
+  --color-gold-deep: var(--color-la-blue);
+  --color-gold-bright: var(--color-white);
   --color-gold-wash: #e3f5fc;
   --color-navy: var(--color-black);
   --color-navy-deep: var(--color-black);
@@ -59,14 +59,15 @@
   --text-step-5: clamp(3rem, 2rem + 4.2vw, 6rem);
 
   --radius-sm: 0px;
-  --radius-md: 2px;
-  --radius-lg: 4px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
 
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  --shadow-paper: 0 1px 2px rgb(0 0 0 / 0.06), 0 8px 24px -12px rgb(0 0 0 / 0.18);
-  --shadow-lift: 0 2px 6px rgb(0 0 0 / 0.08), 0 18px 48px -18px rgb(0 0 0 / 0.3);
+  /* LA28 is flat: no card shadows */
+  --shadow-paper: none;
+  --shadow-lift: none;
 }
 
 /* ============================================================ Base */
@@ -75,7 +76,7 @@
 
 *, *::before, *::after { border-color: var(--color-border); }
 
-html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; overflow-x: clip; }
 
 body {
   background: var(--color-white);
@@ -98,7 +99,7 @@ body {
 @keyframes marquee-roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes ken-burns { from { transform: scale(1); } to { transform: scale(1.06); } }
 @keyframes bounce-down { 0%, 100% { transform: translateY(0); opacity: 0.45; } 50% { transform: translateY(7px); opacity: 1; } }
-@keyframes ribbon-drift { from { transform: translateX(0); } to { transform: translateX(-25%); } }
+@keyframes ribbon-drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 @utility animate-fade-up { animation: fade-up 750ms var(--ease-out-expo) both; }
 @utility animate-fade-in { animation: fade-in 900ms var(--ease-out-expo) both; }
@@ -186,6 +187,17 @@ body {
   &:hover { background: var(--color-black); color: var(--color-white); transform: translateY(-2px); }
 }
 
+/* White solid, for dark sections (black on black is invisible) */
+@utility btn-light {
+  display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer;
+  background: var(--color-white); color: var(--color-black);
+  padding: 1.05rem 1.9rem; border-radius: 0;
+  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 220ms var(--ease-out-expo), color 220ms var(--ease-out-expo), transform 220ms var(--ease-out-expo);
+  &:hover { background: var(--color-la-blue); color: var(--color-white); transform: translateY(-2px); }
+}
+
 /* On-photo variant: white outline */
 @utility btn-outline-light {
   display: inline-flex; align-items: center; gap: 0.6rem; cursor: pointer;
@@ -199,22 +211,17 @@ body {
 
 /* ============================================================ Rules and details */
 
-@utility rule-gold { height: 3px; background: var(--color-black); }
+/* Hairline rules next to eyebrows are retired; LA28 uses the bold eyebrow alone */
+@utility rule-gold { display: none; }
 @utility rule-tricolor {
   height: 4px;
   background: linear-gradient(to right,
     var(--color-la-blue) 0 25%, var(--color-la-cyan) 25% 50%,
     var(--color-la-green) 50% 75%, var(--color-la-pink) 75% 100%);
 }
-@utility section-no {
-  font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 800;
-  letter-spacing: 0.1em; color: var(--color-la-blue);
-}
-@utility ghost-type {
-  position: absolute; z-index: 0; pointer-events: none; user-select: none;
-  font-family: var(--font-display); font-weight: 900; line-height: 0.8;
-  color: transparent; -webkit-text-stroke: 1px rgb(0 0 0 / 0.12);
-}
+/* Retired editorial kit: numbering and ghost numerals are not in the LA28 dialect */
+@utility section-no { display: none; }
+@utility ghost-type { display: none; }
 @utility img-frame { position: relative; }
 @utility link-draw {
   background-image: linear-gradient(var(--color-black), var(--color-black));

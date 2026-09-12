@@ -13,7 +13,7 @@ import { HOMEPAGE_FAQ } from "@/lib/content";
  */
 export default function Faq() {
   return (
-    <section id="faq" className="paper-grain bg-paper py-24 md:py-32">
+    <section id="faq" className="paper-grain bg-paper py-16 md:py-24">
       <div className="mx-auto max-w-[900px] px-6 md:px-12">
         <Reveal>
           <div className="flex items-center gap-4">

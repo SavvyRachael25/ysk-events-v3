@@ -28,6 +28,7 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 24);
+      if (window.location.pathname !== "/") { setActive(""); return; }
       let cur = "event";
       for (const s of NAV_SECTIONS) {
         const el = document.getElementById(s.id);
@@ -74,7 +75,7 @@ export default function Navbar() {
               <a
                 href={s.href}
                 className={cn(
-                  "group relative font-sans text-[10.5px] font-semibold uppercase tracking-[0.22em] transition-colors duration-300",
+                  "group relative font-sans text-[13px] font-extrabold uppercase tracking-[0.06em] transition-colors duration-300",
                   active === s.id
                     ? "text-la-cyan"
                     : "text-white/80 hover:text-white",

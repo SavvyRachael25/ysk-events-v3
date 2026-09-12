@@ -8,7 +8,7 @@ import { HISTORY, HISTORY_PROOF, TIMELINE } from "@/lib/content";
  */
 export default function History() {
   return (
-    <section id="history" className="paper-grain relative bg-paper py-24 md:py-36">
+    <section id="history" className="paper-grain relative bg-paper py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
           {/* LEFT: copy + proof */}
@@ -55,7 +55,7 @@ export default function History() {
 
           {/* RIGHT: athlete */}
           <Reveal delay={160} as="figure" className="lg:col-span-7">
-            <div className="img-frame relative aspect-[16/10] overflow-hidden rounded-lg shadow-[var(--shadow-lift)]">
+            <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={HISTORY.image}
                 alt={HISTORY.alt}
@@ -73,19 +73,19 @@ export default function History() {
             <span className="eyebrow">The road so far</span>
             <span aria-hidden="true" className="h-px flex-1 bg-border" />
           </div>
-          <ol className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+          <ol className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-6 lg:gap-5">
             {TIMELINE.map((item, i) => (
               <li key={item.year} className="relative">
                 {/* Connector rule on desktop */}
                 {i < TIMELINE.length - 1 && (
                   <span
                     aria-hidden="true"
-                    className="absolute left-0 top-[7px] hidden h-px w-full bg-border lg:block"
+                    className="absolute left-0 top-[1px] hidden h-[2px] w-full bg-black/15 lg:block"
                   />
                 )}
                 <span
                   aria-hidden="true"
-                  className="relative z-10 block h-[15px] w-[15px] rounded-full border-2 border-gold bg-paper"
+                  className="relative z-10 block h-1 w-10 bg-black"
                 />
                 <p
                   className="mt-4 font-lockup text-gold"

@@ -44,12 +44,12 @@ export default function Partner() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="/sponsors" className="btn-gold">
+              <a href="/sponsors" className="btn-light">
                 View Sponsorship Packages
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Road to LA Partnership Inquiry")}`}
-                className="btn-outline !border-paper/30 !text-paper hover:!border-gold-bright hover:!text-gold-bright"
+                className="btn-outline-light"
               >
                 Start the Conversation
               </a>
@@ -72,7 +72,7 @@ export default function Partner() {
                 <Reveal
                   key={tier.name}
                   delay={i * 130}
-                  className="group rounded-lg border border-paper/12 bg-paper/[0.04] p-7 transition-colors duration-300 hover:border-gold-bright/50 md:p-8"
+                  className="group border border-paper/20 p-7 transition-colors duration-300 hover:border-gold-bright/50 md:p-8"
                 >
                   <div className="flex items-baseline justify-between gap-4">
                     <h3
@@ -102,7 +102,7 @@ export default function Partner() {
                 ).map((interest) => (
                   <li
                     key={interest}
-                    className="rounded-full border border-paper/15 px-4 py-1.5 font-sans text-xs text-paper/60"
+                    className="border border-paper/25 px-4 py-1.5 font-sans text-xs font-bold uppercase tracking-[0.06em] text-paper/70"
                   >
                     {interest}
                   </li>

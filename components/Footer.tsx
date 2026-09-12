@@ -122,7 +122,7 @@ export default function Footer() {
         </div>
 
         {/* Photo credits: required by the CC BY-SA licence on the tour photography */}
-        <p className="mt-12 max-w-[760px] rounded-lg border border-paper/15 bg-paper/[0.04] p-5 font-sans text-[12px] leading-relaxed text-paper/70">
+        <p className="mt-12 max-w-[760px] border border-paper/25 p-5 font-sans text-[12px] leading-relaxed text-paper/70">
           Photography from the 2023-24 PSA World Tour Finals in Bellevue by
           Nettrom, licensed under{" "}
           <a
@@ -145,7 +145,7 @@ export default function Footer() {
           . Universal Studios photograph by Benoît Prieur, released under CC0
           via Wikimedia Commons. Championship photography courtesy of YSK
           Events. The LA28 mark is used with permission; Los Angeles 2028 is a
-          trademark of the LA28 organising committee.
+          trademark of the LA28 organizing committee.
         </p>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
