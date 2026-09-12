@@ -124,33 +124,33 @@
   "partnerTiers": [
     {
       "name": "Title Partner",
-      "desc": "Naming rights to the qualification event, court branding, and first position across all broadcast and press coverage.",
+      "desc": "Presenting credit, court and venue branding, and first position across every channel YSK controls.",
       "includes": [
-        "Event naming rights and presenting credit",
-        "Glass-court and arena branding",
-        "First position in all press, broadcast, and digital coverage",
-        "Premium hospitality suite for the full event week",
+        "Presenting credit, subject to sanctioning-body approval",
+        "Court-side and venue branding, subject to venue and rights-holder approval",
+        "First position across YSK-controlled signage, program, site, and social",
+        "Premium hospitality for finals sessions, format confirmed once the venue is announced",
         "Year-round presence across YSK channels through 2028"
       ]
     },
     {
       "name": "Official Partner",
-      "desc": "Court-side branding, hospitality packages, and presence across the event's digital and printed program.",
+      "desc": "Court-side presence, hospitality, and placement across the event program and site.",
       "includes": [
-        "Court-side and venue signage",
+        "Court-side and venue signage, subject to venue and rights-holder approval",
         "Hospitality packages for finals sessions",
-        "Placement in the official event program and site",
+        "Placement in the official event program and on this site",
         "Content and social collaborations with YSK Events"
       ]
     },
     {
       "name": "Community Partner",
-      "desc": "Fund youth clinics and scholarship court time around the event. Every dollar is tax-deductible.",
+      "desc": "Fund youth clinics and scholarship court time around the event. Contributions are tax-deductible to the extent allowed by law.",
       "includes": [
         "Named support of youth clinics around the event",
         "Scholarship court time and equipment funding",
-        "Recognition at community sessions and on-site",
-        "501(c)(3) tax-deductible contribution"
+        "Recognition at community sessions and on site",
+        "Tax-deductible to the extent allowed by law; consult your tax advisor"
       ]
     }
   ]
