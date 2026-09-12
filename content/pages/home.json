@@ -1,8 +1,8 @@
 {
   "hero": {
-    "kicker": "The Final Olympic Qualification Event for Squash",
-    "headlineTop": "The Road to LA",
-    "headlineAccent": "Goes Through Washington.",
+    "kicker": "Los Angeles 2028 Olympic Games · Squash",
+    "headlineTop": "The Final Olympic",
+    "headlineAccent": "Qualifier for Squash.",
     "location": "Bellevue · Seattle, Washington",
     "date": "June 2028",
     "lines": [
@@ -12,7 +12,7 @@
     ],
     "image": "/event/worlds-bellevue-hero.jpg",
     "imageAlt": "World number one Hania El Hammamy competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
-    "ctaPrimaryLabel": "Explore the Event",
+    "ctaPrimaryLabel": "Explore the Qualifier",
     "ctaPrimaryHref": "#road",
     "ctaSecondaryLabel": "Partner With Us",
     "ctaSecondaryHref": "#partner",
@@ -20,12 +20,11 @@
     "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
   },
   "marquee": [
-    "Squash Debuts at the LA Olympics",
-    "The Final Qualification Event",
+    "Squash Olympic Final Qualifier",
     "Bellevue · Seattle · June 2028",
-    "The World's Best Players",
-    "One Last Chance to Qualify",
-    "Presented by YSK Events · 501(c)(3)"
+    "The Last Places for Los Angeles 2028",
+    "World's Top Players · One Last Chance",
+    "Presented by YSK Events"
   ],
   "qualify": {
     "eyebrow": "June 2028 · Washington State",

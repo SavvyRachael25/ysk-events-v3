@@ -1,19 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, Instrument_Sans } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz", "SOFT", "WONK"],
-  display: "swap",
-});
-
-const instrument = Instrument_Sans({
-  variable: "--font-instrument",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "700", "800", "900"],
   display: "swap",
 });
 
@@ -77,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${instrument.variable} h-full antialiased`}
+      className={`${archivo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <a href="#main" className="skip-link">

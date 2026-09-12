@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import OlympicBand from "@/components/OlympicBand";
+import Ribbon from "@/components/Ribbon";
 import RoadToLA from "@/components/RoadToLA";
 import Cities from "@/components/Cities";
 import History from "@/components/History";
@@ -62,8 +63,10 @@ export default function Home() {
       <Navbar />
       <main id="main" className="flex-1">
         <Hero />
-        <Marquee />
+        <Ribbon />
         <OlympicBand />
+        <Ribbon />
+        <Marquee />
         <RoadToLA />
         <Cities />
         <History />
