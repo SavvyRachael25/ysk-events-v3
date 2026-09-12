@@ -152,7 +152,15 @@ export default function Footer() {
             © {year} YSK Events. A 501(c)(3) nonprofit organization.
           </p>
           <p className="font-sans text-xs text-paper/40">
-            The Road to LA Goes Through Washington.
+            Built by{" "}
+            <a
+              href="https://www.thesavvydigitalco.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-paper/60 underline-offset-4 transition-colors duration-300 hover:text-white hover:underline"
+            >
+              RB Collective, dba The Savvy Digital Co.
+            </a>
           </p>
         </div>
       </div>
