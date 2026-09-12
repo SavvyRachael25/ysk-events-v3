@@ -55,11 +55,11 @@ export default function Navbar() {
         className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between px-6 transition-all duration-300 ease-[var(--ease-out-expo)] md:h-[76px] md:px-10"
         style={{
           background: scrolled
-            ? "hsl(42 33% 95% / 0.92)"
-            : "linear-gradient(180deg, hsl(42 33% 95% / 0.92) 0%, hsl(42 33% 95% / 0.55) 60%, transparent 100%)",
-          backdropFilter: scrolled ? "blur(16px) saturate(1.1)" : "none",
+            ? "rgb(0 0 0 / 0.96)"
+            : "linear-gradient(180deg, rgb(0 0 0 / 0.6) 0%, rgb(0 0 0 / 0) 100%)",
+          backdropFilter: scrolled ? "blur(12px)" : "none",
           borderBottom: scrolled
-            ? "1px solid hsl(34 18% 82%)"
+            ? "1px solid rgb(255 255 255 / 0.12)"
             : "1px solid transparent",
         }}
       >
@@ -76,14 +76,14 @@ export default function Navbar() {
                 className={cn(
                   "group relative font-sans text-[10.5px] font-semibold uppercase tracking-[0.22em] transition-colors duration-300",
                   active === s.id
-                    ? "text-gold"
-                    : "text-ink-soft hover:text-ink",
+                    ? "text-la-cyan"
+                    : "text-white/80 hover:text-white",
                 )}
               >
                 {s.label}
                 <span
                   className={cn(
-                    "absolute -bottom-1.5 left-0 h-px w-full origin-left bg-gold transition-transform duration-300 ease-[var(--ease-out-expo)]",
+                    "absolute -bottom-1.5 left-0 h-px w-full origin-left bg-la-cyan transition-transform duration-300 ease-[var(--ease-out-expo)]",
                     active === s.id
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100",
@@ -93,7 +93,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="/sponsors" className="btn-gold !px-5 !py-2.5">
+            <a href="/sponsors" className="btn-gold !bg-white !px-5 !py-2.5 !text-black hover:!bg-la-blue hover:!text-white">
               Partner With Us
             </a>
           </li>
@@ -103,7 +103,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((v) => !v)}
-          className="p-2 text-ink md:hidden"
+          className="p-2 text-white md:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
@@ -116,7 +116,7 @@ export default function Navbar() {
         <div
           className="fixed inset-0 z-40 pt-16 md:hidden animate-fade-up"
           style={{
-            background: "hsl(42 33% 95% / 0.98)",
+            background: "rgb(0 0 0 / 0.98)",
             backdropFilter: "blur(20px)",
           }}
         >
@@ -128,7 +128,7 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className={cn(
                     "font-display text-2xl transition-colors duration-300",
-                    active === s.id ? "text-gold" : "text-ink hover:text-gold",
+                    active === s.id ? "text-la-cyan" : "text-white hover:text-la-cyan",
                   )}
                 >
                   {s.label}

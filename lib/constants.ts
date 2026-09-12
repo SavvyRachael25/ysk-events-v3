@@ -11,7 +11,12 @@ export const HERO_END_TIME = 80;   // seconds
 
 // ——— Organization ———
 export const ORG_NAME = "YSK Events";
-export const ORG_TAGLINE = "The Road to LA Goes Through Washington";
+export const ORG_TAGLINE = "The Final Olympic Qualifier for Squash";
+
+// One sentence, used verbatim in meta description, SportsEvent description, and on the page.
+// Keeping them identical is what lets an answer engine trust the claim.
+export const EVENT_DEFINITION =
+  "The Final Olympic Qualifier for Squash is the last qualification event before squash makes its Olympic debut at the Los Angeles 2028 Games. It is held in Bellevue and Seattle, Washington, in June 2028, and presented by YSK Events, a 501(c)(3) nonprofit.";
 export const ORG_FOUNDED = 2013;
 export const ORG_STATUS = "501(c)(3) Nonprofit";
 

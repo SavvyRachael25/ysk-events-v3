@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { EVENT } from "@/lib/content";
+import { EVENT_DEFINITION } from "@/lib/constants";
 
 /**
  * Full-bleed hero in the la28.org pattern: photography edge to edge,
@@ -48,6 +49,9 @@ export default function Hero() {
           <span className="block sm:inline">{EVENT.location}</span>
           <span aria-hidden="true" className="mx-3 hidden opacity-50 sm:inline">|</span>
           <span className="block sm:inline">{EVENT.date}</span>
+        </p>
+        <p className="mt-5 max-w-[62ch] font-sans text-[15px] leading-relaxed text-white/85 animate-fade-up md:text-base" style={{ animationDelay: "500ms" }}>
+          {EVENT_DEFINITION}
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-4 animate-fade-up" style={{ animationDelay: "560ms" }}>
           <a href={EVENT.ctaPrimary.href} className="btn-gold !bg-white !text-black hover:!bg-la-blue hover:!text-white">

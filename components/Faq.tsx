@@ -17,15 +17,15 @@ export default function Faq() {
       <div className="mx-auto max-w-[900px] px-6 md:px-12">
         <Reveal>
           <div className="flex items-center gap-4">
-            <span className="section-no">05</span>
+            <span className="section-no">04</span>
             <span aria-hidden="true" className="rule-tricolor h-[3px] w-12" />
-            <p className="eyebrow">Common questions</p>
+            <p className="eyebrow">The qualifier, explained</p>
           </div>
           <h2
             className="mt-5 font-display text-ink"
             style={{ fontSize: "var(--text-step-3)" }}
           >
-            Everything people ask <span className="text-gold">about YSK.</span>
+            Questions about <span className="text-gold">the qualifier.</span>
           </h2>
         </Reveal>
 

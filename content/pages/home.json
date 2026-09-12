@@ -20,7 +20,7 @@
     "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
   },
   "marquee": [
-    "Squash Olympic Final Qualifier",
+    "Final Olympic Qualification Event · Squash",
     "Bellevue · Seattle · June 2028",
     "The Last Places for Los Angeles 2028",
     "World's Top Players · One Last Chance",
@@ -37,15 +37,15 @@
   "cities": [
     {
       "name": "Bellevue",
-      "tagline": "Where the journey begins.",
-      "desc": "Home of YSK Events and the 2015 Men's World Championship, the first ever held on U.S. soil.",
+      "tagline": "Where the world has played before.",
+      "desc": "Host of the 2015 Men's World Championship, the first ever on U.S. soil, and the 2024 PSA World Tour Finals.",
       "image": "/event/city-bellevue.jpg",
       "alt": "Downtown Bellevue, Washington skyline across the water"
     },
     {
       "name": "Seattle",
-      "tagline": "Where the final Olympic places are decided.",
-      "desc": "The Pacific Northwest's biggest stage hosts the last qualification event before the Games.",
+      "tagline": "Shares the final qualifier with Bellevue.",
+      "desc": "Bellevue and Seattle share the last qualification event before the Games. Venue to be announced.",
       "image": "/event/city-seattle.jpg",
       "alt": "Seattle skyline at golden hour with Mount Rainier behind"
     },
@@ -58,10 +58,10 @@
     }
   ],
   "history": {
-    "eyebrow": "Since 2013",
-    "headline": "A history of",
-    "headlineAccent": "making squash matter.",
-    "body": "For more than a decade, YSK Events has helped elevate squash in the United States through community impact, major championships, and memorable event experiences. Founded by the Khan family, three generations of champions, YSK is a 501(c)(3) nonprofit rooted in the Pacific Northwest.",
+    "eyebrow": "Host record",
+    "headline": "The world has",
+    "headlineAccent": "played here before.",
+    "body": "Twice. In 2015, YSK Events brought the Men's World Squash Championship to Meydenbauer Center in Bellevue, the first ever on U.S. soil: 100+ professionals, 25+ countries. In June 2024, the PSA World Tour Finals came to Bellevue with the top eight men and women in the world. YSK is a 501(c)(3) founded by the Khan family, holders of seven World No. 1 rankings.",
     "image": "/event/trophy-lift.jpg",
     "alt": "The champion lifting the trophy at the 2015 Men's World Squash Championship, the first ever held on U.S. soil"
   },
@@ -79,8 +79,8 @@
       "label": "Khan family World No. 1 rankings"
     },
     {
-      "value": "10K+",
-      "label": "Youth introduced to squash across Washington"
+      "value": "8",
+      "label": "Top-ranked men and women who played the 2024 PSA World Tour Finals in Bellevue"
     }
   ],
   "timeline": [
@@ -100,7 +100,7 @@
       "desc": "A $200K PSA event brings the world tour back to the Eastside."
     },
     {
-      "year": "2021–2023",
+      "year": "2021 to 2023",
       "title": "The Yusuf Khan Invitational era",
       "desc": "Junior championships and the annual invitational honoring the man who brought squash to the Pacific Northwest."
     },
@@ -119,7 +119,7 @@
     "eyebrow": "Sponsorship & Support",
     "headline": "Be part of squash's",
     "headlineAccent": "Olympic moment.",
-    "body": "The first Olympic qualification event on American soil is a once-in-a-generation platform. Partner with YSK Events to put your brand at the center of it, or support the 501(c)(3) mission that builds the next generation of American squash."
+    "body": "Squash has never been an Olympic sport. In June 2028 the last places for Los Angeles are decided in Washington, with the world's top players on the court. Put your brand beside them, or fund the youth programs that run alongside the event through a 501(c)(3) contribution."
   },
   "partnerTiers": [
     {

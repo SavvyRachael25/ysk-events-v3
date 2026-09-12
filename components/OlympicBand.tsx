@@ -26,9 +26,9 @@ export default function OlympicBand() {
           />
         </div>
         <div className="flex flex-col items-center lg:items-end">
-          <h2 id="countdown-heading" className="eyebrow mb-3 text-center lg:text-right">
-            Squash Olympic Final Qualifier in
-          </h2>
+          <p id="countdown-heading" className="eyebrow mb-3 text-center lg:text-right">
+            The last Olympic places for squash are decided in
+          </p>
           <Countdown />
         </div>
       </div>

@@ -26,17 +26,17 @@ export const organizationJsonLd = {
   name: ORG_NAME,
   alternateName: "YSK",
   url: SITE_URL,
-  logo: `${SITE_URL}/icon`,
+  logo: `${SITE_URL}/ysk-logo.png`,
   image: `${SITE_URL}/opengraph-image`,
   description:
-    "501(c)(3) nonprofit building futures through squash in the Pacific Northwest. Youth development, competitive training, and the LA28 Olympic pathway — based out of PRO Club Bellevue.",
+    "501(c)(3) nonprofit and presenter of the Final Olympic Qualifier for Squash, June 2028, Bellevue and Seattle, Washington. Host of the 2015 Men's World Squash Championship, the first on U.S. soil, and the 2024 PSA World Tour Finals in Bellevue. Runs youth squash programs at PRO Club Bellevue.",
   foundingDate: String(ORG_FOUNDED),
   founder: {
     "@type": "Person",
     name: "Shabana Khan",
     jobTitle: "Founder & CEO",
   },
-  nonprofitStatus: "501(c)(3)",
+  nonprofitStatus: "https://schema.org/Nonprofit501c3",
   sport: "Squash",
   areaServed: [
     { "@type": "AdministrativeArea", name: "Pacific Northwest" },
@@ -64,7 +64,7 @@ export const venueJsonLd = {
   "@id": VENUE_ID,
   name: `${ORG_NAME} at ${VENUE.name}`,
   description:
-    "Training home of YSK Events youth squash programs, led by world-class Khan family coaches.",
+    "Home base of YSK Events in Bellevue, Washington, and the training venue for its youth squash programs. The venue for the June 2028 Olympic qualifier will be announced separately.",
   url: SITE_URL,
   address: venueAddress,
   geo: {

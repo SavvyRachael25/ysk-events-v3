@@ -3,7 +3,8 @@ import { BLOG_POSTS } from "@/lib/blog";
 import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Real dates, not build time. Update when the page copy actually changes.
+  const now = new Date("2026-09-12");
 
   const core: MetadataRoute.Sitemap = [
     {

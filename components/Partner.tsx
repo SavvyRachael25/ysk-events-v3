@@ -14,7 +14,7 @@ export default function Partner() {
           {/* LEFT: pitch */}
           <Reveal className="lg:col-span-5">
             <div className="flex items-center gap-4">
-              <span className="section-no !text-gold-bright">04</span>
+              <span className="section-no !text-gold-bright">05</span>
               <span aria-hidden="true" className="h-px w-8 bg-gold-bright/50" />
               <p className="eyebrow !text-gold-bright">{PARTNER.eyebrow}</p>
             </div>

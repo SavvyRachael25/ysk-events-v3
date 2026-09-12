@@ -9,13 +9,12 @@ import History from "@/components/History";
 import Faq from "@/components/Faq";
 import Partner from "@/components/Partner";
 import Footer from "@/components/Footer";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, EVENT_DEFINITION } from "@/lib/constants";
 import { HOMEPAGE_FAQ } from "@/lib/content";
 import {
   breadcrumbJsonLd,
   faqJsonLd,
   jsonLdScriptProps,
-  organizationJsonLd,
   venueJsonLd,
 } from "@/lib/seo";
 
@@ -28,34 +27,28 @@ const homeFaq = faqJsonLd(HOMEPAGE_FAQ);
 const eventJsonLd = {
   "@context": "https://schema.org",
   "@type": "SportsEvent",
-  name: "The Road to LA: Final Olympic Qualification Event for Squash",
-  description:
-    "The final Olympic qualification event for squash. The world's top players come to Bellevue and Seattle, Washington in June 2028 for one last chance to earn their place at the Los Angeles Olympic Games.",
+  "@id": `${SITE_URL}/#event`,
+  name: "The Final Olympic Qualifier for Squash",
+  alternateName: "Squash Olympic Final Qualification Event, Los Angeles 2028",
+  description: EVENT_DEFINITION,
+  url: SITE_URL,
+  image: `${SITE_URL}/opengraph-image`,
   startDate: "2028-06",
   sport: "Squash",
   eventStatus: "https://schema.org/EventScheduled",
-  location: {
-    "@type": "Place",
-    name: "Bellevue and Seattle, Washington",
-    address: {
-      "@type": "PostalAddress",
-      addressRegion: "WA",
-      addressCountry: "US",
-    },
-  },
-  organizer: {
-    "@type": "NGO",
-    name: "YSK Events",
-    url: SITE_URL,
-    nonprofitStatus: "501(c)(3)",
-    foundingDate: "2013",
-  },
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  // Venue not yet announced: locate at city level, never invent a venue.
+  location: [
+    { "@type": "City", name: "Bellevue", address: { "@type": "PostalAddress", addressLocality: "Bellevue", addressRegion: "WA", addressCountry: "US" } },
+    { "@type": "City", name: "Seattle", address: { "@type": "PostalAddress", addressLocality: "Seattle", addressRegion: "WA", addressCountry: "US" } },
+  ],
+  superEvent: { "@type": "SportsEvent", name: "Los Angeles 2028 Olympic Games", location: { "@type": "City", name: "Los Angeles" } },
+  organizer: { "@id": `${SITE_URL}/#organization` },
 };
 
 export default function Home() {
   return (
     <>
-      <script {...jsonLdScriptProps(organizationJsonLd)} />
       <script {...jsonLdScriptProps(venueJsonLd)} />
       <script {...jsonLdScriptProps(homeBreadcrumbs)} />
       <script {...jsonLdScriptProps(homeFaq)} />

@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
 export const alt =
-  "The Road to LA Goes Through Washington. The final Olympic qualification event for squash, Bellevue and Seattle, June 2028. Presented by YSK Events.";
+  "The Final Olympic Qualifier for Squash. Bellevue and Seattle, Washington, June 2028. Presented by YSK Events.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -51,7 +51,7 @@ export default function OgImage() {
             textAlign: "center",
           }}
         >
-          The Road to LA Goes Through Washington
+          The Final Olympic Qualifier for Squash
         </div>
 
         <div

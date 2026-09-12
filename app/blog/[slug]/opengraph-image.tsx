@@ -105,7 +105,7 @@ export default async function OgImage({
             fontWeight: 700,
           }}
         >
-          <span>Pacific Northwest · Youth Squash · LA28 Pathway</span>
+          <span>Bellevue · Seattle · Olympic Qualifier June 2028</span>
           <span>yskevents.com/blog</span>
         </div>
       </div>

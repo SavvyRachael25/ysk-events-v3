@@ -24,6 +24,7 @@ export const metadata: Metadata = {
       "Put your brand at the center of squash's first Olympic moment. Bellevue and Seattle, June 2028.",
     url: "/sponsors",
     type: "website",
+    images: ["/opengraph-image"],
   },
 };
 

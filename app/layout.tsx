@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
+import { EVENT_DEFINITION } from "@/lib/constants";
+import { jsonLdScriptProps, organizationJsonLd } from "@/lib/seo";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -15,11 +17,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "YSK Events — The Road to LA Goes Through Washington | Olympic Squash Qualification",
+      "The Final Olympic Qualifier for Squash | Bellevue and Seattle, June 2028 | YSK Events",
     template: "%s · YSK Events",
   },
-  description:
-    "The final Olympic qualification event for squash. In June 2028, the world's top players come to Bellevue–Seattle, Washington for one last chance to earn their place at the Los Angeles Olympic Games. Presented by YSK Events, a 501(c)(3) nonprofit.",
+  description: EVENT_DEFINITION,
   keywords: [
     "Olympic squash",
     "LA28 squash",
@@ -27,7 +28,8 @@ export const metadata: Metadata = {
     "Bellevue squash event",
     "Seattle squash",
     "YSK Events",
-    "Road to LA",
+    "Olympic squash qualifier",
+    "squash LA28 qualifier",
   ],
   authors: [{ name: "YSK Events" }],
   creator: "YSK Events",
@@ -35,16 +37,16 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: "YSK Events",
-    title: "The Road to LA Goes Through Washington",
-    description:
-      "The final Olympic qualification event for squash. Bellevue–Seattle, Washington. June 2028.",
+    title: "The Final Olympic Qualifier for Squash | Bellevue and Seattle, June 2028",
+    description: EVENT_DEFINITION,
+    images: ["/opengraph-image"],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Road to LA Goes Through Washington",
-    description:
-      "The final Olympic qualification event for squash. Bellevue–Seattle, Washington. June 2028.",
+    title: "The Final Olympic Qualifier for Squash | Bellevue and Seattle, June 2028",
+    description: EVENT_DEFINITION,
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: SITE_URL,
@@ -72,6 +74,7 @@ export default function RootLayout({
       className={`${archivo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <script {...jsonLdScriptProps(organizationJsonLd)} />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

@@ -15,7 +15,7 @@ export default function Cities() {
           <div className="mb-5 flex items-center justify-center gap-4">
             <span className="section-no">02</span>
             <span aria-hidden="true" className="rule-gold h-px w-8" />
-            <span className="eyebrow-quiet">The Journey</span>
+            <span className="eyebrow-quiet">The road</span>
           </div>
           <h2
             className="font-display text-ink"

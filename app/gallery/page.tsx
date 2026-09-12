@@ -17,6 +17,7 @@ export const metadata: Metadata = {
       "Photos from YSK Events squash championships and community events in the Pacific Northwest.",
     url: "/gallery",
     type: "website",
+    images: ["/opengraph-image"],
   },
 };
 

@@ -68,7 +68,7 @@ export const SPONSOR_CRED = [
   "PRO Club",
   "Xbox",
   "Seattle Sports Commission",
-  "LA28 Olympic pathway",
+  "LA28",
 ] as const;
 
 export const SPONSOR_PROOF = [
@@ -96,36 +96,56 @@ export const PRESS_OUTLETS = [
   "US Squash",
 ] as const;
 
-// ——— Homepage FAQ (SEO/AEO structured data) ———
+// ——— Homepage FAQ: questions about the qualifier, for sponsors, officials, and press ———
+// Only supported facts. Where YSK has not confirmed a figure, the answer says so.
 export const HOMEPAGE_FAQ = [
+  {
+    question: "What is the Final Olympic Qualifier for Squash?",
+    answer:
+      "The last qualification event before squash makes its Olympic debut at the Los Angeles 2028 Games. It takes place in Bellevue and Seattle, Washington, in June 2028. Players who have not yet secured a place at LA28 compete here for the final spots.",
+  },
+  {
+    question: "When and where is it held?",
+    answer:
+      "June 2028, in Bellevue and Seattle, Washington. The venue and match schedule will be announced. The Olympic squash competition itself follows in Los Angeles at the Comcast Squash Center at Universal Studios.",
+  },
+  {
+    question: "Who hosts the qualifier?",
+    answer:
+      "YSK Events, a 501(c)(3) nonprofit based in Bellevue and founded by the Khan family, which holds seven World No. 1 rankings across its members. YSK hosted the 2015 Men's World Squash Championship at Meydenbauer Center, the first ever on U.S. soil, with more than 100 professionals from more than 25 countries. In June 2024, Bellevue hosted the PSA World Tour Finals, the top eight men and women in the world.",
+  },
+  {
+    question: "Why is squash at the Olympics for the first time?",
+    answer:
+      "Squash was added to the Olympic programme for Los Angeles 2028. It has never been contested at a Summer Games before, which makes the 2028 qualification cycle the first of its kind and this event the last stop on the way to it.",
+  },
+  {
+    question: "How do sponsors and partners get involved?",
+    answer:
+      "Three partnership levels are open: Title, Official, and Community. Details are on the Sponsors page. To start a conversation or request the sponsorship deck, email hello@yskevents.com.",
+  },
+  {
+    question: "How do press and public partners reach the organizers?",
+    answer:
+      "Email hello@yskevents.com. For media, use the subject line Press. For city, county, or state partnership, use the subject line Public Partnership. YSK Events is a registered 501(c)(3); governance and financial documents are available on request.",
+  },
+] as const;
+
+// ——— Youth program FAQ: moved off the home page, shown to Community Partner prospects ———
+export const YOUTH_FAQ = [
   {
     question: "Where does YSK Events train youth squash players?",
     answer:
-      "YSK Events programs are based at PRO Club Bellevue (4455 148th Ave NE, Bellevue, WA), where Head Coach Azam Khan directs a world-class squash program. We also partner with Title I schools across the Bellevue–Seattle corridor for community access clinics.",
+      "YSK Events programs are based at PRO Club Bellevue (4455 148th Ave NE, Bellevue, WA), where Head Coach Azam Khan directs the squash program. YSK also partners with Title I schools across the Bellevue to Seattle corridor for community access clinics.",
   },
   {
-    question: "Who runs YSK Events?",
+    question: "Are the youth programs free for scholarship athletes?",
     answer:
-      "YSK Events was founded in 2013 by national champion Shabana Khan. The Khan family has produced seven World No. 1–ranked players across three generations, beginning with patriarch Yusuf Khan, who brought squash to Seattle in 1968. The full coaching and leadership team is led by Shabana Khan (Founder & CEO), Murad Khan (President), Azam Khan (Head Coach), and Latasha Khan (Director and 2024 US Squash Hall of Fame inductee).",
-  },
-  {
-    question: "Is YSK Events a registered nonprofit?",
-    answer:
-      "Yes. YSK Events is a 501(c)(3) tax-exempt nonprofit. All donations are tax-deductible, and 100% of program funding goes directly to youth — coaching, court time, equipment, academic support, and tournament travel.",
-  },
-  {
-    question: "Are the youth programs really free for scholarship athletes?",
-    answer:
-      "Yes. No child is turned away for inability to pay. Through scholarship-funded court time, donated equipment, and partnerships with Title I schools, the cost for a scholarship athlete is $0 — that includes coaching, gear, and competitive play.",
+      "Yes. No child is turned away for inability to pay. Through scholarship-funded court time, donated equipment, and partnerships with Title I schools, the cost for a scholarship athlete is $0. That includes coaching, gear, and competitive play.",
   },
   {
     question: "How does YSK Events connect to the LA28 Olympic Games?",
     answer:
-      "Squash makes its Olympic debut at the Los Angeles 2028 Games. YSK Events runs the LA28 Pathway program (launching 2027) to identify and develop Pacific Northwest junior players with Olympic potential, in alignment with US Squash sanctioning.",
-  },
-  {
-    question: "How can I support YSK Events?",
-    answer:
-      "Three ways: make a tax-deductible donation, sponsor a scholarship athlete or tournament season, or partner as a corporation or foundation. Contact hello@yskevents.com to discuss naming rights, multi-year sponsorships, or grant partnerships.",
+      "Beyond hosting the final qualifier, YSK Events runs the LA28 Pathway program (launching 2027) to identify and develop Pacific Northwest junior players with Olympic potential, in alignment with US Squash sanctioning.",
   },
 ] as const;

@@ -7,16 +7,17 @@ import { SITE_URL } from "@/lib/constants";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Blog — Youth Squash, the Khan Family, and the LA28 Pathway",
+  title: "Blog: Olympic Squash, the Khan Family, and the Road to LA28",
   description:
-    "Long-form writing from YSK Events on Pacific Northwest youth squash, the LA28 Olympic pathway, and the Khan family legacy that built American squash from Bellevue.",
+    "Writing from YSK Events, presenter of the Final Olympic Qualifier for Squash in June 2028, on Olympic squash, the LA28 pathway, and the Khan family legacy that built American squash from Bellevue.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "YSK Events Blog",
     description:
-      "Long-form writing on Pacific Northwest youth squash, the LA28 Olympic pathway, and the Khan family legacy.",
+      "Olympic squash, the LA28 pathway, and the Khan family legacy, from the presenter of the June 2028 Olympic qualifier.",
     url: "/blog",
     type: "website",
+    images: ["/opengraph-image"],
   },
 };
 

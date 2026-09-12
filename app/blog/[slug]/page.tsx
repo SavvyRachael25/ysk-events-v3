@@ -226,11 +226,11 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                   style={{ fontSize: "var(--text-step-1)" }}
                 >
                   Whether you&rsquo;re a parent, sponsor, or just curious about
-                  the road to LA28 — we want to hear from you.
+                  the road to LA28, we want to hear from you.
                 </p>
                 <div className="flex flex-wrap items-center gap-4">
                   <a
-                    href={`mailto:${CONTACT_EMAIL}?subject=I%20read%20your%20blog%20—%20want%20to%20connect`}
+                    href={`mailto:${CONTACT_EMAIL}?subject=I%20read%20your%20blog%20and%20want%20to%20connect`}
                     className="group inline-flex items-center gap-2 rounded-md bg-gold px-7 py-3.5 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-on-gold transition-all duration-300 ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]"
                   >
                     Email YSK Events
@@ -242,10 +242,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                     </span>
                   </a>
                   <Link
-                    href="/#programs"
+                    href="/sponsors"
                     className="group inline-flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-ink/80 transition-colors duration-300 hover:text-gold"
                   >
-                    Explore programs
+                    Partner with the qualifier
                     <span
                       aria-hidden="true"
                       className="transition-transform duration-300 ease-[var(--ease-spring)] group-hover:translate-x-1"
