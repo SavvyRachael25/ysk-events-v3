@@ -10,51 +10,62 @@ import { EVENT_DEFINITION } from "@/lib/constants";
  */
 export default function Hero() {
   return (
-    <section id="event" className="relative min-h-[88svh] w-full overflow-hidden bg-black text-white">
-      {/* Photography */}
-      <div className="absolute inset-0 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1">
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 animate-ken-burns">
-            <Image src={EVENT.image} alt={EVENT.imageAlt} fill priority sizes="50vw" className="object-cover" />
-          </div>
-        </div>
-        <div className="relative overflow-hidden border-t-2 border-white/60 lg:border-l-2 lg:border-t-0">
-          <div className="absolute inset-0 animate-ken-burns" style={{ animationDelay: "-9s" }}>
-            <Image src={EVENT.imageSecondary} alt={EVENT.imageSecondaryAlt} fill priority sizes="50vw" className="object-cover" />
-          </div>
-        </div>
-      </div>
-
-      {/* Scrim: photo stays vivid up top, type stays legible at the bottom */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0.1) 30%, rgb(0 0 0 / 0.55) 55%, rgb(0 0 0 / 0.82) 78%, rgb(0 0 0 / 0.94) 100%)" }}
-      />
-
+    <section id="event" className="relative w-full overflow-hidden bg-black text-white lg:min-h-[88svh]">
       {/* LA28 emblem, the way la28.org places it: a white tab at the top-left of
           the hero. The white field gives the mark its clear space; it is never
           set directly on the photo, never resized out of proportion, and never
-          combined with another logo in the same tab. Requested by John, 2026-09-14. */}
+          combined with another logo in the same tab. On phones the tab becomes
+          a full-width white strip under the nav so it never covers a player.
+          Requested by John, 2026-09-14. */}
       <a
         href="https://la28.org"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Los Angeles 2028 Olympic Games"
-        className="absolute left-0 top-16 z-20 block rounded-br-3xl bg-white px-6 py-5 md:top-[76px] md:px-8 md:py-6"
+        className="relative z-20 mt-16 block w-full bg-white px-6 py-4 md:mt-[76px] lg:absolute lg:left-0 lg:top-[76px] lg:mt-0 lg:w-auto lg:rounded-br-3xl lg:px-8 lg:py-6"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/event/la28-olympic-mark.png"
           alt="LA28 emblem with the Olympic rings"
-          className="h-[88px] w-auto md:h-[120px]"
-          width={378}
-          height={549}
+          className="h-[72px] w-auto lg:h-[120px]"
+          width={639}
+          height={936}
         />
       </a>
 
+      {/* Photography. Below lg the two players sit side by side in a fixed
+          band at the top and the copy runs beneath on black, so both athletes
+          are visible on a phone without the headline covering either of them.
+          At lg and up the diptych goes full bleed behind the copy. */}
+      <div className="relative grid h-[50svh] min-h-[340px] grid-cols-2 lg:absolute lg:inset-0 lg:h-auto lg:min-h-0">
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 animate-ken-burns">
+            <Image src={EVENT.image} alt={EVENT.imageAlt} fill priority sizes="50vw" className="object-cover object-[60%_center]" />
+          </div>
+        </div>
+        <div className="relative overflow-hidden border-l-2 border-white/60">
+          <div className="absolute inset-0 animate-ken-burns" style={{ animationDelay: "-9s" }}>
+            <Image src={EVENT.imageSecondary} alt={EVENT.imageSecondaryAlt} fill priority sizes="50vw" className="object-cover object-[45%_center]" />
+          </div>
+        </div>
+
+        {/* Scrim. On phones it only feathers the band into the black copy area
+            below; on desktop it carries the type at the bottom of the frame. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 lg:hidden"
+          style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.35) 0%, rgb(0 0 0 / 0) 26%, rgb(0 0 0 / 0) 72%, rgb(0 0 0 / 0.9) 100%)" }}
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden lg:block"
+          style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0.1) 30%, rgb(0 0 0 / 0.55) 55%, rgb(0 0 0 / 0.82) 78%, rgb(0 0 0 / 0.94) 100%)" }}
+        />
+      </div>
+
       {/* Copy */}
-      <div className="relative z-10 flex min-h-[88svh] flex-col justify-end px-6 pb-14 pt-[232px] md:px-12 md:pb-20 md:pt-[300px] lg:px-20">
+      <div className="relative z-10 flex flex-col px-6 pb-14 pt-10 md:px-12 md:pb-20 md:pt-12 lg:min-h-[88svh] lg:justify-end lg:px-20 lg:pt-[300px]">
         <p className="eyebrow !text-white animate-fade-up" style={{ animationDelay: "80ms" }}>
           {EVENT.kicker}
         </p>
