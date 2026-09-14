@@ -43,7 +43,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setMenuOpen(false);
+      if (window.innerWidth >= 1024) setMenuOpen(false);
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -69,13 +69,13 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-7 lg:flex">
           {NAV_SECTIONS.filter((s) => s.id !== "partner").map((s) => (
             <li key={s.id}>
               <a
                 href={s.href}
                 className={cn(
-                  "group relative font-sans text-[13px] font-extrabold uppercase tracking-[0.06em] transition-colors duration-300",
+                  "group relative whitespace-nowrap font-sans text-[13px] font-extrabold uppercase tracking-[0.06em] transition-colors duration-300",
                   active === s.id
                     ? "text-la-cyan"
                     : "text-white/80 hover:text-white",
@@ -94,7 +94,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="/sponsors" className="btn-gold !bg-white !px-5 !py-2.5 !text-black hover:!bg-la-blue hover:!text-white">
+            <a href="/sponsors" className="btn-gold whitespace-nowrap !bg-white !px-5 !py-2.5 !text-black hover:!bg-la-blue hover:!text-white">
               Partner With Us
             </a>
           </li>
@@ -104,7 +104,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((v) => !v)}
-          className="p-2 text-white md:hidden"
+          className="p-2 text-white lg:hidden"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
@@ -115,7 +115,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-40 pt-16 md:hidden animate-fade-up"
+          className="fixed inset-0 z-40 pt-16 md:pt-[76px] lg:hidden animate-fade-up"
           style={{
             background: "rgb(0 0 0 / 0.98)",
             backdropFilter: "blur(20px)",

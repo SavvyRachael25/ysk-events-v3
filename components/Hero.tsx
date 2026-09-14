@@ -12,27 +12,45 @@ export default function Hero() {
   return (
     <section id="event" className="relative w-full overflow-hidden bg-black text-white lg:min-h-[88svh]">
       {/* LA28 emblem, the way la28.org places it: a white tab at the top-left of
-          the hero. The white field gives the mark its clear space; it is never
-          set directly on the photo, never resized out of proportion, and never
-          combined with another logo in the same tab. On phones the tab becomes
-          a full-width white strip under the nav so it never covers a player.
-          Requested by John, 2026-09-14. */}
-      <a
-        href="https://la28.org"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Los Angeles 2028 Olympic Games"
-        className="relative z-20 mt-16 block w-full bg-white px-6 py-4 md:mt-[76px] lg:absolute lg:left-0 lg:top-[76px] lg:mt-0 lg:w-auto lg:rounded-br-3xl lg:px-8 lg:py-6"
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/event/la28-olympic-mark.png"
-          alt="LA28 emblem with the Olympic rings"
-          className="h-[72px] w-auto lg:h-[120px]"
-          width={639}
-          height={936}
-        />
-      </a>
+          the hero, with the YSK Events emblem beside it as the presenter. The
+          white field gives the LA28 mark its clear space; it is never set on
+          the photo or resized out of proportion. A rule and the words
+          "Presented by" keep the two marks read as host and presenter, not as
+          one combined logo. On phones the tab becomes a full-width strip under
+          the nav so it never covers a player. Requested by John, 2026-09-14. */}
+      <div className="relative z-20 mt-16 flex w-full items-center justify-between gap-5 bg-white px-6 py-4 md:mt-[76px] lg:absolute lg:left-0 lg:top-[76px] lg:mt-0 lg:w-auto lg:justify-start lg:gap-8 lg:rounded-br-3xl lg:px-8 lg:py-6">
+        <a
+          href="https://la28.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Los Angeles 2028 Olympic Games"
+          className="block shrink-0"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/event/la28-olympic-mark.png"
+            alt="LA28 emblem with the Olympic rings"
+            className="h-[72px] w-auto lg:h-[120px]"
+            width={639}
+            height={936}
+          />
+        </a>
+        <span aria-hidden="true" className="hidden h-[72px] w-px shrink-0 bg-black/20 sm:block lg:h-[120px]" />
+        <a href="/#history" className="flex shrink-0 items-center gap-3 lg:gap-4">
+          <Image
+            src="/ysk-logo.png"
+            alt="YSK Events"
+            width={1254}
+            height={1254}
+            priority
+            sizes="96px"
+            className="h-[60px] w-[60px] lg:h-[96px] lg:w-[96px]"
+          />
+          <span className="font-sans text-[10px] font-extrabold uppercase leading-tight tracking-[0.16em] text-black lg:text-[11px]">
+            Presented<br />by<br />YSK Events
+          </span>
+        </a>
+      </div>
 
       {/* Photography. Below lg the two players sit side by side in a fixed
           band at the top and the copy runs beneath on black, so both athletes
