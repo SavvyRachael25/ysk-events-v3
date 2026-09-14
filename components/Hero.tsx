@@ -32,6 +32,27 @@ export default function Hero() {
         style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0.1) 30%, rgb(0 0 0 / 0.55) 55%, rgb(0 0 0 / 0.82) 78%, rgb(0 0 0 / 0.94) 100%)" }}
       />
 
+      {/* LA28 emblem, the way la28.org places it: a white tab at the top-left of
+          the hero. The white field gives the mark its clear space; it is never
+          set directly on the photo, never resized out of proportion, and never
+          combined with another logo in the same tab. Requested by John, 2026-09-14. */}
+      <a
+        href="https://la28.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Los Angeles 2028 Olympic Games"
+        className="absolute left-0 top-16 z-20 block rounded-br-3xl bg-white px-6 py-5 md:top-[76px] md:px-8 md:py-6"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/event/la28-olympic-mark.png"
+          alt="LA28 emblem with the Olympic rings"
+          className="h-[88px] w-auto md:h-[120px]"
+          width={378}
+          height={549}
+        />
+      </a>
+
       {/* Copy */}
       <div className="relative z-10 flex min-h-[88svh] flex-col justify-end px-6 pb-14 pt-32 md:px-12 md:pb-20 lg:px-20">
         <p className="eyebrow !text-white animate-fade-up" style={{ animationDelay: "80ms" }}>
