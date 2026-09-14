@@ -54,7 +54,7 @@ export default function Hero() {
       </a>
 
       {/* Copy */}
-      <div className="relative z-10 flex min-h-[88svh] flex-col justify-end px-6 pb-14 pt-32 md:px-12 md:pb-20 lg:px-20">
+      <div className="relative z-10 flex min-h-[88svh] flex-col justify-end px-6 pb-14 pt-[232px] md:px-12 md:pb-20 md:pt-[300px] lg:px-20">
         <p className="eyebrow !text-white animate-fade-up" style={{ animationDelay: "80ms" }}>
           {EVENT.kicker}
         </p>
