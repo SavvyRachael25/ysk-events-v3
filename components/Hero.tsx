@@ -26,11 +26,11 @@ export default function Hero() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/event/la28-olympic-mark.png"
+          src="/event/la28-olympic-mark.svg"
           alt="LA28 emblem with the Olympic rings"
           className="h-[72px] w-auto lg:h-[120px]"
-          width={639}
-          height={936}
+          width={682}
+          height={1000}
         />
       </a>
 
