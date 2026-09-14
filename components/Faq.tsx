@@ -14,7 +14,8 @@ import { HOMEPAGE_FAQ } from "@/lib/content";
 export default function Faq() {
   return (
     <section id="faq" className="paper-grain bg-paper py-16 md:py-24">
-      <div className="mx-auto max-w-[900px] px-6 md:px-12">
+      <div className="mx-auto max-w-[1280px] px-6 md:px-12">
+        <div className="max-w-[900px]">
         <Reveal>
           <div className="flex items-center gap-4">
             <span className="section-no">04</span>
@@ -32,26 +33,28 @@ export default function Faq() {
         <div className="mt-12 border-t border-border">
           {HOMEPAGE_FAQ.map((item, i) => (
             <Reveal key={item.question} delay={i * 60}>
-              <details className="group border-b border-border py-5">
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-6">
+              <details className="group border-b border-border">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5">
                   <h3
-                    className="font-sans text-[15px] font-semibold leading-snug text-ink transition-colors duration-300 group-hover:text-gold"
+                    className="font-sans font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-gold"
+                    style={{ fontSize: "var(--text-step-1)" }}
                   >
                     {item.question}
                   </h3>
                   <span
                     aria-hidden="true"
-                    className="mt-1 shrink-0 font-lockup text-xl leading-none text-gold transition-transform duration-300 group-open:rotate-45"
+                    className="mt-1 shrink-0 font-lockup text-2xl leading-none text-gold transition-transform duration-300 group-open:rotate-45"
                   >
                     +
                   </span>
                 </summary>
-                <p className="body-copy mt-4 max-w-[720px] pr-10 text-[15px]">
+                <p className="body-copy mb-5 max-w-[720px] pr-10 text-[15px]">
                   {item.answer}
                 </p>
               </details>
             </Reveal>
           ))}
+        </div>
         </div>
       </div>
     </section>

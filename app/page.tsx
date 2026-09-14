@@ -57,7 +57,6 @@ export default function Home() {
         <Hero />
         <Ribbon />
         <OlympicBand />
-        <Ribbon />
         <Marquee />
         <RoadToLA />
         <Cities />

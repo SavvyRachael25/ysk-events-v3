@@ -45,7 +45,7 @@ export default function History() {
                   >
                     {stat.value}
                   </dt>
-                  <dd className="mt-2 font-sans text-xs leading-relaxed text-ink-faint">
+                  <dd className="mt-2 font-sans text-[13px] leading-relaxed text-ink-faint">
                     {stat.label}
                   </dd>
                 </div>
@@ -96,7 +96,7 @@ export default function History() {
                 <h3 className="mt-2 font-sans text-[13px] font-bold uppercase tracking-[0.12em] text-ink">
                   {item.title}
                 </h3>
-                <p className="mt-2 font-sans text-[13px] leading-relaxed text-ink-faint">
+                <p className="mt-2 font-sans text-[15px] leading-relaxed text-ink-faint">
                   {item.desc}
                 </p>
               </li>

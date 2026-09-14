@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { NAV_SECTIONS } from "@/lib/content";
@@ -15,6 +16,7 @@ function Wordmark({ className }: { className?: string }) {
       width={1254}
       height={1254}
       priority
+      sizes="48px"
       className={cn("h-11 w-11 md:h-12 md:w-12", className)}
     />
   );
@@ -24,6 +26,8 @@ export default function Navbar() {
   const [active, setActive] = useState("event");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // White pages get the solid bar from the first paint; the gradient is for the hero only.
+  const solid = scrolled || usePathname() !== "/";
 
   useEffect(() => {
     const onScroll = () => {
@@ -55,11 +59,11 @@ export default function Navbar() {
         aria-label="Primary"
         className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between px-6 transition-all duration-300 ease-[var(--ease-out-expo)] md:h-[76px] md:px-10"
         style={{
-          background: scrolled
+          background: solid
             ? "rgb(0 0 0 / 0.96)"
             : "linear-gradient(180deg, rgb(0 0 0 / 0.6) 0%, rgb(0 0 0 / 0) 100%)",
-          backdropFilter: scrolled ? "blur(12px)" : "none",
-          borderBottom: scrolled
+          backdropFilter: solid ? "blur(12px)" : "none",
+          borderBottom: solid
             ? "1px solid rgb(255 255 255 / 0.12)"
             : "1px solid transparent",
         }}
@@ -136,6 +140,15 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="pt-4">
+              <a
+                href="/sponsors"
+                onClick={() => setMenuOpen(false)}
+                className="btn-gold !bg-white !text-black hover:!bg-la-blue hover:!text-white"
+              >
+                Partner With Us
+              </a>
+            </li>
           </ul>
         </div>
       )}

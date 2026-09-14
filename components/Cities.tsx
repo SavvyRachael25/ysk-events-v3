@@ -11,22 +11,22 @@ export default function Cities() {
     <section id="cities" className="bg-paper-2 py-16 md:py-24">
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         {/* Section header */}
-        <Reveal className="text-center">
-          <div className="mb-5 flex items-center justify-center gap-4">
+        <Reveal>
+          <div className="mb-5 flex items-center gap-4">
             <span className="section-no">02</span>
             <span aria-hidden="true" className="rule-gold h-px w-8" />
             <span className="eyebrow-quiet">The road</span>
           </div>
           <h2
             className="font-display text-ink"
-            style={{ fontSize: "var(--text-step-2)" }}
+            style={{ fontSize: "var(--text-step-3)" }}
           >
             From <span className="text-gold">Bellevue</span> to Seattle to{" "}
             <span className="text-gold">LA</span>
           </h2>
           <span
             aria-hidden="true"
-            className="rule-tricolor mx-auto mt-6 block w-20"
+            className="rule-tricolor mt-6 block w-20"
           />
         </Reveal>
 

@@ -58,7 +58,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YSK Events on Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
               >
                 <InstagramIcon />
               </a>
@@ -67,7 +67,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YSK Events on Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
               >
                 <FacebookIcon />
               </a>
@@ -76,7 +76,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YSK Events on YouTube"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
               >
                 <YoutubeIcon />
               </a>
@@ -88,12 +88,12 @@ export default function Footer() {
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bright">
               Explore
             </p>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-4 space-y-1">
               {NAV_SECTIONS.map((s) => (
                 <li key={s.id}>
                   <a
                     href={s.href}
-                    className="font-sans text-sm text-paper/60 transition-colors duration-300 hover:text-gold-bright"
+                    className="block py-1.5 font-sans text-sm text-paper/60 transition-colors duration-300 hover:text-gold-bright"
                   >
                     {s.label}
                   </a>
@@ -124,7 +124,12 @@ export default function Footer() {
 
         {/* Rights and photo credits. Attribution is required by the CC licences;
             the disclaimer is standard for any use of an Olympic mark under licence. */}
-        <div className="mt-12 max-w-[820px] space-y-4 border border-paper/25 p-5 font-sans text-[12px] leading-relaxed text-paper/70">
+        <details className="group mt-12 max-w-[820px] border-t border-paper/15 pt-5 font-sans text-[13px] leading-relaxed text-paper/70">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-2 text-[12px] font-bold uppercase tracking-[0.2em] text-paper/70 hover:text-white">
+            Credits and trademarks
+            <span aria-hidden="true" className="font-lockup text-xl leading-none transition-transform duration-300 group-open:rotate-45">+</span>
+          </summary>
+          <div className="mt-3 space-y-4">
           <p>
             LA28 and the Olympic rings are trademarks of the LA28 Organizing Committee and the International
             Olympic Committee, used with permission. This event is presented by YSK Events, a 501(c)(3)
@@ -143,13 +148,15 @@ export default function Footer() {
             <a href="https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_globe_(July_2022).JPG" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC0</a>.
             2015 World Championship photography copyright YSK Events.
           </p>
-          <div className="pt-1"><MotionToggle /></div>
-        </div>
+          </div>
+        </details>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-paper/10 pt-7 md:flex-row md:items-center">
           <p className="font-sans text-xs text-paper/60">
             © {year} YSK Events. A 501(c)(3) nonprofit organization.
           </p>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <MotionToggle />
           <p className="font-sans text-xs text-paper/60">
             Built by{" "}
             <a
@@ -161,6 +168,7 @@ export default function Footer() {
               RB Collective, dba The Savvy Digital Co.
             </a>
           </p>
+          </div>
         </div>
       </div>
     </footer>

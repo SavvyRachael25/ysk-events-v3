@@ -44,7 +44,7 @@ export default function RoadToLA() {
               <div className="flex flex-col items-center text-center">
                 <span
                   className="font-lockup uppercase text-ink"
-                  style={{ fontSize: "var(--text-step-2)", letterSpacing: "0.22em" }}
+                  style={{ fontSize: "var(--text-step-2)", letterSpacing: "0.14em" }}
                 >
                   Road
                 </span>
@@ -52,7 +52,7 @@ export default function RoadToLA() {
                   <span aria-hidden="true" className="rule-gold h-px w-8" />
                   <span
                     className="font-lockup uppercase text-ink"
-                    style={{ fontSize: "var(--text-step-0)", letterSpacing: "0.3em" }}
+                    style={{ fontSize: "var(--text-step-0)", letterSpacing: "0.14em" }}
                   >
                     to
                   </span>

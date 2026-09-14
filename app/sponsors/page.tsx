@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Ribbon from "@/components/Ribbon";
 import {
-  QUALIFY,
   PARTNER_TIERS,
   SPONSOR_CRED,
   SPONSOR_PROOF,
   PRESS_OUTLETS,
+  YOUTH_FAQ,
 } from "@/lib/content";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/constants";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
@@ -45,10 +45,11 @@ export default function SponsorsPage() {
 
       <Navbar />
 
-      <main id="main" className="flex-1">
+      <main id="main" className="flex-1 pb-20 lg:pb-0">
         {/* ——— Page hero ——— */}
         <section className="paper-grain relative overflow-hidden bg-paper px-6 pt-32 pb-20 md:px-12 md:pt-44 md:pb-28 lg:px-20">
-          <div className="relative z-10 mx-auto max-w-[1280px]">
+          <div className="relative z-10 mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-7">
             <div className="flex items-center gap-4">
               <span className="section-no">Sponsorship</span>
               <span aria-hidden="true" className="rule-gold h-px w-8" />
@@ -76,6 +77,17 @@ export default function SponsorsPage() {
                 About the Event
               </a>
             </div>
+            </div>
+            <figure className="relative hidden aspect-[4/5] overflow-hidden lg:col-span-5 lg:block">
+              <Image
+                src="/event/glass-court-venue.jpg"
+                alt="The all-glass show court at the 2015 Men's World Squash Championship in Bellevue, seen from the spectator side"
+                fill
+                priority
+                sizes="(max-width: 1024px) 0px, 40vw"
+                className="object-cover"
+              />
+            </figure>
           </div>
         </section>
 
@@ -173,6 +185,24 @@ export default function SponsorsPage() {
                 </Reveal>
               ))}
             </div>
+
+            {/* What a Community Partner funds. Same facts as the youth FAQ, nothing added. */}
+            <Reveal className="mt-16 grid grid-cols-1 gap-8 border-t-2 border-black pt-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="eyebrow">What Community Partners fund</p>
+                <h3 className="mt-4 font-display text-ink" style={{ fontSize: "var(--text-step-2)" }}>
+                  Youth squash in Bellevue and Seattle.
+                </h3>
+              </div>
+              <dl className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:col-span-8">
+                {YOUTH_FAQ.slice(0, 2).map((item) => (
+                  <div key={item.question}>
+                    <dt className="font-sans text-[15px] font-bold text-ink">{item.question}</dt>
+                    <dd className="body-copy mt-2 text-[15px]">{item.answer}</dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
           </div>
         </section>
 
@@ -213,8 +243,8 @@ export default function SponsorsPage() {
             <Reveal delay={160} as="figure" className="hidden lg:col-span-5 lg:block">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/event/glass-court-venue.jpg"
-                  alt="The all-glass show court at the 2015 Men's World Squash Championship in Bellevue, seen from the spectator side"
+                  src="/event/trophy-lift.jpg"
+                  alt="The champion lifting the trophy at the 2015 Men's World Squash Championship in Bellevue, the first ever held on U.S. soil"
                   fill
                   sizes="40vw"
                   className="object-cover"
@@ -224,6 +254,13 @@ export default function SponsorsPage() {
           </div>
         </section>
       </main>
+
+      {/* Phone-only sticky inquiry bar; the tiers run 2,000px between the two mailto links. */}
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-black bg-white p-3 lg:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
+        <a href={mailto} className="btn-gold flex w-full justify-center">
+          Request the Sponsorship Deck
+        </a>
+      </div>
 
       <Footer />
     </>

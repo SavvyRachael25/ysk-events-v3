@@ -9,6 +9,7 @@ import { EVENT_DEFINITION } from "@/lib/constants";
  * First impression in half a second: this is an Olympic qualifier.
  */
 export default function Hero() {
+  const kickerParts = EVENT.kicker.split(" · ");
   return (
     <section id="event" className="relative w-full overflow-hidden bg-black text-white lg:min-h-[88svh]">
       {/* LA28 emblem, the way la28.org places it: a white tab at the top-left of
@@ -40,13 +41,17 @@ export default function Hero() {
           At lg and up the diptych goes full bleed behind the copy. */}
       <div className="relative grid h-[50svh] min-h-[340px] grid-cols-2 lg:absolute lg:inset-0 lg:h-auto lg:min-h-0">
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 animate-ken-burns">
-            <Image src={EVENT.image} alt={EVENT.imageAlt} fill priority sizes="50vw" className="object-cover object-[60%_center]" />
+          <div className="absolute inset-0 origin-[18%_60%] scale-[1.12] lg:scale-[1.5]">
+            <div className="absolute inset-0 animate-ken-burns">
+              <Image src={EVENT.image} alt={EVENT.imageAlt} fill priority sizes="50vw" className="object-cover object-[50%_55%]" />
+            </div>
           </div>
         </div>
         <div className="relative overflow-hidden border-l-2 border-white/60">
-          <div className="absolute inset-0 animate-ken-burns" style={{ animationDelay: "-9s" }}>
-            <Image src={EVENT.imageSecondary} alt={EVENT.imageSecondaryAlt} fill priority sizes="50vw" className="object-cover object-[45%_center]" />
+          <div className="absolute inset-0 origin-[75%_45%] scale-[1.12] lg:scale-[1.3]">
+            <div className="absolute inset-0 animate-ken-burns" style={{ animationDelay: "-9s" }}>
+              <Image src={EVENT.imageSecondary} alt={EVENT.imageSecondaryAlt} fill priority sizes="50vw" className="object-cover object-[50%_45%]" />
+            </div>
           </div>
         </div>
 
@@ -65,15 +70,21 @@ export default function Hero() {
       </div>
 
       {/* Copy */}
-      <div className="relative z-10 flex flex-col px-6 pb-14 pt-10 md:px-12 md:pb-20 md:pt-12 lg:min-h-[88svh] lg:justify-end lg:px-20 lg:pt-[300px]">
+      <div className="relative z-10 flex flex-col px-6 pb-10 pt-8 md:px-12 md:pb-16 md:pt-12 lg:min-h-[88svh] lg:justify-end lg:px-20 lg:pb-20 lg:pt-[270px]">
         <p className="eyebrow !text-white animate-fade-up" style={{ animationDelay: "80ms" }}>
-          {EVENT.kicker}
+          {kickerParts.map((part, i) => (
+            <span key={part}>
+              {i > 0 && <span aria-hidden="true" className="hidden sm:inline"> · </span>}
+              {i > 0 && <br className="sm:hidden" />}
+              {part}
+            </span>
+          ))}
         </p>
-        <h1 className="mt-5 max-w-[22ch]">
-          <span className="block font-display animate-fade-up" style={{ fontSize: "clamp(2.6rem, 1.6rem + 4vw, 5rem)", animationDelay: "200ms" }}>
+        <h1 className="mt-5 max-w-[18ch] font-display" style={{ fontSize: "clamp(2.6rem, 1.6rem + 4vw, 5rem)" }}>
+          <span className="block animate-fade-up" style={{ animationDelay: "200ms" }}>
             {EVENT.headlineTop}
           </span>
-          <span className="block font-display animate-fade-up" style={{ fontSize: "clamp(2.6rem, 1.6rem + 4vw, 5rem)", animationDelay: "320ms" }}>
+          <span className="block animate-fade-up" style={{ animationDelay: "320ms" }}>
             {EVENT.headlineAccent}
           </span>
         </h1>
@@ -84,11 +95,11 @@ export default function Hero() {
           <span aria-hidden="true" className="mx-3 hidden opacity-50 sm:inline">|</span>
           <span className="block sm:inline">Presented by YSK Events</span>
         </p>
-        <p className="mt-5 max-w-[62ch] font-sans text-[15px] leading-relaxed text-white/85 animate-fade-up md:text-base" style={{ animationDelay: "500ms" }}>
+        <p className="mt-5 hidden max-w-[62ch] font-sans text-[15px] leading-relaxed text-white/85 animate-fade-up md:block md:text-base" style={{ animationDelay: "500ms" }}>
           {EVENT_DEFINITION}
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-4 animate-fade-up" style={{ animationDelay: "560ms" }}>
-          <a href={EVENT.ctaPrimary.href} className="btn-gold !bg-white !text-black hover:!bg-la-blue hover:!text-white">
+          <a href={EVENT.ctaPrimary.href} className="btn-gold !bg-la-blue !text-white hover:!bg-white hover:!text-black">
             {EVENT.ctaPrimary.label}
           </a>
           <a href={EVENT.ctaSecondary.href} className="btn-outline-light">

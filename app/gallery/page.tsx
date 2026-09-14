@@ -50,9 +50,9 @@ export default function GalleryPage() {
 
       <main
         id="main"
-        className="paper-grain relative flex-1 bg-paper px-6 pt-32 pb-24 md:px-12 md:pt-40 lg:px-20"
+        className="paper-grain relative flex-1 bg-paper pt-32 pb-24 md:pt-40"
       >
-        <div className="relative mx-auto max-w-[1280px]">
+        <div className="relative mx-auto max-w-[1280px] px-6 md:px-12 lg:px-20">
           <header className="mb-14">
             <div className="flex items-center gap-4">
               <span className="section-no">Archive</span>
@@ -66,8 +66,9 @@ export default function GalleryPage() {
               Scenes from <span className="text-gold">the court.</span>
             </h1>
           </header>
-          <Ribbon className="mb-10" />
-
+        </div>
+        <Ribbon className="mb-10" />
+        <div className="relative mx-auto max-w-[1280px] px-6 md:px-12 lg:px-20">
           <GalleryGrid images={GALLERY} />
         </div>
       </main>
