@@ -152,6 +152,9 @@ export default function Footer({ backdrop }: { backdrop?: string } = {}) {
             ). Cropped and scaled for display, and a second player and a reflection on the glass were removed from the El Hammamy photograph; these versions are shared under the same licence. Universal Studios
             globe by Benoît Prieur,{" "}
             <a href="https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_globe_(July_2022).JPG" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC0</a>.
+            Seattle skyline by Sajad Mohamad,{" "}
+            <a href="https://commons.wikimedia.org/wiki/File:Seattle_Skyline_Kerry_Park.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC BY-SA 4.0</a>, cropped, with a squash court added in one version. Bellevue skyline by Matthew Rutledge,{" "}
+            <a href="https://commons.wikimedia.org/wiki/File:Bellevue_and_Lake_Washington_at_dusk.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC BY 2.0</a>, cropped.
             2015 World Championship photography copyright YSK Events.
           </p>
           </div>

@@ -67,9 +67,9 @@ export default async function MockPage({ params }: { params: Promise<{ variant: 
           single={
             v.pacificHero
               ? {
-                  src: "/pacific/hero.jpg",
-                  alt: "Seattle skyline and Lake Washington at sunset, seen from a squash court",
-                  credit: "Artwork: 8th Day Create",
+                  src: "/pacific/seattle-court.jpg",
+                  alt: "Seattle skyline with the Space Needle and Mount Rainier seen through the glass back wall of a squash court",
+                  credit: "Skyline photo: Sajad Mohamad, CC BY-SA 4.0, court added",
                 }
               : undefined
           }
@@ -84,7 +84,7 @@ export default async function MockPage({ params }: { params: Promise<{ variant: 
         <Partner />
         <Ribbon colors={v.ribbon ? [...v.ribbon] : undefined} />
       </main>
-      <Footer backdrop="/pacific/footer.jpg" />
+      <Footer backdrop="/pacific/bellevue-dusk.jpg" />
       <div className="fixed bottom-3 left-3 z-[60] border border-black bg-white px-3 py-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-black">
         {v.label}
       </div>

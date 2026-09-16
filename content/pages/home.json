@@ -39,15 +39,15 @@
       "name": "Bellevue",
       "tagline": "Where the world has played before.",
       "desc": "Host of the 2015 Men's World Championship, the first ever on U.S. soil, and the 2024 PSA World Tour Finals.",
-      "image": "/event/city-bellevue.jpg",
-      "alt": "Downtown Bellevue, Washington skyline across the water"
+      "image": "/event/city-bellevue-lake.jpg",
+      "alt": "Downtown Bellevue skyline across Lake Washington at dusk, with the Cascades behind"
     },
     {
       "name": "Seattle",
       "tagline": "Shares the final qualifier with Bellevue.",
       "desc": "Bellevue and Seattle share the last qualification event before the Games. Venue to be announced.",
-      "image": "/event/city-seattle.jpg",
-      "alt": "Seattle skyline at golden hour with Mount Rainier behind"
+      "image": "/event/city-seattle-rainier.jpg",
+      "alt": "Seattle skyline with the Space Needle and Mount Rainier, seen from Kerry Park"
     },
     {
       "name": "Los Angeles",
