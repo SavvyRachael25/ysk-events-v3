@@ -59,10 +59,11 @@ export default function Cities() {
                   />
                 </div>
 
-                <figcaption className="mt-6">
+                <figcaption className="mt-5">
+                  <span aria-hidden="true" className="mb-4 block h-[3px] w-10 origin-left bg-[#e87953] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-x-[2.2]" />
                   <div className="flex items-center gap-3">
                     <h3
-                      className="font-display text-ink"
+                      className="font-display text-ink transition-colors duration-300 group-hover:text-gold"
                       style={{ fontSize: "1.05rem", letterSpacing: "0.14em" }}
                     >
                       {city.name}

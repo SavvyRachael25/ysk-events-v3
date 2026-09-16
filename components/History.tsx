@@ -8,7 +8,7 @@ import { HISTORY, HISTORY_PROOF, TIMELINE } from "@/lib/content";
  */
 const ICON_FILE: Record<string, string> = { "2021 to 2023": "2021-2023" };
 
-export default function History({ icons = false }: { icons?: boolean } = {}) {
+export default function History({ icons = true }: { icons?: boolean } = {}) {
   return (
     <section id="history" className="paper-grain relative py-16 md:py-24" style={{ background: "var(--color-surface-history)" }}>
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">

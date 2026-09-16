@@ -29,7 +29,7 @@ function YoutubeIcon({ size = 15 }: { size?: number }) {
   );
 }
 
-export default function Footer({ backdrop }: { backdrop?: string } = {}) {
+export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { backdrop?: string | null } = {}) {
   const year = new Date().getFullYear();
 
   return (

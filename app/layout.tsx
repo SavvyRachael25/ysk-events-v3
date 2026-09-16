@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Fraunces } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import { EVENT_DEFINITION } from "@/lib/constants";
 import { jsonLdScriptProps, organizationJsonLd } from "@/lib/seo";
@@ -8,13 +8,6 @@ const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
   weight: ["400", "500", "700", "800", "900"],
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  weight: ["500", "600"],
   display: "swap",
 });
 
@@ -80,7 +73,7 @@ export default function RootLayout({
       lang="en"
       className={`${archivo.variable} h-full antialiased`}
     >
-      <body data-variant="v3" className={`${fraunces.variable} min-h-full flex flex-col bg-paper text-ink`}>
+      <body className="min-h-full flex flex-col bg-paper text-ink">
         <script {...jsonLdScriptProps(organizationJsonLd)} />
         <a href="#main" className="skip-link">
           Skip to content

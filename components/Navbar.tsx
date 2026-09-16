@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { NAV_SECTIONS } from "@/lib/content";
@@ -27,7 +26,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   // White pages get the solid bar from the first paint; the gradient is for the hero only.
-  const solid = scrolled || usePathname() !== "/";
+  // The milestones strip sits under the bar on the home page, so the bar is
+  // solid everywhere; the scroll state only tightens the border.
+  const solid = true;
 
   useEffect(() => {
     const onScroll = () => {

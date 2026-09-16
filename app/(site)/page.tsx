@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Moments from "@/components/Moments";
 import Marquee from "@/components/Marquee";
 import OlympicBand from "@/components/OlympicBand";
 import Ribbon from "@/components/Ribbon";
@@ -54,7 +55,8 @@ export default function Home() {
       <script {...jsonLdScriptProps(eventJsonLd)} />
       <Navbar />
       <main id="main" className="flex-1">
-        <Hero />
+        <Moments />
+        <Hero flush />
         <Ribbon />
         <OlympicBand />
         <Marquee />

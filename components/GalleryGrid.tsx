@@ -74,7 +74,7 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
           aria-modal="true"
           aria-label={`Photo ${open + 1} of ${images.length}`}
           className="fixed inset-0 z-[90] flex items-center justify-center animate-fade-in"
-          style={{ background: "hsl(24 12% 8% / 0.94)" }}
+          style={{ background: "rgb(var(--scrim-rgb) / 0.95)" }}
           onClick={() => setOpen(null)}
         >
           <div

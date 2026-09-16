@@ -46,7 +46,7 @@ export default function OgImage() {
             marginTop: 40,
             fontSize: 44,
             fontWeight: 900,
-            color: "#000000",
+            color: "#102822",
             textTransform: "uppercase",
             letterSpacing: "0.01em",
             textAlign: "center",
@@ -60,7 +60,7 @@ export default function OgImage() {
             display: "flex",
             marginTop: 14,
             fontSize: 22,
-            color: "#000000",
+            color: "#1b5b70",
             letterSpacing: "0.04em",
           }}
         >
@@ -73,7 +73,7 @@ export default function OgImage() {
             marginTop: 10,
             fontSize: 20,
             fontWeight: 800,
-            color: "#009ed6",
+            color: "#123d32",
             letterSpacing: "0.16em",
             textTransform: "uppercase",
           }}
@@ -83,8 +83,9 @@ export default function OgImage() {
 
         {/* USA tricolor rule, then YSK attribution */}
         <div style={{ display: "flex", marginTop: 34 }}>
-          <div style={{ width: 46, height: 5, background: "#009ed6" }} />
-          <div style={{ width: 46, height: 5, background: "#3adfa8" }} />
+          <div style={{ width: 46, height: 5, background: "#1b5b70" }} />
+          <div style={{ width: 46, height: 5, background: "#d8ee63" }} />
+          <div style={{ width: 46, height: 5, background: "#e87953" }} />
           <div style={{ width: 46, height: 5, background: "#ff018f" }} />
         </div>
 
@@ -94,7 +95,7 @@ export default function OgImage() {
             marginTop: 22,
             fontSize: 16,
             fontWeight: 700,
-            color: "#000000",
+            color: "#102822",
             letterSpacing: "0.2em",
             textTransform: "uppercase",
           }}

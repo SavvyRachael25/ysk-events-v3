@@ -8,11 +8,11 @@ import { EVENT_DEFINITION } from "@/lib/constants";
  * Women and men side by side, both from the Bellevue World Tour Finals.
  * First impression in half a second: this is an Olympic qualifier.
  */
-export default function Hero() {
+export default function Hero({ mode = "scene", flush = false }: { mode?: "scene" | "diptych"; flush?: boolean } = {}) {
   const kickerParts = EVENT.kicker.split(" · ");
   // Scene mode: a wide Pacific Northwest photo behind the copy, with the
-  // athletes as named cards. Falls back to the diptych when no scene is set.
-  const single = EVENT.scene;
+  // athletes as named cards. Diptych mode is the two-athlete layout.
+  const single = mode === "scene" ? EVENT.scene : null;
   const athletes = EVENT.athletes;
   return (
     <section id="event" className="relative w-full overflow-hidden bg-ink text-white lg:min-h-[88svh]">
@@ -27,7 +27,7 @@ export default function Hero() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Los Angeles 2028 Olympic Games"
-        className="relative z-20 mt-16 block w-full bg-white px-6 py-4 md:mt-[76px] lg:absolute lg:left-0 lg:top-[76px] lg:mt-0 lg:w-auto lg:rounded-br-3xl lg:px-8 lg:py-6"
+        className={`relative z-20 block w-full bg-white px-6 py-4 lg:absolute lg:left-0 lg:mt-0 lg:w-auto lg:rounded-br-3xl lg:px-8 lg:py-6 ${flush ? "mt-0 lg:top-0" : "mt-16 md:mt-[76px] lg:top-[76px]"}`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -80,7 +80,7 @@ export default function Hero() {
       </div>
 
       {/* Copy */}
-      <div className="relative z-10 flex flex-col px-6 pb-10 pt-8 md:px-12 md:pb-16 md:pt-12 lg:min-h-[88svh] lg:max-w-[64%] lg:justify-end lg:px-20 lg:pb-20 lg:pt-[270px]">
+      <div className={`relative z-10 flex flex-col px-6 pb-10 pt-8 md:px-12 md:pb-16 md:pt-12 lg:min-h-[88svh] lg:max-w-[64%] lg:justify-end lg:px-20 lg:pb-20 ${flush ? "lg:pt-[200px]" : "lg:pt-[270px]"}`}>
         <p className="eyebrow !text-white animate-fade-up flex items-start gap-3" style={{ animationDelay: "80ms" }}>
           <span aria-hidden="true" className="mt-[6px] block h-[3px] w-6 shrink-0" style={{ background: "var(--color-cta)" }} />
           <span>{kickerParts.map((part, i) => (
@@ -102,7 +102,7 @@ export default function Hero() {
         <p className="mt-6 font-sans text-base font-700 uppercase tracking-[0.1em] text-white/90 animate-fade-up" style={{ fontWeight: 700, animationDelay: "440ms" }}>
           <span className="block whitespace-nowrap sm:inline">{EVENT.location}</span>
           <span aria-hidden="true" className="mx-3 hidden opacity-50 sm:inline">|</span>
-          <span className="block sm:inline">{EVENT.date}</span>
+          <span className="block whitespace-nowrap sm:inline">{EVENT.date}</span>
           <span aria-hidden="true" className="mx-3 hidden opacity-50 sm:inline">|</span>
           <span className="block whitespace-nowrap sm:inline">Presented by YSK Events</span>
         </p>
