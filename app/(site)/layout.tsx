@@ -1,4 +1,5 @@
 import { Fraunces } from "next/font/google";
+import ReviewPill from "@/components/ReviewPill";
 
 /**
  * Pacific Motion, the direction chosen on 2026-09-16. Every public page
@@ -17,6 +18,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   return (
     <div data-variant="v3" className={`${fraunces.variable} flex min-h-full flex-1 flex-col`}>
       {children}
+      {process.env.VERCEL_GIT_COMMIT_REF === "mockups" && <ReviewPill label="Option 3 · all three" />}
     </div>
   );
 }

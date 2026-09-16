@@ -54,9 +54,9 @@ export default async function MockPage({ params }: { params: Promise<{ variant: 
         <Ribbon colors={colors} />
       </main>
       <Footer />
-      <div className="fixed bottom-3 left-3 z-[60] border border-black bg-white px-3 py-1.5 font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-black">
-        {v.label}
-      </div>
+      <a href="/options" className="fixed bottom-4 left-4 z-[70] flex items-center gap-2 border-2 border-black bg-white px-3.5 py-2 font-sans text-[11px] font-extrabold uppercase tracking-[0.14em] text-black shadow-[0_12px_30px_-12px_rgb(0_0_0/0.5)] transition-transform hover:-translate-y-0.5">
+        <span aria-hidden="true">←</span> Option {variant.slice(1)} · all three
+      </a>
     </div>
   );
 }
