@@ -174,7 +174,16 @@ export default function Footer({ backdrop }: { backdrop?: string } = {}) {
               rel="noopener noreferrer"
               className="text-paper/60 underline-offset-4 transition-colors duration-300 hover:text-white hover:underline"
             >
-              RB Collective, dba The Savvy Digital Co.
+              The Savvy Digital Co.
+            </a>
+            {" "}· Design system and illustration by{" "}
+            <a
+              href="https://www.8thdaycreate.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-paper/60 underline-offset-4 transition-colors duration-300 hover:text-white hover:underline"
+            >
+              8th Day Create
             </a>
           </p>
           </div>

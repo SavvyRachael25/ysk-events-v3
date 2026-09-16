@@ -17,7 +17,25 @@
     "ctaSecondaryLabel": "Partner With Us",
     "ctaSecondaryHref": "#partner",
     "imageSecondary": "/event/mens-bellevue.jpg",
-    "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
+    "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
+    "sceneImage": "/pacific/seattle-court-real.jpg",
+    "sceneImageAlt": "Seattle skyline with the Space Needle and Mount Rainier, seen from a squash court",
+    "sceneCredit": "Skyline: Sajad Mohamad, CC BY-SA 4.0, court floor added. Athletes: Nettrom, CC BY-SA 4.0, PSA World Tour Finals, Bellevue, June 2024.",
+    "athletesEyebrow": "They have played Bellevue before",
+    "athletes": [
+      {
+        "name": "Hania El Hammamy",
+        "title": "World No. 1",
+        "image": "/event/worlds-bellevue-hero.jpg",
+        "alt": "Hania El Hammamy competing at the 2023-24 PSA World Tour Finals in Bellevue"
+      },
+      {
+        "name": "Ali Farag",
+        "title": "Former World No. 1",
+        "image": "/event/mens-bellevue.jpg",
+        "alt": "Ali Farag competing at the 2023-24 PSA World Tour Finals in Bellevue"
+      }
+    ]
   },
   "marquee": [
     "Final Olympic Qualification Event · Squash",

@@ -27,6 +27,12 @@ export const EVENT = {
   imageSecondaryAlt: home.hero.imageSecondaryAlt,
   ctaPrimary: { label: home.hero.ctaPrimaryLabel, href: home.hero.ctaPrimaryHref },
   ctaSecondary: { label: home.hero.ctaSecondaryLabel, href: home.hero.ctaSecondaryHref },
+  // Scene mode: one landscape image with the athletes as cards on top of it.
+  scene: home.hero.sceneImage
+    ? { src: home.hero.sceneImage, alt: home.hero.sceneImageAlt ?? "", credit: home.hero.sceneCredit ?? "" }
+    : null,
+  athletesEyebrow: home.hero.athletesEyebrow ?? "",
+  athletes: (home.hero.athletes ?? []) as { name: string; title: string; image: string; alt: string }[],
 };
 
 export const MARQUEE_ITEMS = home.marquee;
