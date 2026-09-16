@@ -143,7 +143,7 @@ export default function Footer() {
             <a href="https://commons.wikimedia.org/wiki/File:Hania_El_Hammamy_at_the_2023-24_PSA_World_Tour_Finals-06.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">1</a>,{" "}
             <a href="https://commons.wikimedia.org/wiki/File:Ali_Farag_at_the_2023-24_PSA_World_Tour_Finals-01.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">2</a>,{" "}
             <a href="https://commons.wikimedia.org/wiki/File:Nele_Gilis_and_Olivia_Weaver_at_the_2023-24_PSA_World_Tour_Finals.jpg" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">3</a>
-            ). Cropped and scaled for display; these versions are shared under the same licence. Universal Studios
+            ). Cropped and scaled for display, and a second player and a reflection on the glass were removed from the El Hammamy photograph; these versions are shared under the same licence. Universal Studios
             globe by Benoît Prieur,{" "}
             <a href="https://commons.wikimedia.org/wiki/File:Universal_Studios_Hollywood_globe_(July_2022).JPG" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-white">CC0</a>.
             2015 World Championship photography copyright YSK Events.
