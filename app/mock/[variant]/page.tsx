@@ -67,7 +67,7 @@ export default async function MockPage({ params }: { params: Promise<{ variant: 
           single={
             v.pacificHero
               ? {
-                  src: "/pacific/seattle-court.jpg",
+                  src: "/pacific/seattle-court-real.jpg",
                   alt: "Seattle skyline with the Space Needle and Mount Rainier seen through the glass back wall of a squash court",
                   credit: "Skyline photo: Sajad Mohamad, CC BY-SA 4.0, court added",
                 }
