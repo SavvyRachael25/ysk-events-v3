@@ -60,7 +60,7 @@ export default function Navbar() {
         className="fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between px-6 transition-all duration-300 ease-[var(--ease-out-expo)] md:h-[76px] md:px-10"
         style={{
           background: solid
-            ? "rgb(0 0 0 / 0.96)"
+            ? "var(--color-nav)"
             : "linear-gradient(180deg, rgb(0 0 0 / 0.6) 0%, rgb(0 0 0 / 0) 100%)",
           backdropFilter: solid ? "blur(12px)" : "none",
           borderBottom: solid
@@ -81,14 +81,14 @@ export default function Navbar() {
                 className={cn(
                   "group relative whitespace-nowrap font-sans text-[13px] font-extrabold uppercase tracking-[0.06em] transition-colors duration-300",
                   active === s.id
-                    ? "text-la-cyan"
+                    ? "text-accent"
                     : "text-white/80 hover:text-white",
                 )}
               >
                 {s.label}
                 <span
                   className={cn(
-                    "absolute -bottom-1.5 left-0 h-px w-full origin-left bg-la-cyan transition-transform duration-300 ease-[var(--ease-out-expo)]",
+                    "absolute -bottom-1.5 left-0 h-px w-full origin-left bg-accent transition-transform duration-300 ease-[var(--ease-out-expo)]",
                     active === s.id
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100",
@@ -133,7 +133,7 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   className={cn(
                     "font-display text-2xl transition-colors duration-300",
-                    active === s.id ? "text-la-cyan" : "text-white hover:text-la-cyan",
+                    active === s.id ? "text-accent" : "text-white hover:text-accent",
                   )}
                 >
                   {s.label}

@@ -45,6 +45,15 @@
   --color-border-strong: #bdbdbd;
   --color-on-gold: var(--color-white);
 
+  /* ——— Variant hooks (the /mock routes override these) ——— */
+  --color-cta: var(--color-la-blue);          /* hero primary button */
+  --color-accent: var(--color-la-cyan);       /* active nav link */
+  --color-headline-accent: var(--color-white);
+  --color-surface-history: var(--color-white);
+  --color-surface-faq: var(--color-white);
+  --color-nav: rgb(0 0 0 / 0.96);
+  --scrim-rgb: 0 0 0;
+
   /* ——— Type: one heavy grotesque family, like LA28 ——— */
   --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
   --font-lockup: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
@@ -69,6 +78,54 @@
   --shadow-paper: none;
   --shadow-lift: none;
 }
+
+/* ============================================================ Mockup variants
+   Three points on the dial between the Olympic version and Brandon Palma's
+   Pacific Motion build (8th Day Create, 2026-09-16). Only the /mock routes
+   set data-variant; the live site never does. */
+
+[data-variant] {
+  --color-cta: var(--color-la-pink);
+  --color-accent: var(--color-la-pink);
+  --color-paper: #fcfcf5;
+  --color-paper-2: #e1ebe7;
+  --color-border: #d6e0da;
+  --color-surface-history: #ebdcc5;
+  --color-surface-faq: #e9efe7;
+  --color-gold-wash: #fde7f3;
+}
+[data-variant] #cities { background-image: url("/pacific/bg/03-tidal-cities.svg"); background-size: cover; background-position: center; }
+[data-variant] #history { background-image: url("/pacific/bg/04-driftwood.svg"); background-size: cover; background-position: center; }
+[data-variant] #faq { background-image: url("/pacific/bg/01-evergreen.svg"); background-size: cover; background-position: center bottom; }
+[data-variant] #road { background-image: url("/pacific/bg/02-pacific-route.svg"); background-size: cover; background-position: center; }
+[data-variant] .paper-grain::before { display: none; }
+
+/* v2 and v3: deep ink instead of black, evergreen partner band */
+[data-variant="v2"], [data-variant="v3"] {
+  --color-black: #102822;
+  --color-ink: #102822;
+  --color-ink-2: #123d32;
+  --color-ink-soft: #1f3a33;
+  --color-ink-faint: #4f6660;
+  --color-navy-deep: #123d32;
+  --color-gold: #123d32;
+  --color-gold-bright: #d8ee63;
+  --color-nav: rgb(16 40 34 / 0.96);
+  --scrim-rgb: 16 40 34;
+  --color-headline-accent: #d8ee63;
+}
+[data-variant="v2"] #partner, [data-variant="v3"] #partner { background-image: url("/pacific/bg/08-deep-pacific.svg"); background-size: cover; }
+
+/* v3: Pacific Motion, serif display, evergreen nav, no ribbons */
+[data-variant="v3"] {
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-lockup: var(--font-fraunces), Georgia, serif;
+  --color-nav: rgb(18 61 50 / 0.97);
+  --scrim-rgb: 18 61 50;
+}
+[data-variant="v3"] .ribbon { display: none; }
+[data-variant="v3"] .font-display { font-weight: 600; letter-spacing: -0.01em; text-transform: none; }
+[data-variant="v3"] h1.font-display, [data-variant="v3"] .font-display h1 { font-weight: 600; }
 
 /* ============================================================ Base */
 

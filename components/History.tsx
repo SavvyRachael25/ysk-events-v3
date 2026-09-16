@@ -6,9 +6,11 @@ import { HISTORY, HISTORY_PROOF, TIMELINE } from "@/lib/content";
  * "A history of making squash matter." — copy + proof points left,
  * athlete image right, then the event timeline strip below.
  */
-export default function History() {
+const ICON_FILE: Record<string, string> = { "2021 to 2023": "2021-2023" };
+
+export default function History({ icons = false }: { icons?: boolean } = {}) {
   return (
-    <section id="history" className="paper-grain relative bg-paper py-16 md:py-24">
+    <section id="history" className="paper-grain relative py-16 md:py-24" style={{ background: "var(--color-surface-history)" }}>
       <div className="mx-auto max-w-[1280px] px-6 md:px-12">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
           {/* LEFT: copy + proof */}
@@ -87,6 +89,10 @@ export default function History() {
                   aria-hidden="true"
                   className="relative z-10 block h-1 w-10 bg-black"
                 />
+                {icons && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={`/pacific/icons/${ICON_FILE[item.year] ?? item.year}.png`} alt="" width={512} height={512} className="mt-5 h-16 w-16" />
+                )}
                 <p
                   className="mt-4 font-lockup text-gold"
                   style={{ fontSize: "1.35rem", lineHeight: 1 }}

@@ -33,9 +33,9 @@ function bandPath(j: number, ox: number) {
   return `M ${top[0]} L ${top.slice(1).join(" L ")} L ${bot.reverse().join(" L ")} Z`;
 }
 
-export default function Ribbon({ className = "" }: { className?: string }) {
+export default function Ribbon({ className = "", colors = COLORS }: { className?: string; colors?: string[] }) {
   return (
-    <div aria-hidden="true" className={`relative w-full overflow-hidden bg-la-blue ${className}`} style={{ height: "clamp(56px, 6vw, 80px)" }}>
+    <div aria-hidden="true" className={`ribbon relative w-full overflow-hidden ${className}`} style={{ height: "clamp(56px, 6vw, 80px)", background: colors[0] }}>
       <svg
         className="animate-ribbon absolute left-0 top-0 h-full"
         style={{ width: "200%" }}
@@ -44,7 +44,7 @@ export default function Ribbon({ className = "" }: { className?: string }) {
         shapeRendering="geometricPrecision"
       >
         {[0, W].map((ox) =>
-          COLORS.map((c, j) => <path key={`${ox}-${j}`} d={bandPath(j, ox)} fill={c} />),
+          colors.map((c, j) => <path key={`${ox}-${j}`} d={bandPath(j, ox)} fill={c} />),
         )}
       </svg>
     </div>

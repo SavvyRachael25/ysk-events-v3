@@ -8,10 +8,15 @@ import { EVENT_DEFINITION } from "@/lib/constants";
  * Women and men side by side, both from the Bellevue World Tour Finals.
  * First impression in half a second: this is an Olympic qualifier.
  */
-export default function Hero() {
+type HeroProps = {
+  /** One full-bleed image instead of the athlete diptych (mockups only). */
+  single?: { src: string; alt: string; credit?: string };
+};
+
+export default function Hero({ single }: HeroProps = {}) {
   const kickerParts = EVENT.kicker.split(" · ");
   return (
-    <section id="event" className="relative w-full overflow-hidden bg-black text-white lg:min-h-[88svh]">
+    <section id="event" className="relative w-full overflow-hidden bg-ink text-white lg:min-h-[88svh]">
       {/* LA28 emblem, the way la28.org places it: a white tab at the top-left of
           the hero. The white field gives the mark its clear space; it is never
           set directly on the photo, never resized out of proportion, and never
@@ -39,7 +44,12 @@ export default function Hero() {
           band at the top and the copy runs beneath on black, so both athletes
           are visible on a phone without the headline covering either of them.
           At lg and up the diptych goes full bleed behind the copy. */}
-      <div className="relative grid h-[50svh] min-h-[340px] grid-cols-2 lg:absolute lg:inset-0 lg:h-auto lg:min-h-0">
+      <div className={`relative grid h-[50svh] min-h-[340px] lg:absolute lg:inset-0 lg:h-auto lg:min-h-0 ${single ? "grid-cols-1" : "grid-cols-2"}`}>
+        {single ? (
+          <div className="relative overflow-hidden">
+            <Image src={single.src} alt={single.alt} fill priority sizes="100vw" className="object-cover object-[50%_40%]" />
+          </div>
+        ) : (<>
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 origin-[18%_60%] scale-[1.12] lg:scale-[1.5]">
             <div className="absolute inset-0 animate-ken-burns">
@@ -54,18 +64,19 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        </>)}
 
         {/* Scrim. On phones it only feathers the band into the black copy area
             below; on desktop it carries the type at the bottom of the frame. */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 lg:hidden"
-          style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.35) 0%, rgb(0 0 0 / 0) 26%, rgb(0 0 0 / 0) 72%, rgb(0 0 0 / 0.9) 100%)" }}
+          style={{ background: "linear-gradient(180deg, rgb(var(--scrim-rgb) / 0.35) 0%, rgb(var(--scrim-rgb) / 0) 26%, rgb(var(--scrim-rgb) / 0) 72%, rgb(var(--scrim-rgb) / 0.9) 100%)" }}
         />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 hidden lg:block"
-          style={{ background: "linear-gradient(180deg, rgb(0 0 0 / 0.3) 0%, rgb(0 0 0 / 0.1) 30%, rgb(0 0 0 / 0.55) 55%, rgb(0 0 0 / 0.82) 78%, rgb(0 0 0 / 0.94) 100%)" }}
+          style={{ background: "linear-gradient(180deg, rgb(var(--scrim-rgb) / 0.3) 0%, rgb(var(--scrim-rgb) / 0.1) 30%, rgb(var(--scrim-rgb) / 0.55) 55%, rgb(var(--scrim-rgb) / 0.82) 78%, rgb(var(--scrim-rgb) / 0.94) 100%)" }}
         />
       </div>
 
@@ -84,7 +95,7 @@ export default function Hero() {
           <span className="block animate-fade-up" style={{ animationDelay: "200ms" }}>
             {EVENT.headlineTop}
           </span>
-          <span className="block animate-fade-up" style={{ animationDelay: "320ms" }}>
+          <span className="block animate-fade-up" style={{ animationDelay: "320ms", color: "var(--color-headline-accent)" }}>
             {EVENT.headlineAccent}
           </span>
         </h1>
@@ -99,7 +110,7 @@ export default function Hero() {
           {EVENT_DEFINITION}
         </p>
         <div className="mt-9 flex flex-wrap items-center gap-4 animate-fade-up" style={{ animationDelay: "560ms" }}>
-          <a href={EVENT.ctaPrimary.href} className="btn-gold !bg-la-blue !text-white hover:!bg-white hover:!text-black">
+          <a href={EVENT.ctaPrimary.href} className="btn-gold !bg-cta !text-white hover:!bg-white hover:!text-black">
             {EVENT.ctaPrimary.label}
           </a>
           <a href={EVENT.ctaSecondary.href} className="btn-outline-light">
@@ -107,7 +118,7 @@ export default function Hero() {
           </a>
         </div>
         <p className="mt-8 font-sans text-[11px] uppercase tracking-[0.12em] text-white/60 animate-fade-up" style={{ fontWeight: 700, animationDelay: "700ms" }}>
-          Photos: PSA World Tour Finals, Bellevue, June 2024
+          {single?.credit ?? "Photos: PSA World Tour Finals, Bellevue, June 2024"}
         </p>
       </div>
     </section>

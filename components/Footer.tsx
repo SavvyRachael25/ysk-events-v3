@@ -29,11 +29,17 @@ function YoutubeIcon({ size = 15 }: { size?: number }) {
   );
 }
 
-export default function Footer() {
+export default function Footer({ backdrop }: { backdrop?: string } = {}) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-paper/10 bg-ink text-paper">
+      {backdrop && (
+        <div aria-hidden="true" className="relative h-[280px] w-full overflow-hidden md:h-[380px]">
+          <Image src={backdrop} alt="" fill sizes="100vw" className="object-cover object-[50%_35%]" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgb(var(--scrim-rgb) / 0.15) 0%, rgb(var(--scrim-rgb) / 0.35) 55%, rgb(var(--scrim-rgb) / 1) 100%)" }} />
+        </div>
+      )}
       <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-12 md:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           {/* Brand */}
