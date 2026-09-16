@@ -5,7 +5,7 @@ import { EVENT_DEFINITION } from "@/lib/constants";
 /**
  * Full-bleed hero in the la28.org pattern: photography edge to edge,
  * heavy white all-caps headline over a bottom scrim, solid black CTA.
- * YSK's own history on the left, a current world-tour player on the right.
+ * Women and men side by side, both from the Bellevue World Tour Finals.
  * First impression in half a second: this is an Olympic qualifier.
  */
 export default function Hero() {
@@ -41,9 +41,9 @@ export default function Hero() {
           At lg and up the diptych goes full bleed behind the copy. */}
       <div className="relative grid h-[50svh] min-h-[340px] grid-cols-2 lg:absolute lg:inset-0 lg:h-auto lg:min-h-0">
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 origin-[18%_60%] scale-[1.12] lg:scale-[1.5]">
             <div className="absolute inset-0 animate-ken-burns">
-              <Image src={EVENT.image} alt={EVENT.imageAlt} fill priority sizes="50vw" className="object-cover object-[46%_45%]" />
+              <Image src={EVENT.image} alt={EVENT.imageAlt} fill priority sizes="50vw" className="object-cover object-[50%_55%]" />
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function Hero() {
           </a>
         </div>
         <p className="mt-8 font-sans text-[11px] uppercase tracking-[0.12em] text-white/60 animate-fade-up" style={{ fontWeight: 700, animationDelay: "700ms" }}>
-          Photos: 2015 World Championship and 2024 PSA World Tour Finals, Bellevue
+          Photos: PSA World Tour Finals, Bellevue, June 2024
         </p>
       </div>
     </section>
