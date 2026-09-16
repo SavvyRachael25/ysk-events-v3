@@ -12,7 +12,7 @@ import LogoVideo from "./LogoVideo";
  */
 export default function OlympicBand() {
   return (
-    <section aria-labelledby="countdown-heading" className="bg-white py-10 md:py-12">
+    <section id="countdown" aria-labelledby="countdown-heading" className="bg-white py-10 md:py-12">
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-8 px-6 md:px-12 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
         <div className="flex shrink-0 items-center justify-center lg:w-[300px]">
           <LogoVideo className="h-auto w-[220px] lg:w-[260px]" />

@@ -98,7 +98,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="/sponsors" className="btn-gold whitespace-nowrap !bg-white !px-5 !py-2.5 !text-black hover:!bg-la-blue hover:!text-white">
+            <a href="/sponsors" className="btn-gold whitespace-nowrap !bg-nav-cta !px-5 !py-2.5 !text-nav-cta-text hover:!bg-cta hover:!text-white">
               Partner With Us
             </a>
           </li>
@@ -144,7 +144,7 @@ export default function Navbar() {
               <a
                 href="/sponsors"
                 onClick={() => setMenuOpen(false)}
-                className="btn-gold !bg-white !text-black hover:!bg-la-blue hover:!text-white"
+                className="btn-gold !bg-nav-cta !text-nav-cta-text hover:!bg-cta hover:!text-white"
               >
                 Partner With Us
               </a>

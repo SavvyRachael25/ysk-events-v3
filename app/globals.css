@@ -52,6 +52,8 @@
   --color-surface-history: var(--color-white);
   --color-surface-faq: var(--color-white);
   --color-nav: rgb(0 0 0 / 0.96);
+  --color-nav-cta: var(--color-white);
+  --color-nav-cta-text: var(--color-black);
   --scrim-rgb: 0 0 0;
 
   /* ——— Type: one heavy grotesque family, like LA28 ——— */
@@ -115,6 +117,38 @@
   --color-headline-accent: #d8ee63;
 }
 [data-variant="v2"] #partner, [data-variant="v3"] #partner { background-image: url("/pacific/bg/08-deep-pacific.svg"); background-size: cover; }
+
+/* v2 pushed further: evergreen nav and footer, coral eyebrows, pacific accent
+   words, pink primary buttons, citron on dark, water and evergreen art. */
+[data-variant="v2"] {
+  --color-nav: rgb(18 61 50 / 0.96);
+  --scrim-rgb: 18 61 50;
+  --color-gold: #1b5b70;               /* accent words, years, plus signs */
+  --color-border: #cfe0d8;
+}
+[data-variant="v2"] .eyebrow { color: #e87953; }
+[data-variant="v2"] .eyebrow-quiet { color: #1b5b70; }
+[data-variant="v2"] #event .eyebrow { color: #d8ee63; }
+[data-variant="v2"] .btn-gold { background: #ff018f; color: #ffffff; }
+[data-variant="v2"] .btn-gold:hover { background: #102822; color: #ffffff; }
+[data-variant="v2"] { --color-nav-cta: #d8ee63; --color-nav-cta-text: #102822; }
+[data-variant="v2"] .btn-outline { border-color: #123d32; color: #123d32; }
+[data-variant="v2"] .btn-outline:hover { background: #123d32; color: #fcfcf5; }
+[data-variant="v2"] .btn-light { background: #d8ee63; color: #102822; }
+[data-variant="v2"] .btn-light:hover { background: #ff018f; color: #ffffff; }
+[data-variant="v2"] .rule-tricolor { background: linear-gradient(to right, #1b5b70 0 25%, #d8ee63 25% 50%, #e87953 50% 75%, #ff018f 75% 100%); }
+[data-variant="v2"] .ribbon { height: clamp(64px, 7vw, 96px) !important; }
+[data-variant="v2"] #countdown { background: #eaf0ee url("/pacific/bg/07-court-current.svg") center / cover; }
+[data-variant="v2"] .marquee { background: #123d32; }
+[data-variant="v2"] .marquee span { color: #d8ee63; }
+[data-variant="v2"] .marquee-dot { background: #e87953; }
+[data-variant="v2"] #cities h3 { color: #123d32; }
+[data-variant="v2"] #cities figcaption > p:first-of-type { color: #1b5b70; }
+[data-variant="v2"] #partner { border-top-color: #d8ee63 !important; }
+[data-variant="v2"] footer { background: #123d32; }
+[data-variant="v2"] #history ol img { height: 5rem; width: 5rem; }
+[data-variant="v2"] ::selection { background: #ff018f; color: #ffffff; }
+[data-variant="v2"] :focus-visible { outline-color: #ff018f; }
 
 /* v3: Pacific Motion, serif display, evergreen nav, no ribbons */
 [data-variant="v3"] {
