@@ -132,7 +132,7 @@ export default function Hero({ mode = "scene", flush = false }: { mode?: "scene"
             {athletes.map((a, i) => (
               <li key={a.name} className="group w-1/2 max-w-[220px] lg:w-[168px]">
                 <div className="relative aspect-[3/4] overflow-hidden border-2 border-white/90 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:-translate-y-1.5" style={{ boxShadow: "0 24px 48px -20px rgb(16 40 34 / 0.6)" }}>
-                  <Image src={a.image} alt={a.alt} fill sizes="(max-width: 1024px) 45vw, 168px" className={`object-cover ${i === 0 ? "object-[62%_30%]" : "object-[45%_35%]"}`} />
+                  <Image src={a.image} alt={a.alt} fill sizes="(max-width: 1024px) 45vw, 168px" className={`object-cover ${i === 0 ? "object-[62%_30%]" : "object-[50%_20%]"}`} />
                 </div>
                 <p className="mt-3 font-sans text-[13px] font-extrabold uppercase tracking-[0.08em] text-white">{a.name}</p>
                 <p className="font-sans text-[12px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--color-headline-accent)" }}>{a.title}</p>

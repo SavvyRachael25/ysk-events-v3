@@ -150,7 +150,7 @@
 [data-variant="v3"] .btn-light:hover { background: #ff018f; color: #ffffff; }
 [data-variant="v2"] .rule-tricolor { background: linear-gradient(to right, #1b5b70 0 25%, #d8ee63 25% 50%, #e87953 50% 75%, #ff018f 75% 100%); }
 [data-variant="v3"] .rule-tricolor { background: linear-gradient(to right, #1b5b70 0 25%, #d8ee63 25% 50%, #e87953 50% 75%, #ff018f 75% 100%); }
-[data-variant="v2"] .ribbon { height: clamp(64px, 7vw, 96px) !important; }
+[data-variant="v2"] .ribbon, [data-variant="v3"] .ribbon { height: clamp(64px, 7vw, 96px) !important; }
 [data-variant="v2"] #countdown { background: #eaf0ee url("/pacific/bg/07-court-current.svg") center / cover; }
 [data-variant="v3"] #countdown { background: #eaf0ee url("/pacific/bg/07-court-current.svg") center / cover; }
 [data-variant="v2"] .marquee { background: #123d32; }
@@ -181,7 +181,6 @@
   --color-nav: rgb(18 61 50 / 0.97);
   --scrim-rgb: 18 61 50;
 }
-[data-variant="v3"] .ribbon { display: none; }
 [data-variant="v3"] #event::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgb(18 61 50 / 0.82) 0%, rgb(18 61 50 / 0.55) 40%, rgb(18 61 50 / 0.1) 68%, rgb(18 61 50 / 0) 100%); }
 [data-variant="v3"] .font-display { font-weight: 600; letter-spacing: -0.01em; text-transform: none; }
 [data-variant="v3"] h1.font-display, [data-variant="v3"] .font-display h1 { font-weight: 600; }

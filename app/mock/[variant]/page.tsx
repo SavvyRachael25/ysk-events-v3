@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import OlympicBand from "@/components/OlympicBand";
-import Ribbon from "@/components/Ribbon";
+import Ribbon, { LA28_COLORS } from "@/components/Ribbon";
 import RoadToLA from "@/components/RoadToLA";
 import Cities from "@/components/Cities";
 import History from "@/components/History";
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 const VARIANTS = {
-  v1: { label: "1 · Olympic, Pacific surfaces", ribbon: undefined },
+  v1: { label: "1 · Olympic, Pacific surfaces", ribbon: LA28_COLORS },
   v2: { label: "2 · Evergreen Olympic", ribbon: ["#1b5b70", "#d8ee63", "#e87953", "#ff018f"] },
 } as const;
 
@@ -36,7 +36,7 @@ export default async function MockPage({ params }: { params: Promise<{ variant: 
   const { variant } = await params;
   const v = VARIANTS[variant as keyof typeof VARIANTS];
   if (!v) notFound();
-  const colors = v.ribbon ? [...v.ribbon] : undefined;
+  const colors = [...v.ribbon];
 
   return (
     <div data-variant={variant} className="flex min-h-full flex-1 flex-col">

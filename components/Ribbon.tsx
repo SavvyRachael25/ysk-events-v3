@@ -9,7 +9,9 @@
 const W = 1600; // tile width in viewBox units
 const H = 80;   // band height
 const K = 2;    // whole wave periods per tile, so the tile repeats seamlessly
-const COLORS = ["#009ed6", "#3fc6ea", "#3adfa8", "#ff018f"];
+// Pacific Motion set: Brandon Palma's pacific, citron and coral, plus the LA28 pink.
+const COLORS = ["#1b5b70", "#d8ee63", "#e87953", "#ff018f"];
+export const LA28_COLORS = ["#009ed6", "#3fc6ea", "#3adfa8", "#ff018f"];
 const PHASES = [0, 0.9, 1.7, 2.6];
 const AMP = 11;
 
