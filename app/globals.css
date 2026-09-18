@@ -119,8 +119,8 @@
 }
 [data-variant="v2"] #partner, [data-variant="v3"] #partner { background-image: url("/pacific/bg/08-deep-pacific.svg"); background-size: cover; }
 
-/* Pacific Motion (chosen 2026-09-16). data-variant="v3" is set site-wide in
-   layout.tsx; v1 and v2 remain as reference token sets.
+/* Pacific Motion (chosen 2026-09-16), applied site-wide from app/(site)/layout.tsx.
+   The v1 and v2 token sets are kept for reference only.
    v2 pushed further: evergreen nav and footer, coral eyebrows, pacific accent
    words, pink primary buttons, citron on dark, water and evergreen art. */
 [data-variant="v2"], [data-variant="v3"] {
