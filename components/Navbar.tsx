@@ -6,17 +6,17 @@ import { Menu, X } from "lucide-react";
 import { NAV_SECTIONS } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
-/** Official YSK Events emblem. Dark circle needs no extra treatment on ivory. */
+/** YSK Events wordmark by 8th Day Create (Sept 2026), citron on the evergreen bar. */
 function Wordmark({ className }: { className?: string }) {
   return (
     <Image
-      src="/ysk-logo.png"
+      src="/brand/ysk-events-citron.png"
       alt="YSK Events"
-      width={1254}
-      height={1254}
+      width={1400}
+      height={770}
       priority
-      sizes="48px"
-      className={cn("h-11 w-11 md:h-12 md:w-12", className)}
+      sizes="(max-width: 768px) 96px, 112px"
+      className={cn("h-auto w-24 md:w-28", className)}
     />
   );
 }

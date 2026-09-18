@@ -26,7 +26,7 @@ export const organizationJsonLd = {
   name: ORG_NAME,
   alternateName: "YSK",
   url: SITE_URL,
-  logo: `${SITE_URL}/ysk-logo.png`,
+  logo: `${SITE_URL}/brand/ysk-events-square.png`,
   image: `${SITE_URL}/opengraph-image`,
   description:
     "501(c)(3) nonprofit and presenter of the Final Olympic Qualifier for Squash, June 2028, Bellevue and Seattle, Washington. Host of the 2015 Men's World Squash Championship, the first on U.S. soil, and the 2024 PSA World Tour Finals in Bellevue. Runs youth squash programs at PRO Club Bellevue.",

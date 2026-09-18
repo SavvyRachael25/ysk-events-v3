@@ -45,12 +45,12 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
           {/* Brand */}
           <div className="md:col-span-5">
             <Image
-              src="/ysk-logo.png"
+              src="/brand/ysk-events-citron.png"
               alt="YSK Events"
-              width={1254}
-              height={1254}
-              sizes="64px"
-              className="h-16 w-16"
+              width={1400}
+              height={770}
+              sizes="160px"
+              className="h-auto w-40"
             />
             <p className="mt-6 max-w-[380px] font-sans text-sm leading-relaxed text-paper/55">
               The final Olympic qualification event for squash. Bellevue ·
@@ -176,7 +176,7 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
             >
               The Savvy Digital Co.
             </a>
-            {" "}· Design system and illustration by{" "}
+            {" "}· Logo, design system and illustration by{" "}
             <a
               href="https://www.8thdaycreate.com/"
               target="_blank"
