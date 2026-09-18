@@ -95,7 +95,7 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
               Explore
             </p>
             <ul className="mt-4 space-y-1">
-              {NAV_SECTIONS.map((s) => (
+              {[...NAV_SECTIONS, { id: "squash-art", label: "Squash Art", href: "/squash-art" }].map((s) => (
                 <li key={s.id}>
                   <a
                     href={s.href}
