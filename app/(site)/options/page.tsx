@@ -38,7 +38,7 @@ const OPTIONS = [
     href: "/",
     image: "/options/option-3.jpg",
     recommended: true,
-    what: "Closest to Brandon's build, rebuilt on our structure. Serif headlines. Evergreen nav. A real Seattle photograph in the hero (Space Needle, Mount Rainier, the trees) with a squash court floor in front of it. Hania El Hammamy and Grégory Gaultier, the 2015 champion in Bellevue, sit on that court as named cards. His icons run as a strip of milestones under the nav, 2014 to 2028. Sponsors, gallery, and blog carry the same look.",
+    what: "Closest to Brandon's build, rebuilt on our structure. Serif headlines. Evergreen nav. A real Seattle photograph in the hero (Space Needle, Mount Rainier, the trees) with a squash court floor in front of it. Hania El Hammamy and Paul Coll sit on that court as named cards. His icons run as a strip of milestones under the nav, 2014 to 2028. Sponsors, gallery, and blog carry the same look.",
     why: "The only one that answers both notes: John's \"extension of LA28\" (the mark, the countdown, the structure, the athletes) and Shabana's \"Pacific Northwest\" (the photo, the palette, the icons, the serif). It also looks like nothing else in squash.",
     short: "Brandon's original hero image was AI-generated, so it was replaced with a licensed photograph. The court floor in front of it is rendered, and the credit line says so.",
   },

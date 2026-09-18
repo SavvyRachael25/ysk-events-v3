@@ -20,7 +20,7 @@
     "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
     "sceneImage": "/pacific/seattle-court-real.jpg",
     "sceneImageAlt": "Seattle skyline with the Space Needle and Mount Rainier, seen from a squash court",
-    "sceneCredit": "Skyline: Sajad Mohamad, CC BY-SA 4.0, court floor added. Hania El Hammamy: Nettrom, CC BY-SA 4.0, PSA World Tour Finals, Bellevue, 2024.",
+    "sceneCredit": "Skyline: Sajad Mohamad, CC BY-SA 4.0, court floor added. Hania El Hammamy: Nettrom, CC BY-SA 4.0, PSA World Tour Finals, Bellevue, 2024. Paul Coll: YSK Events.",
     "athletesEyebrow": "They have played Bellevue before",
     "athletes": [
       {
@@ -30,10 +30,10 @@
         "alt": "Hania El Hammamy competing at the 2023-24 PSA World Tour Finals in Bellevue"
       },
       {
-        "name": "Grégory Gaultier",
-        "title": "2015 World Champion, Bellevue",
-        "image": "",
-        "alt": ""
+        "name": "Paul Coll",
+        "title": "Former World No. 1",
+        "image": "/event/paul-coll.jpg",
+        "alt": "Paul Coll on the glass court between points"
       }
     ]
   },
@@ -80,8 +80,8 @@
     "headline": "The world has",
     "headlineAccent": "played here before.",
     "body": "Twice. In 2015, YSK Events brought the Men's World Squash Championship to Meydenbauer Center in Bellevue, the first ever on U.S. soil: 100+ professionals, 25+ countries. In June 2024, the PSA World Tour Finals came to Bellevue with the top eight men and women in the world. YSK is a 501(c)(3) founded by the Khan family, holders of seven World No. 1 rankings.",
-    "image": "/event/trophy-lift.jpg",
-    "alt": "The champion lifting the trophy at the 2015 Men's World Squash Championship, the first ever held on U.S. soil"
+    "image": "/event/yusuf-khan-gaultier-2015.jpg",
+    "alt": "Yusuf Khan with 2015 world champion Grégory Gaultier at the Men's World Squash Championship in Bellevue"
   },
   "historyProof": [
     {
