@@ -1,4 +1,6 @@
 import Countdown from "./Countdown";
+import GhlForm from "./GhlForm";
+import { GHL } from "@/lib/ghl";
 import LogoVideo from "./LogoVideo";
 
 /**
@@ -22,6 +24,19 @@ export default function OlympicBand() {
             The last Olympic places for squash are decided in
           </p>
           <Countdown />
+        </div>
+      </div>
+      {/* Fan capture: one promise, venue and tickets, posts to GHL */}
+      <div className="mx-auto mt-10 max-w-[1280px] px-6 md:px-12">
+        <div className="grid grid-cols-1 items-center gap-6 border-t-2 border-black pt-8 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-5">
+            <p className="eyebrow">Venue and tickets</p>
+            <p className="mt-3 font-display text-ink" style={{ fontSize: "var(--text-step-2)" }}>Hear it first when they are announced.</p>
+            <p className="body-copy mt-2 text-[15px]">One email when there is news. Nothing else, never sold.</p>
+          </div>
+          <div className="lg:col-span-7">
+            <GhlForm id={GHL.forms.fan} title="Keep me posted" height={330} />
+          </div>
         </div>
       </div>
     </section>

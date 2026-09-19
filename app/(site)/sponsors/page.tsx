@@ -12,6 +12,8 @@ import {
   YOUTH_FAQ,
 } from "@/lib/content";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/constants";
+import { GHL } from "@/lib/ghl";
+import GhlForm from "@/components/GhlForm";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -70,7 +72,7 @@ export default function SponsorsPage() {
               of the story the sport tells forever.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a href={mailto} className="btn-gold">
+              <a href="#inquire" className="btn-gold">
                 Request the Sponsorship Deck
               </a>
               <a href="/#event" className="btn-outline">
@@ -177,7 +179,7 @@ export default function SponsorsPage() {
                     ))}
                   </ul>
                   <a
-                    href={mailto}
+                    href="#inquire"
                     className="btn-gold mt-8 w-fit"
                   >
                     Start the conversation
@@ -202,6 +204,25 @@ export default function SponsorsPage() {
                   </div>
                 ))}
               </dl>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ——— Inquiry form: posts to the YSK GHL sub-account ——— */}
+        <section id="inquire" className="scroll-mt-24 px-6 py-20 md:px-12 md:py-28 lg:px-20" style={{ background: "var(--color-paper-2)" }}>
+          <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-5">
+              <p className="eyebrow">Request the deck</p>
+              <h2 className="mt-4 font-display text-ink" style={{ fontSize: "var(--text-step-3)" }}>
+                Tell us a little, and a person <span className="text-gold">writes back.</span>
+              </h2>
+              <p className="body-copy mt-6 max-w-[46ch]">
+                The sponsorship deck goes out the same day. Someone from YSK Events follows up within two business days to talk through fit and timing. If email is easier, write to{" "}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-gold underline-offset-4 hover:underline">{CONTACT_EMAIL}</a>.
+              </p>
+            </Reveal>
+            <Reveal delay={120} className="lg:col-span-7">
+              <GhlForm id={GHL.forms.partner} title="Partner inquiry" height={760} />
             </Reveal>
           </div>
         </section>
@@ -257,7 +278,7 @@ export default function SponsorsPage() {
 
       {/* Phone-only sticky inquiry bar; the tiers run 2,000px between the two mailto links. */}
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-black bg-white p-3 lg:hidden" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
-        <a href={mailto} className="btn-gold flex w-full justify-center">
+        <a href="#inquire" className="btn-gold flex w-full justify-center">
           Request the Sponsorship Deck
         </a>
       </div>

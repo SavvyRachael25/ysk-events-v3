@@ -1,0 +1,35 @@
+{
+  "location": "PZoI8dLcfmoA4oayp8UI",
+  "fields": {
+    "Company or organization": {
+      "id": "BDYV2ESTSNLpyXcb2xnQ",
+      "fieldKey": "contact.company_or_organization",
+      "parentId": "kmI7976L09DmhtDx6KYZ"
+    },
+    "Sponsorship tier": {
+      "id": "pRv7CKWaIXyw1zzd3Cmx",
+      "fieldKey": "contact.sponsorship_tier",
+      "parentId": "kmI7976L09DmhtDx6KYZ"
+    },
+    "Message": {
+      "id": "9dD2oDpCEvJOvnZPGadp",
+      "fieldKey": "contact.message",
+      "parentId": "kmI7976L09DmhtDx6KYZ"
+    }
+  },
+  "pipeline": {
+    "id": "LerDaXivfDMomjUYvXkB",
+    "stages": {
+      "New inquiry": "d1f52434-83ff-4d48-b188-28db64b7f19d",
+      "Deck sent": "647725d4-a859-49e6-921b-c07ed512f18b",
+      "In conversation": "2cb68f47-4792-4472-bfe0-a99019d7d510",
+      "Proposal": "82418ff1-d578-4ade-8946-89fcafcff358",
+      "Committed": "e584adf2-c218-493e-b098-f58e1594405a",
+      "Declined": "74f672e3-7fb2-427a-8db2-cac70542e4d2"
+    }
+  },
+  "forms": {
+    "Partner inquiry": "oVWzn80dvcILHlu0d4wj",
+    "Keep me posted": "tkxcTtfpwkN9twowjoXo"
+  }
+}
