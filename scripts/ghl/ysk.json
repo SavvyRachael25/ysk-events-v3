@@ -31,5 +31,13 @@
   "forms": {
     "Partner inquiry": "oVWzn80dvcILHlu0d4wj",
     "Keep me posted": "tkxcTtfpwkN9twowjoXo"
+  },
+  "workflows": {
+    "partner-inquiry": "f5dc6331-fb8e-4384-a77c-26e57d6c7df0",
+    "fan-signup": "15bcdc55-27df-4104-a0ff-ffa9e06552cf"
+  },
+  "webhooks": {
+    "partner-inquiry": "https://services.leadconnectorhq.com/hooks/PZoI8dLcfmoA4oayp8UI/webhook-trigger/b5TcCDbeiPZetHenVfMS",
+    "fan-signup": "https://services.leadconnectorhq.com/hooks/PZoI8dLcfmoA4oayp8UI/webhook-trigger/ICI2SMAY6X9lv3xpYdWZ"
   }
 }
