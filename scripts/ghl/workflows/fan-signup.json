@@ -1,13 +1,12 @@
 {
-  "name": "Keep me posted",
+  "name": "yskevents.com: Keep me posted",
   "folder": "root",
   "publish": true,
   "triggers": [
-    { "type": "form_submission", "name": "Keep me posted submitted",
-      "conditions": [ { "operator": "is-any-of", "field": "form.id", "value": ["__FAN_FORM_ID__"], "title": "Form is", "type": "string" } ] }
+    { "type": "inbound_webhook", "name": "yskevents.com keep-me-posted form", "conditions": [] }
   ],
   "steps": [
-    { "type": "add_contact_tag", "name": "Tag fan", "attributes": { "tags": ["fan", "venue-announcement"] } },
+    { "type": "add_contact_tag", "name": "Tag fan", "attributes": { "tags": ["ysk", "fan", "venue-announcement"] } },
     { "type": "email", "name": "Welcome", "htmlFile": "emails/fan-welcome.html",
       "attributes": { "subject": "You're on the list for the Olympic qualifier in Washington", "fromName": "YSK Events", "fromEmail": "hello@yskevents.com" } }
   ]

@@ -12,8 +12,7 @@ import {
   YOUTH_FAQ,
 } from "@/lib/content";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/constants";
-import { GHL } from "@/lib/ghl";
-import GhlForm from "@/components/GhlForm";
+import PartnerForm from "@/components/PartnerForm";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -222,7 +221,7 @@ export default function SponsorsPage() {
               </p>
             </Reveal>
             <Reveal delay={120} className="lg:col-span-7">
-              <GhlForm id={GHL.forms.partner} title="Partner inquiry" height={760} />
+              <PartnerForm />
             </Reveal>
           </div>
         </section>

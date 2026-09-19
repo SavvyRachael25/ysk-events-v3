@@ -1,6 +1,5 @@
 import Countdown from "./Countdown";
-import GhlForm from "./GhlForm";
-import { GHL } from "@/lib/ghl";
+import KeepMePostedForm from "./KeepMePostedForm";
 import LogoVideo from "./LogoVideo";
 
 /**
@@ -35,7 +34,7 @@ export default function OlympicBand() {
             <p className="body-copy mt-2 text-[15px]">One email when there is news. Nothing else, never sold.</p>
           </div>
           <div className="lg:col-span-7">
-            <GhlForm id={GHL.forms.fan} title="Keep me posted" height={330} />
+            <KeepMePostedForm />
           </div>
         </div>
       </div>

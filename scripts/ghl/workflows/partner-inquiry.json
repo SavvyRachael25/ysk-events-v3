@@ -1,19 +1,18 @@
 {
-  "name": "Partner inquiry",
+  "name": "yskevents.com: Partner inquiry",
   "folder": "root",
   "publish": true,
   "triggers": [
-    { "type": "form_submission", "name": "Partner inquiry submitted",
-      "conditions": [ { "operator": "is-any-of", "field": "form.id", "value": ["__PARTNER_FORM_ID__"], "title": "Form is", "type": "string" } ] }
+    { "type": "inbound_webhook", "name": "yskevents.com/sponsors form", "conditions": [] }
   ],
   "steps": [
-    { "type": "add_contact_tag", "name": "Tag sponsor-inquiry", "attributes": { "tags": ["sponsor-inquiry"] } },
+    { "type": "add_contact_tag", "name": "Tag sponsor-inquiry", "attributes": { "tags": ["ysk", "sponsor-inquiry"] } },
     { "type": "create_opportunity", "name": "Card in Sponsorship: New inquiry",
-      "attributes": { "fields": [], "type": "create_opportunity", "pipeline_id": "__PIPELINE_ID__", "allow_backward": true, "pipeline_stage_id": "__STAGE_NEW_ID__", "opportunity_status": "open", "opportunity_name": "{{contact.company_or_organization}} · {{contact.name}}", "opportunity_source": "yskevents.com/sponsors", "monetary_value": "" } },
+      "attributes": { "fields": [], "type": "create_opportunity", "pipeline_id": "__PIPELINE_ID__", "allow_backward": true, "pipeline_stage_id": "__STAGE_NEW_ID__", "opportunity_status": "open", "opportunity_name": "{{inboundWebhookRequest.organization}} · {{contact.name}}", "opportunity_source": "yskevents.com/sponsors", "monetary_value": "" } },
     { "type": "internal_notification", "name": "Notify the team",
       "attributes": { "type": "email", "email": {
-        "subject": "Sponsor inquiry: {{contact.company_or_organization}} ({{contact.name}})",
-        "html": "<p><strong>{{contact.name}}</strong> from <strong>{{contact.company_or_organization}}</strong> asked for the sponsorship deck.</p><p><strong>Email:</strong> {{contact.email}}<br><strong>Phone:</strong> {{contact.phone}}<br><strong>Level:</strong> {{contact.sponsorship_tier}}</p><p><strong>Message:</strong><br>{{contact.message}}</p><p>The auto-reply promised a person within two business days.</p>",
+        "subject": "Sponsor inquiry: {{inboundWebhookRequest.organization}} ({{contact.name}})",
+        "html": "<p><strong>{{contact.name}}</strong> from <strong>{{inboundWebhookRequest.organization}}</strong> asked for the sponsorship deck on yskevents.com.</p><p><strong>Email:</strong> {{contact.email}}<br><strong>Phone:</strong> {{contact.phone}}<br><strong>Level:</strong> {{inboundWebhookRequest.tier}}</p><p><strong>Message:</strong><br>{{inboundWebhookRequest.message}}</p><p>The auto-reply promised a person within two business days.</p>",
         "userType": "all" } } },
     { "type": "email", "name": "Auto-reply to the partner", "htmlFile": "emails/partner-reply.html",
       "attributes": { "subject": "Thanks for reaching out about the Final Olympic Qualifier", "fromName": "YSK Events", "fromEmail": "hello@yskevents.com" } }
