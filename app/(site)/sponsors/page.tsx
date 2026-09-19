@@ -114,9 +114,11 @@ export default function SponsorsPage() {
                 ))}
               </dl>
             </Reveal>
-            <Reveal delay={150} className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border pt-8">
+            <Reveal delay={150} className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-border pt-8">
               <span className="eyebrow-quiet">YSK works with</span>
-              {SPONSOR_CRED.map((name) => (
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/partners/seattle-sports-commission.svg" alt="Seattle Sports Commission" width={558} height={559} className="h-16 w-16 md:h-20 md:w-20" />
+              {SPONSOR_CRED.filter((n) => n !== "Seattle Sports Commission").map((name) => (
                 <span
                   key={name}
                   className="font-lockup text-[15px] tracking-[0.06em] text-ink-soft"
