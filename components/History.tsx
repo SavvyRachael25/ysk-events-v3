@@ -55,17 +55,21 @@ export default function History({ icons = true }: { icons?: boolean } = {}) {
             </dl>
           </Reveal>
 
-          {/* RIGHT: athlete */}
+          {/* RIGHT: Yusuf Khan, front row at the 2015 Worlds */}
           <Reveal delay={160} as="figure" className="lg:col-span-7">
-            <div className="relative aspect-[16/10] overflow-hidden">
+            <div className="relative mx-auto aspect-[4/5] max-w-[520px] overflow-hidden border-2 border-black lg:ml-auto lg:mr-0">
               <Image
                 src={HISTORY.image}
                 alt={HISTORY.alt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 58vw"
+                sizes="(max-width: 1024px) 100vw, 520px"
                 className="object-cover"
               />
             </div>
+            <figcaption className="mx-auto mt-4 max-w-[520px] lg:ml-auto lg:mr-0">
+              <p className="font-sans text-[13px] font-extrabold uppercase tracking-[0.12em] text-ink">Yusuf Khan</p>
+              <p className="font-sans text-[13px] leading-relaxed text-ink-faint">Front row at the 2015 Men's World Championship in Bellevue, the event he brought to the Pacific Northwest.</p>
+            </figcaption>
           </Reveal>
         </div>
 
