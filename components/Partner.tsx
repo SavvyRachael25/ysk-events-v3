@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import PressStrip from "./PressStrip";
 import { PARTNER, PARTNER_TIERS, CONTACT_INTERESTS } from "@/lib/content";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
@@ -54,6 +55,8 @@ export default function Partner() {
                 Start the Conversation
               </a>
             </div>
+            <p className="mt-10 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-paper/50">As seen in</p>
+            <PressStrip tone="dark" className="mt-4 gap-x-7" />
             <p className="mt-5 font-sans text-[13px] text-paper/50">
               Or write to us directly:{" "}
               <a

@@ -8,11 +8,11 @@ import {
   PARTNER_TIERS,
   SPONSOR_CRED,
   SPONSOR_PROOF,
-  PRESS_OUTLETS,
   YOUTH_FAQ,
 } from "@/lib/content";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/constants";
 import PartnerForm from "@/components/PartnerForm";
+import PressStrip from "@/components/PressStrip";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -256,9 +256,8 @@ export default function SponsorsPage() {
                   Contact {CONTACT_EMAIL}
                 </a>
               </div>
-              <p className="mt-8 font-sans text-[11px] uppercase tracking-[0.2em] text-paper/40">
-                As seen in {PRESS_OUTLETS.join(" · ")}
-              </p>
+              <p className="mt-10 font-sans text-[11px] font-bold uppercase tracking-[0.2em] text-paper/50">As seen in</p>
+              <PressStrip tone="dark" className="mt-4" />
             </Reveal>
             <Reveal delay={160} as="figure" className="hidden lg:col-span-5 lg:block">
               <div className="relative aspect-[4/3] overflow-hidden">

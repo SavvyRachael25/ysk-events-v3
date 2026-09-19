@@ -1,7 +1,8 @@
 import Image from "next/image";
 import MotionToggle from "./MotionToggle";
+import PressStrip from "./PressStrip";
 import { CONTACT_EMAIL, ORG_FOUNDED, SOCIAL } from "@/lib/constants";
-import { NAV_SECTIONS, PRESS_OUTLETS } from "@/lib/content";
+import { NAV_SECTIONS } from "@/lib/content";
 
 function FacebookIcon({ size = 15 }: { size?: number }) {
   return (
@@ -122,9 +123,7 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
             <p className="mt-8 font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-gold-bright">
               As Seen In
             </p>
-            <p className="mt-4 max-w-[320px] font-sans text-xs leading-loose text-paper/60">
-              {PRESS_OUTLETS.join(" · ")}
-            </p>
+            <PressStrip tone="dark" className="mt-5 max-w-[360px] gap-x-7" />
           </div>
         </div>
 
