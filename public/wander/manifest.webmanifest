@@ -1,0 +1,15 @@
+{
+  "name": "Wanderboard",
+  "short_name": "Wander",
+  "description": "A travel vision board sorted by category and by what is near you. Never by time.",
+  "id": "/wander",
+  "start_url": "/wander",
+  "scope": "/wander",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f1e8",
+  "theme_color": "#f6f1e8",
+  "icons": [
+    { "src": "/wander/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
