@@ -338,7 +338,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         question: "Where will I be able to watch Olympic squash in 2028?",
         answer:
-          "Squash at LA28 will be played at the Comcast Squash Center at Universal Studios in Los Angeles. Before that, the final Olympic qualification event for squash takes place in Bellevue and Seattle, Washington, in June 2028, presented by YSK Events. Broadcast coverage will be handled through standard Olympic broadcast partners; specific U.S. coverage details will be announced closer to the Games.",
+          "Squash at LA28 will be played at the Comcast Squash Center at Universal Studios in Los Angeles. Before that, the final Olympic qualification event for squash takes place in Bellevue and Seattle, Washington, June 6 to 10, 2028, presented by YSK Events. Broadcast coverage will be handled through standard Olympic broadcast partners; specific U.S. coverage details will be announced closer to the Games.",
       },
     ],
   },

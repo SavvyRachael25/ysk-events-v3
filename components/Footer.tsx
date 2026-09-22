@@ -55,7 +55,7 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
             />
             <p className="mt-6 max-w-[380px] font-sans text-sm leading-relaxed text-paper/55">
               The final Olympic qualification event for squash. Bellevue ·
-              Seattle, Washington, June 2028. Presented by YSK Events, a
+              Seattle, Washington, June 6 to 10, 2028. Presented by YSK Events, a
               501(c)(3) that hosted the 2015 Men's World Championship and the 2024 PSA World Tour Finals in Bellevue. Growing squash in the United States since{" "}
               {ORG_FOUNDED}.
             </p>
@@ -96,7 +96,7 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
               Explore
             </p>
             <ul className="mt-4 space-y-1">
-              {[...NAV_SECTIONS, { id: "squash-art", label: "Squash Art", href: "/squash-art" }].map((s) => (
+              {[...NAV_SECTIONS, { id: "squash-art", label: "Squash Art", href: "/squash-art" }, { id: "press", label: "Press", href: "/press" }].map((s) => (
                 <li key={s.id}>
                   <a
                     href={s.href}

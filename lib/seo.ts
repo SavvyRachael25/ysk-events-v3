@@ -64,7 +64,7 @@ export const venueJsonLd = {
   "@id": VENUE_ID,
   name: `${ORG_NAME} at ${VENUE.name}`,
   description:
-    "Home base of YSK Events in Bellevue, Washington, and the training venue for its youth squash programs. The venue for the June 2028 Olympic qualifier will be announced separately.",
+    "Home base of YSK Events in Bellevue, Washington, and the training venue for its youth squash programs. Early rounds of the June 2028 qualifier are played here; the later rounds are on an all-glass court in Seattle, venue to be announced.",
   url: SITE_URL,
   address: venueAddress,
   geo: {

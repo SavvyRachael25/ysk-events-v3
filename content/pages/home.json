@@ -4,7 +4,7 @@
     "headlineTop": "The Final Olympic",
     "headlineAccent": "Qualifier for Squash.",
     "location": "Bellevue · Seattle, Washington",
-    "date": "June 2028",
+    "date": "June 6 to 10, 2028",
     "lines": [
       "One final opportunity.",
       "The world's best players.",
@@ -39,13 +39,13 @@
   },
   "marquee": [
     "Final Olympic Qualification Event · Squash",
-    "Bellevue · Seattle · June 2028",
+    "Bellevue · Seattle · June 6 to 10, 2028",
     "The Last Places for Los Angeles 2028",
     "World's Top Players · One Last Chance",
     "Presented by YSK Events"
   ],
   "qualify": {
-    "eyebrow": "June 2028 · Washington State",
+    "eyebrow": "June 6 to 10, 2028 · Washington State",
     "headline": "Where the world comes to qualify",
     "headlineAccent": "for the Olympics.",
     "body": "In 2028, squash makes its Olympic debut at the Los Angeles Games. Before it does, the world's top players will come to Washington for one last chance to earn their place. They have been here before: Bellevue hosted the PSA World Tour Finals in 2024, and the Men's World Championship in 2015. Every match matters. Every point could send a player to the Olympics, or send them home.",
@@ -56,14 +56,14 @@
     {
       "name": "Bellevue",
       "tagline": "Where the world has played before.",
-      "desc": "Host of the 2015 Men's World Championship, the first ever on U.S. soil, and the 2024 PSA World Tour Finals.",
+      "desc": "Host of the 2015 Men's World Championship and the 2024 PSA World Tour Finals. Early rounds of the qualifier are played at PRO Club.",
       "image": "/event/city-bellevue-lake.jpg",
       "alt": "Downtown Bellevue skyline across Lake Washington at dusk, with the Cascades behind"
     },
     {
       "name": "Seattle",
       "tagline": "Shares the final qualifier with Bellevue.",
-      "desc": "Bellevue and Seattle share the last qualification event before the Games. Venue to be announced.",
+      "desc": "The later rounds and the finals are played on an all-glass court in Seattle. Venue to be announced.",
       "image": "/event/city-seattle-rainier.jpg",
       "alt": "Seattle skyline with the Space Needle and Mount Rainier, seen from Kerry Park"
     },
@@ -137,7 +137,7 @@
     "eyebrow": "Sponsorship & Support",
     "headline": "Be part of squash's",
     "headlineAccent": "Olympic moment.",
-    "body": "Squash has never been an Olympic sport. In June 2028 the last places for Los Angeles are decided in Washington, with the world's top players on the court. Put your brand beside them, or fund the youth programs that run alongside the event through a 501(c)(3) contribution."
+    "body": "Squash has never been an Olympic sport. From June 6 to 10, 2028, the last places for Los Angeles are decided in Washington, with the world's top players on the court. Put your brand beside them, or fund the youth programs that run alongside the event through a 501(c)(3) contribution."
   },
   "partnerTiers": [
     {

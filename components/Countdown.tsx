@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 /**
- * Days until June 2028. No hours, minutes, or seconds until YSK publishes
+ * Days until June 6, 2028, the first day of play. No hours, minutes, or seconds until YSK publishes
  * a start date: a ticking clock implies a day nobody has announced, and an
  * official will ask which day it is. Counts to the first of the month.
  * Server renders a dash; client fills in after hydration.
  */
-const TARGET = new Date("2028-06-01T00:00:00-07:00");
+const TARGET = new Date("2028-06-06T00:00:00-07:00");
 
 export default function Countdown() {
   const [days, setDays] = useState<number | null>(null);
@@ -30,7 +30,7 @@ export default function Countdown() {
       </div>
       <div className="mb-6 flex flex-col">
         <span className="font-sans text-[11px] uppercase tracking-[0.14em] text-black/60" style={{ fontWeight: 800 }}>until</span>
-        <span className="font-lockup leading-none text-black" style={{ fontSize: "clamp(1.4rem, 2.6vw, 2.2rem)" }}>June 2028</span>
+        <span className="font-lockup leading-none text-black" style={{ fontSize: "clamp(1.4rem, 2.6vw, 2.2rem)" }}>June 6, 2028</span>
       </div>
     </div>
   );

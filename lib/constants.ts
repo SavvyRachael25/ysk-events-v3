@@ -16,7 +16,7 @@ export const ORG_TAGLINE = "The Final Olympic Qualifier for Squash";
 // One sentence, used verbatim in meta description, SportsEvent description, and on the page.
 // Keeping them identical is what lets an answer engine trust the claim.
 export const EVENT_DEFINITION =
-  "The Final Olympic Qualifier for Squash is the last qualification event before squash makes its Olympic debut at the Los Angeles 2028 Games. It is held in Bellevue and Seattle, Washington, in June 2028, and presented by YSK Events, a 501(c)(3) nonprofit.";
+  "The Final Olympic Qualifier for Squash is the last qualification event before squash makes its Olympic debut at the Los Angeles 2028 Games. It is held in Bellevue and Seattle, Washington, June 6 to 10, 2028, and presented by YSK Events, a 501(c)(3) nonprofit.";
 export const ORG_FOUNDED = 2013;
 export const ORG_STATUS = "501(c)(3) Nonprofit";
 

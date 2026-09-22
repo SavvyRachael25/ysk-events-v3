@@ -107,12 +107,12 @@ export const HOMEPAGE_FAQ = [
   {
     question: "What is the Final Olympic Qualifier for Squash?",
     answer:
-      "The last qualification event before squash makes its Olympic debut at the Los Angeles 2028 Games. It takes place in Bellevue and Seattle, Washington, in June 2028. Players who have not yet secured a place at LA28 compete here for the final spots.",
+      "The last qualification event before squash makes its Olympic debut at the Los Angeles 2028 Games. It takes place in Bellevue and Seattle, Washington, June 6 to 10, 2028. Twenty-four men and twenty-four women who have not yet secured a place at LA28 compete in two draws; the winner of each draw qualifies for the Games.",
   },
   {
     question: "When and where is it held?",
     answer:
-      "June 2028, in Bellevue and Seattle, Washington. The venue and match schedule will be announced. The Olympic squash competition itself follows in Los Angeles at the Comcast Squash Center at Universal Studios.",
+      "June 6 to 10, 2028. Early rounds are played at PRO Club in Bellevue; the later rounds and finals on an all-glass court in Seattle, venue to be announced. The Olympic squash competition itself follows in Los Angeles at the Comcast Squash Center at Universal Studios.",
   },
   {
     question: "Who hosts the qualifier?",
