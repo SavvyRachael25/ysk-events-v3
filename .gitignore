@@ -44,7 +44,7 @@ next-env.d.ts
 .tina/__generated__
 tina/__generated__
 public/admin
-*\ 2.*
+* [0-9].*
 
 # GHL setup scripts read a local session token; keep them off GitHub
 scripts/ghl/*.mjs

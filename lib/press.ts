@@ -25,6 +25,33 @@ export const RELEASE = {
     "YSK Events is a 501(c)(3) nonprofit founded by the Khan family, holders of seven world number one rankings, to grow squash in the United States. Since 2013 it has hosted world championship and world tour events in Bellevue, Washington, and runs youth clinics and scholarship court time at no cost to scholarship athletes. www.yskevents.com",
 };
 
+/**
+ * Second release: YSK's own story, for local, community and South Asian
+ * press. No invented quotes; the Shabana line is from the PSA announcement.
+ */
+export const RELEASE_2 = {
+  dateline: "BELLEVUE, Wash., September 22, 2026",
+  headline: "From Pakistan to Seattle to the Olympics: the Khan family will welcome the world to Washington in 2028",
+  paragraphs: [
+    "When the Squash Final Qualifier for the Los Angeles 2028 Olympic Games comes to Seattle and Bellevue on June 6 to 10, 2028, it will be presented by a family that carried the game across the world and planted it in the Pacific Northwest.",
+    "YSK Events is named for Yusuf Khan, who brought squash from Pakistan to Seattle and taught it here for decades. The Khan family holds seven world number one rankings. His daughter, Shabana Khan, founded YSK Events as a 501(c)(3) nonprofit and led the two largest squash events ever held in the region: the 2015 Men's World Championship at Meydenbauer Center, the first on U.S. soil, and the 2024 PSA World Tour Finals in Bellevue.",
+    "The 2028 event decides the last two places at squash's first Olympic tournament. Forty-eight players who have not yet qualified, twenty-four men and twenty-four women, compete in two draws. Early rounds are played at PRO Club in Bellevue; the finals move to an all-glass court in Seattle.",
+    "Alongside the tournament, YSK Events runs youth clinics and scholarship court time with Title I schools across the Bellevue to Seattle corridor, at no cost to scholarship athletes, directed by Head Coach Azam Khan. Original squash art by Sharif Khan is shown and auctioned at YSK events, with proceeds supporting those programs.",
+  ],
+  quote: {
+    text: "This is about far more than hosting a sporting event, it is an opportunity to welcome the world to Seattle and Bellevue.",
+    who: "Shabana Khan, CEO and Founder, YSK Events",
+    source: "from the PSA announcement",
+  },
+  closing: "Community organizations, schools and clubs that want to be part of the road to 2028 can reach YSK Events at hello@yskevents.com. Sponsorship: www.yskevents.com/sponsors. Venue and ticket news first: www.yskevents.com.",
+};
+
+export const LOGOS = [
+  { name: "YSK Events, deep green", src: "/brand/ysk-events-deep-green.png", bg: "#ffffff" },
+  { name: "YSK Events, citron", src: "/brand/ysk-events-citron.png", bg: "#123d32" },
+  { name: "YSK Events, pink", src: "/brand/ysk-events-pink.png", bg: "#ffffff" },
+];
+
 export const FACTS = [
   ["Event", "Squash Final Qualifier for the Los Angeles 2028 Olympic Games"],
   ["Dates", "June 6 to 10, 2028"],

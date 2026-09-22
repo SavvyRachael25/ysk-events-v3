@@ -4,7 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Ribbon from "@/components/Ribbon";
 import Reveal from "@/components/Reveal";
-import { RELEASE, FACTS, PRESS_PHOTOS, PSA_ANNOUNCEMENT } from "@/lib/press";
+import { RELEASE, RELEASE_2, FACTS, PRESS_PHOTOS, LOGOS, PSA_ANNOUNCEMENT } from "@/lib/press";
+import PressStrip from "@/components/PressStrip";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/constants";
 import { breadcrumbJsonLd, jsonLdScriptProps } from "@/lib/seo";
 
@@ -79,14 +80,42 @@ export default function PressPage() {
               </div>
               <div className="mt-6 border-2 border-black bg-white p-7">
                 <p className="eyebrow">Logos</p>
-                <ul className="mt-4 space-y-2 font-sans text-[14px]">
-                  <li><a href="/brand/ysk-events-deep-green.png" className="text-gold underline-offset-4 hover:underline" download>YSK Events, deep green (PNG)</a></li>
-                  <li><a href="/brand/ysk-events-citron.png" className="text-gold underline-offset-4 hover:underline" download>YSK Events, citron for dark backgrounds (PNG)</a></li>
+                <ul className="mt-4 grid grid-cols-1 gap-3">
+                  {LOGOS.map((l) => (
+                    <li key={l.src}>
+                      <a href={l.src} download className="group block border border-black/15 p-5 transition-colors hover:border-black" style={{ background: l.bg }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={l.src} alt={l.name} width={1400} height={815} className="mx-auto h-auto w-40" />
+                      </a>
+                      <p className="mt-1.5 font-sans text-[12px] text-ink-faint">{l.name} · PNG, click to download</p>
+                    </li>
+                  ))}
                 </ul>
-                <p className="mt-4 font-sans text-[12px] leading-relaxed text-ink-faint">The LA28 emblem is used under clearance held by YSK Events and is not available for download here.</p>
+                <p className="mt-4 font-sans text-[12px] leading-relaxed text-ink-faint">The LA28 emblem is used under clearance held by YSK Events and is not available for download.</p>
+              </div>
+              <div className="mt-6 border-2 border-black bg-white p-7">
+                <p className="eyebrow">Partners and coverage</p>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/partners/seattle-sports-commission.svg" alt="Seattle Sports Commission" width={558} height={559} className="mt-4 h-20 w-20" />
+                <PressStrip className="mt-5 gap-x-6" />
               </div>
             </aside>
           </div>
+        </section>
+
+        <section className="px-6 pb-20 md:px-12 md:pb-28 lg:px-20" style={{ background: "var(--color-paper)" }}>
+          <article className="mx-auto max-w-[1280px] border-t-2 border-black pt-14">
+            <p className="eyebrow">Press release · {RELEASE_2.dateline}</p>
+            <h2 className="mt-5 max-w-[26ch] font-display text-ink" style={{ fontSize: "var(--text-step-3)", lineHeight: 1.05 }}>{RELEASE_2.headline}</h2>
+            <div className="mt-8 max-w-[68ch] space-y-5">
+              {RELEASE_2.paragraphs.map((p) => (<p key={p.slice(0, 40)} className="body-copy">{p}</p>))}
+              <blockquote className="border-l-4 pl-6" style={{ borderColor: "#e87953" }}>
+                <p className="font-display text-ink" style={{ fontSize: "var(--text-step-1)", lineHeight: 1.3 }}>“{RELEASE_2.quote.text}”</p>
+                <p className="mt-3 font-sans text-[13px] font-bold uppercase tracking-[0.1em] text-ink-faint">{RELEASE_2.quote.who}, <a href={PSA_ANNOUNCEMENT} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-ink">{RELEASE_2.quote.source}</a></p>
+              </blockquote>
+              <p className="body-copy">{RELEASE_2.closing}</p>
+            </div>
+          </article>
         </section>
 
         <Ribbon />

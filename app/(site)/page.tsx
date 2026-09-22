@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Announcement from "@/components/Announcement";
 import Moments from "@/components/Moments";
 import Marquee from "@/components/Marquee";
 import OlympicBand from "@/components/OlympicBand";
@@ -58,6 +59,7 @@ export default function Home() {
       <main id="main" className="flex-1">
         <Moments />
         <Hero flush />
+        <Announcement />
         <Ribbon />
         <OlympicBand />
         <Marquee />
