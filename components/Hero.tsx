@@ -124,13 +124,14 @@ export default function Hero({ mode = "scene", flush = false }: { mode?: "scene"
 
       {/* Athlete cards. On desktop they sit on the court floor at the right of
           the scene; on phones they run as a strip between the photo band and
-          the copy. Names and rankings come from the content file. */}
+          the copy. Name and ranking are optional: leave them blank in the
+          content file and the card runs as a photo with no caption. */}
       {single && athletes.length > 0 && (
         <div className="relative z-10 px-6 pb-2 md:px-12 lg:absolute lg:bottom-16 lg:right-16 lg:z-20 lg:w-auto lg:px-0 lg:pb-0">
           <p className="eyebrow !text-white/80 mb-4 lg:text-right">{EVENT.athletesEyebrow}</p>
           <ul className="flex gap-4 lg:gap-5">
             {athletes.map((a, i) => (
-              <li key={a.name} className="group w-1/2 max-w-[220px] lg:w-[168px]">
+              <li key={a.image || i} className="group w-1/2 max-w-[220px] lg:w-[168px]">
                 <div className="relative aspect-[3/4] overflow-hidden border-2 border-white/90 transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:-translate-y-1.5" style={{ boxShadow: "0 24px 48px -20px rgb(16 40 34 / 0.6)" }}>
                   {a.image ? (
                     <Image src={a.image} alt={a.alt} fill sizes="(max-width: 1024px) 45vw, 168px" className={`object-cover ${i === 0 ? "object-[62%_30%]" : "object-[50%_20%]"}`} />
@@ -142,8 +143,8 @@ export default function Hero({ mode = "scene", flush = false }: { mode?: "scene"
                     </div>
                   )}
                 </div>
-                <p className="mt-3 font-sans text-[13px] font-extrabold uppercase tracking-[0.08em] text-white">{a.name}</p>
-                <p className="font-sans text-[12px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--color-headline-accent)" }}>{a.title}</p>
+                {a.name && <p className="mt-3 font-sans text-[13px] font-extrabold uppercase tracking-[0.08em] text-white">{a.name}</p>}
+                {a.title && <p className="font-sans text-[12px] font-bold uppercase tracking-[0.12em]" style={{ color: "var(--color-headline-accent)" }}>{a.title}</p>}
               </li>
             ))}
           </ul>

@@ -11,29 +11,29 @@
       "Olympic dreams on the line."
     ],
     "image": "/event/worlds-bellevue-hero.jpg",
-    "imageAlt": "World number one Hania El Hammamy competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
+    "imageAlt": "A women's match at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
     "ctaPrimaryLabel": "Explore the Qualifier",
     "ctaPrimaryHref": "#road",
     "ctaSecondaryLabel": "Partner With Us",
     "ctaSecondaryHref": "#partner",
     "imageSecondary": "/event/mens-bellevue.jpg",
-    "imageSecondaryAlt": "Ali Farag, former world number one, competing at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
+    "imageSecondaryAlt": "A men's match at the 2023-24 PSA World Tour Finals in Bellevue, Washington",
     "sceneImage": "/pacific/seattle-court-real.jpg",
     "sceneImageAlt": "Seattle skyline with the Space Needle and Mount Rainier, seen from a squash court",
-    "sceneCredit": "Skyline: Sajad Mohamad, CC BY-SA 4.0, court floor added. Hania El Hammamy: Nettrom, CC BY-SA 4.0, PSA World Tour Finals, Bellevue, 2024. Paul Coll: YSK Events.",
+    "sceneCredit": "Skyline: Sajad Mohamad, CC BY-SA 4.0, court floor added. Player photographs: Nettrom, CC BY-SA 4.0, PSA World Tour Finals, Bellevue, 2024, and YSK Events.",
     "athletesEyebrow": "They have played Bellevue before",
     "athletes": [
       {
-        "name": "Hania El Hammamy",
-        "title": "World No. 1",
+        "name": "",
+        "title": "",
         "image": "/event/worlds-bellevue-hero.jpg",
-        "alt": "Hania El Hammamy competing at the 2023-24 PSA World Tour Finals in Bellevue"
+        "alt": "A player mid-rally at the 2023-24 PSA World Tour Finals in Bellevue"
       },
       {
-        "name": "Paul Coll",
-        "title": "Former World No. 1",
-        "image": "/event/paul-coll.jpg",
-        "alt": "Paul Coll on the glass court between points"
+        "name": "",
+        "title": "",
+        "image": "/event/glass-court-player.jpg",
+        "alt": "A player on the glass court between points"
       }
     ]
   },
@@ -49,8 +49,8 @@
     "headline": "Where the world comes to qualify",
     "headlineAccent": "for the Olympics.",
     "body": "In 2028, squash makes its Olympic debut at the Los Angeles Games. Before it does, the world's top players will come to Washington for one last chance to earn their place. They have been here before: Bellevue hosted the PSA World Tour Finals in 2024, and the Men's World Championship in 2015. Every match matters. Every point could send a player to the Olympics, or send them home.",
-    "image": "/event/olivia-weaver-bellevue.jpg",
-    "imageAlt": "American player Olivia Weaver competing against Nele Gilis at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
+    "image": "/event/womens-match-bellevue.jpg",
+    "imageAlt": "Two players in a match at the 2023-24 PSA World Tour Finals in Bellevue, Washington"
   },
   "cities": [
     {
@@ -105,7 +105,7 @@
     {
       "year": "2014",
       "title": "World-champion exhibitions",
-      "desc": "Ramy Ashour, Amr Shabana, and Grégory Gaultier headline exhibitions at PRO Club in Bellevue."
+      "desc": "Three former world champions headline exhibitions at PRO Club in Bellevue."
     },
     {
       "year": "2015",
@@ -125,7 +125,7 @@
     {
       "year": "2024",
       "title": "PSA World Tour Finals",
-      "desc": "The season-ending finals came to Bellevue. The top eight men and women in the world, including world number one Hania El Hammamy, competed at the Boys and Girls Club at Hidden Valley Fieldhouse."
+      "desc": "The season-ending finals came to Bellevue. The top eight men and women in the world competed at the Boys and Girls Club at Hidden Valley Fieldhouse."
     },
     {
       "year": "2028",

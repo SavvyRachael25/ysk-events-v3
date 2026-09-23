@@ -63,9 +63,9 @@ export const FACTS = [
 ];
 
 export const PRESS_PHOTOS = [
-  { src: "/event/worlds-bellevue-hero.jpg", caption: "Hania El Hammamy at the 2023-24 PSA World Tour Finals, Bellevue. Photo: Nettrom, CC BY-SA 4.0." },
+  { src: "/event/worlds-bellevue-hero.jpg", caption: "A women's match at the 2023-24 PSA World Tour Finals, Bellevue. Photo: Nettrom, CC BY-SA 4.0." },
   { src: "/event/khan-family-2015.jpg", caption: "Yusuf Khan and family, front row, 2015 Men's World Championship, Bellevue. Photo: YSK Events." },
   { src: "/event/glass-court-venue.jpg", caption: "The all-glass show court at the 2015 Men's World Championship, Bellevue. Photo: YSK Events." },
-  { src: "/event/trophy-lift.jpg", caption: "Gregory Gaultier lifts the 2015 world championship trophy in Bellevue. Photo: YSK Events." },
-  { src: "/event/paul-coll.jpg", caption: "Paul Coll. Photo: YSK Events." },
+  { src: "/event/trophy-lift.jpg", caption: "The 2015 world championship trophy lift in Bellevue. Photo: YSK Events." },
+  { src: "/event/glass-court-player.jpg", caption: "On the glass court between points. Photo: YSK Events." },
 ];

@@ -82,7 +82,7 @@ export default defineConfig({
                 name: "athletes",
                 label: "Athlete cards",
                 list: true,
-                ui: { itemProps: (item: { name?: string }) => ({ label: item?.name || "Athlete" }) },
+                ui: { itemProps: (item: { name?: string }) => ({ label: item?.name || "Player photo" }) },
                 fields: [
                   { type: "string", name: "name", label: "Name" },
                   { type: "string", name: "title", label: "Ranking or title" },
