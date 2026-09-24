@@ -42,7 +42,9 @@ export const VENUE = {
 
 // ——— Social ———
 export const SOCIAL = {
-  instagram: "https://www.instagram.com/yskevents",
+  // Confirmed by Murad, Sept 23 2026: the account is yskeventsofficial.
+  instagram: "https://www.instagram.com/yskeventsofficial",
   facebook: "https://www.facebook.com/yskevents",
-  youtube: "https://www.youtube.com/@yskevents",
+  // youtube: @yskevents 404s. Waiting on the real channel from Murad.
+  youtube: "",
 } as const;

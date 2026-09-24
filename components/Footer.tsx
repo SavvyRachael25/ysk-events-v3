@@ -78,15 +78,17 @@ export default function Footer({ backdrop = "/pacific/bellevue-dusk.jpg" }: { ba
               >
                 <FacebookIcon />
               </a>
-              <a
-                href={SOCIAL.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YSK Events on YouTube"
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
-              >
-                <YoutubeIcon />
-              </a>
+              {SOCIAL.youtube && (
+                <a
+                  href={SOCIAL.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YSK Events on YouTube"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/20 text-paper/70 transition-colors duration-300 hover:border-gold-bright hover:text-gold-bright"
+                >
+                  <YoutubeIcon />
+                </a>
+              )}
             </div>
           </div>
 

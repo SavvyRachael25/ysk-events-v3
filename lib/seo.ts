@@ -55,7 +55,7 @@ export const organizationJsonLd = {
       availableLanguage: ["English"],
     },
   ],
-  sameAs: [SOCIAL.instagram, SOCIAL.facebook, SOCIAL.youtube],
+  sameAs: [SOCIAL.instagram, SOCIAL.facebook, SOCIAL.youtube].filter(Boolean),
 };
 
 export const venueJsonLd = {
