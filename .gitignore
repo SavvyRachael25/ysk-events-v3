@@ -48,3 +48,8 @@ public/admin
 
 # GHL setup scripts read a local session token; keep them off GitHub
 scripts/ghl/*.mjs
+
+# backup safety 2026-09-26
+.next
+!.env.example
+auth.json
