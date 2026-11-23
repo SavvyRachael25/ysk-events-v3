@@ -48,3 +48,6 @@ public/admin
 
 # GHL setup scripts read a local session token; keep them off GitHub
 scripts/ghl/*.mjs
+
+# Funding board source (plain text). Only the encrypted build is committed.
+/.funding-src/
